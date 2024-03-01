@@ -18,7 +18,6 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: white;
 }
 
 @layer utilities {
@@ -27,9 +26,7 @@ body {
   }
 }
 .intro {
-  background: #e8ffdb;
-  background-image: url(/introBg.png);
-  background-size: cover;
+  /* background: #e8ffdb; */
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
@@ -43,13 +40,7 @@ body {
   letter-spacing: -0.015em;
   text-align: left;
 }
-.introtext {
-  position: relative;
-  width: 702px;
-  height: 96px;
-  top: 40px;
-  left: 165px;
-}
+
 .introlinks > li > a{
   font-size: 14px;
 }
@@ -95,11 +86,12 @@ body {
   height: 270px;
   height: 270px;
 }
-.officeicon{
-  position: relative;
+.officeicon{ 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
 }
 .officeicon>img{
-  position: absolute;
-  width: 518px;
-  height: 465px;
+  max-width: 100%;
+  height: auto;
 }

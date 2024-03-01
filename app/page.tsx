@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center text-xs ">
       <div className="intro h-full bg-[url('/introBg.png')] bg-cover bg-[#e8ffdb] lg:bg-cover">
-        <div className="introtext w-64 relative left-12 lg: top-10 left-40">
+        <div className="introtext w-64 relative left-12 lg: top-10 lg:left-40">
           <div className="introduction font-bold mb-3">Introduction</div>
           <div className="introlinks list-none flex">
             <li>

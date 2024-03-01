@@ -22,9 +22,9 @@ export default function Home() {
         </div>
       </div>
       <div className="max-w-[1210px] aboutcontent pt-5">
-        <div className="flex ">
+        <div className="flex pb-20">
           <div className="flex flex-col text-justify mr-10 mt-10 basis-3/5 max-w-[678px] mx-auto">
-            <div className="objective pb-6">
+            <div className="objective mb-6">
               With the main objective of providing institutional credit for
               enhancing the production and productivity of the agricultural
               sector in the country, the Agricultural Development Bank, Nepal

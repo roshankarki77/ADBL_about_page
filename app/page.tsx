@@ -5,7 +5,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center text-xs">
       <div className="bg-green-0 intro w-full h-full">
         <div className="introtext">
-          <div className="introduction font-bold mb-3">Introduction</div>
+          <div className="introduction font-bold mb-3">Introduction res2</div>
           <div className="introlinks list-none flex">
             <li>
               <a href="#" className="mr-2 text-green-800">Home</a>

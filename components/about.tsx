@@ -3,7 +3,8 @@ import Image from "next/image";
 export default function About() {
   return (
     <div className="flex mt-24 px-8 justify-center flex-col  flex-wrap lg:flex-row ">
-      <div className="flex flex-col flex-wrap lg:flex-row lg:mr-4">
+      <div className="flex flex-col flex-wrap md:justify-center  lg:flex-row lg:mr-4">
+        <div className=" flex flex-col md:justify-center md:flex-row">
         <div className="min-w-[230px] lg:mx-9">
           <div className="font-bold text-xl text-green-600 mb-3">
             About Us
@@ -66,7 +67,9 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="mb-6 min-w-[190px] lg:mx-8 ">
+        </div>
+        <div className=" flex flex-col  md:flex-row md:justify-center">
+        <div className="mb-6 md:min-w-[230px]  xl:min-w-[190px] lg:mx-8 ">
           <div className="font-bold text-xl text-green-600 mb-3">
             News & Media
           </div>
@@ -95,7 +98,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="mb-6 min-w-[180px] lg:mx-8 ">
+        <div className="mb-6 md:min-w-[230px]  xl:min-w-[180px] lg:mx-8 ">
           <div className="font-bold text-xl text-green-600 mb-3">
             Quick Links
           </div>
@@ -124,6 +127,7 @@ export default function About() {
             <div className="text-stone-500 font-medium text-base mb-3">
               Contact Us
             </div>
+          </div>
           </div>
         </div>
       </div>

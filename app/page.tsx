@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Head from 'next/head';
 
 export default function Home() {
   return (
+    <>
     <main className="flex min-h-screen flex-col items-center text-xs ">
       <div className="intro h-full bg-[url('/introBg.png')] bg-cover bg-[#e8ffdb] lg:bg-cover">
         <div className="introtext w-64 relative left-12 lg: top-10 lg:left-40">
@@ -21,9 +23,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" aboutcontent pt-5 flex flex-col max-w-[1210px] px-11 lg:pl-0">
-        <div className="flex flex-col pb-20 lg:flex-row">
-          <div className="flex flex-col text-justify  mt-10 basis-3/5 max-w-[678px] mx-auto lg:mr-10">
+      <div className=" aboutcontent pt-5 flex flex-col max-w-[1210px] px-6 lg:px-11 lg:pl-0">
+        <div className="flex flex-col pb-8 lg:pb-20 lg:flex-row">
+          <div className="flex flex-col text-justify  basis-3/5 max-w-[678px] mx-auto lg:mr-10 lg:mt-10 ">
             <div className="objective mb-6">
               With the main objective of providing institutional credit for
               enhancing the production and productivity of the agricultural
@@ -41,7 +43,7 @@ export default function Home() {
               "Sampurna Banking Suvidha sahitko Tapai Hamro Ghar Aanganko Bank
               (The bank with complete banking solution at your own door step)"
             </div>
-            <div className="works mb-6">
+            <div className="works  lg:mb-6">
               The bank worked as a premier rural credit institution since its
               establishment, contributing substantial agricultural credit supply
               in the country. Rural finance has been the principal operational
@@ -54,7 +56,7 @@ export default function Home() {
             <img src="/officebuilding.png" alt="building" className="officebuilding" />
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col text-justify  lg:flex-row">
           <div className="goal basis-1/3 mb-4 lg:mr-8 ">
             <img src="/vision.png" alt="vision" />
             <div className="goaltitle">Vision</div>
@@ -81,5 +83,6 @@ export default function Home() {
         </div>
       </div>
     </main>
+    </>
   );
 }

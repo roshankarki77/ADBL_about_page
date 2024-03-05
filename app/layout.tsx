@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Head from 'next/head';
-import { Ubuntu } from "next/font/google";
-
-// const ubuntu = Ubuntu();
+import Head from "next/head";
+import Header from "./components/common/Header";
+import SideMenu from "./components/common/SideMenu";
+import Footer from "./components/common/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,14 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
-    <Head>
+      <Head>
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Ubuntu"
         />
-    </Head>
-      <body className={inter.className}>{children}</body>
+      </Head>
+      <body className={inter.className}>
+        <Header />
+        <SideMenu />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from 'next/head';
+import About from "@/components/about";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
           <div className="introduction font-bold mb-3">Introduction</div>
           <div className="introlinks list-none flex">
             <li>
-              <a href="#" className="mr-2 text-green-800">Home</a>
+              <a href="/" className="mr-2 text-green-800">Home</a>
             </li>
             <span className="mr-2 text-green-800">/</span>
             <li>
@@ -18,13 +19,13 @@ export default function Home() {
             </li>
             <span className="mr-2 text-slate-800">/</span>
             <li>
-              <a href="#" className="ml-2 text-slate-500">Introduction</a>
+              <a href="/team" className="ml-2 text-slate-500">Introduction</a>
             </li>
           </div>
         </div>
       </div>
       <div className=" aboutcontent pt-5 flex flex-col max-w-[1210px] px-6 lg:px-11 lg:pl-0">
-        <div className="flex flex-col pb-8 lg:pb-20 lg:flex-row">
+        <div className="flex flex-col pb-8 lg:pb-20 lg:flex-row lg:ml-16 xl:ml-0">
           <div className="flex flex-col text-justify  basis-3/5 max-w-[678px] mx-auto lg:mr-10 lg:mt-10 ">
             <div className="objective mb-6">
               With the main objective of providing institutional credit for
@@ -83,6 +84,7 @@ export default function Home() {
         </div>
       </div>
     </main>
+    <About />
     </>
   );
 }

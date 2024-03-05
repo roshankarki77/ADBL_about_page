@@ -235,7 +235,7 @@ const LoanSection = () => {
 
                 <Button variant={"default"}>
                   Submit
-                  <TriangleRightIcon />
+                  <TriangleRightIcon className="text-2xl" />
                 </Button>
               </div>
             </form>

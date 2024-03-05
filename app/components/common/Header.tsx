@@ -44,7 +44,7 @@ const Header = (props: Props) => {
                 <span className="ml-1">Business Banking</span>
               </Link>
             </li>
-            <li className="text-sm md:text-base ">
+            <li className="text-sm md:text-base">
               <Link
                 href="#"
                 className="flex items-center hover:text-custom-red"
@@ -69,7 +69,7 @@ const Header = (props: Props) => {
             </li>
             <li className="">
               <Select>
-                <SelectTrigger className="w-[65px] border-custom-green text-xs md:text-sm lg:text-base">
+                <SelectTrigger className="w-[65px] border-custom-green text-xs md:text-sm lg:text-base ">
                   <SelectValue placeholder="EN" />
                 </SelectTrigger>
                 <SelectContent className="min-w-[4rem] sm:min-w-[6]">

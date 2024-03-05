@@ -82,10 +82,7 @@ body {
 .goal>img{
   width: 16%;
 }
-.officeicon>img{
-  height: 270px;
-  height: 270px;
-}
+
 .officeicon{ 
   display: flex;
   justify-content: center; 

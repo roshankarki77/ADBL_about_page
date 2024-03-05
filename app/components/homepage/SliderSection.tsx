@@ -9,7 +9,7 @@ import { Button } from "../ui/button";
 const SliderSection = () => {
   return (
     <>
-      <div className="w-full h-48 md:h-80 relative">
+      <div className="w-full h-48 md:h-[480px] relative">
         <Image
           src={"/images/slider-image.png"}
           alt="slider-image"
@@ -17,15 +17,12 @@ const SliderSection = () => {
           objectFit="fill"
           priority={true}
         />
-        <div className="bg-white w-96 h-64 absolute top-10 right-24 2xl:right-72 rounded-sm p-4 hidden md:block">
-          <h2 className="mb-2 text-lg">Agriculture & MSME Credit</h2>
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-            error consectetur vel excepturi exercitationem dolores ipsum debitis
-            quae eaque earum, soluta id, neque, libero recusandae? Eos eveniet
-            ipsam dolor amet.
+        <div className="bg-white w-96 h-64 absolute top-10 right-24 xl:w-[600px] 2xl:right-72 rounded-xl p-12 hidden md:block">
+          <h2 className="mb-2 font-bold text-green-900 text-lg lg:text-xl xl:text-3xl">Agriculture & MSME Credit</h2>
+          <p className="text-justify text-xl">
+          बढ्दो जनसंख्या, आहार विहारको परिवर्तन, तीव्र गतिमा विकसित शहरीकरण जस्ता कारणबाट देशमा खाद्द सामग्रीहरुको माग दिनानुदिन बढिरहेको सर्वविदितै छ |
           </p>
-          <Button className="mt-2 text-white bg-red-600 rounded-md">
+          <Button className="mt-4 text-white bg-custom-red  rounded-3xl" variant={"destructive"}>
             Read more
             <TriangleRightIcon />
           </Button>

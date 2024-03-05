@@ -15,10 +15,10 @@ const PersonalBankingPage = (props: Props) => {
     <main className="min-h-screen">
       <SliderSection />
       <OfferSection />
-      <LoanSection />
       <ServiceSection />
-      <Banner />
       <SavingDeposit />
+      <LoanSection />
+      <Banner />
       <EMICalculator />
       <Faq />
     </main>

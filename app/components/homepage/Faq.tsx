@@ -10,26 +10,25 @@ import {
 
 const Faq = () => {
   return (
-    <section className="my-8 bg-[#F5FFEF]">
-      <div className="mx-auto w-[85%] pt-8">
-        <div className="flex flex-wrap">
-          <div className="flex-1">
-            <h2 className="text-xl font-semibold">
-              Information and Grievance Officers
-            </h2>
-
+    <section className="my-8 ">
+      <div className="mx-auto w-[95%] sm:w-[85%] pt-8 2xl:max-w-[1320px]">
+        <div className="flex flex-wrap"> 
+          <h2 className="text-xl font-semibold">
+            Information and Grievance Officers
+          </h2>
+          <div className="flex flex-col   w-full">
             <div className="flex flex-col ">
-              <div className="mt-8 flex justify-between rounded border-2 border-[#CCCCCC] px-4 py-6 mr-4">
-                <Image
+              <div className="mt-8 flex flex-col lg:flex-row flex-wrap justify-between rounded border-2 border-[#CCCCCC] pl-4">
+                <img
                   src={"/images/info-officer.png"}
                   alt="information officer"
-                  width={100}
-                  height={100}
-                  className="overflow-hidden rounded-full"
+                  // width={100}
+                  // height={100}
+                  className="overflow-hidden rounded-full mx-auto"
                 />
-                <div className="">
-                  <h3 className="text-custom-green">
-                    Information Officer & Spokeper
+                <div className=" mt-8 ">
+                  <h3 className="text-custom-green text-xl">
+                    Information Officer & Spokeperson
                   </h3>
 
                   <h2 className="text-normal py-2 font-semibold">
@@ -46,20 +45,21 @@ const Faq = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="mt-8 flex h-auto  justify-between  rounded border-2 border-[#CCCCCC] px-4 py-6 mr-4">
-                <Image
+              <div className="mt-8 flex flex-col lg:flex-row flex-wrap justify-between rounded border-2 border-[#CCCCCC] pl-4">
+                <img
                   src={"/images/grievance.png"}
                   alt="information officer"
-                  width={100}
-                  height={100}
-                  className="overflow-hidden rounded-full"
+                  // width={100}
+                  // height={100}
+                  className="overflow-hidden rounded-full mx-auto"
                 />
-                <div className="">
-                  <h3 className="text-custom-green">Grievance Officer</h3>
+                <div className=" mt-8 ">
+                  <h3 className="text-custom-green text-xl">
+                  Grievance Officer
+                  </h3>
 
                   <h2 className="text-normal py-2 font-semibold">
-                    Mr. Hira Bahadur Ale
+                  Mr. Hira Bahadur Ale
                   </h2>
                   <div className="flex flex-col">
                     <span className="text-slate-500">
@@ -76,7 +76,7 @@ const Faq = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1">
+          <div className="lg:flex-1 w-full mt-16">
             <h2 className="text-xl font-semibold">
               Frequently Asked Questions
             </h2>

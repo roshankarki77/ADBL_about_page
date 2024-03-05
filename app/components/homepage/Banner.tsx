@@ -5,13 +5,13 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <section className="my-8">
-      <div className="w-[85%] mx-auto">
-        <div className="flex">
-          <div className="flex-1">
-            <img src={"/images/mobile-app.png"} alt="mobile app" />
+    <section className="my-8 ">
+      <div className="w-[95%] sm:w-[85%] mx-auto 2xl:max-w-[1320px]">
+        <div className="flex flex-wrap">
+          <div className="lg:flex-1 w-full"  >
+            <img src={"/images/mobile-app.png"} className="w-full" alt="mobile app" />
           </div>
-          <div className="flex-1 flex flex-col pt-32 space-y-6">
+          <div className=" flex lg:flex-1 flex-col pt-8 lg:pl-8 lg:pt-0 space-y-6  justify-center">
             <h2 className="text-2xl font-semibold">
               Enjoy easy,secure,convenient banking with ADBL mobile application
             </h2>

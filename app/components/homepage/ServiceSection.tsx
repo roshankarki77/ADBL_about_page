@@ -6,11 +6,11 @@ import { MdPhoneAndroid } from "react-icons/md";
 
 const ServiceSection = () => {
   return (
-    <section className="my-8 h-[750px] bg-[#F5FFEF]">
-      <div className="w-[85%] mx-auto pt-8">
+    <section className=" pb-8  bg-[#F5FFEF] ">
+      <div className="w-[95%] md:w-[85%] mx-auto pt-8 2xl:max-w-[1320px]">
         <h2 className="text-xl font-semibold">ADBL Services</h2>
         <div className="flex items-center justify-between">
-          <p className="mt-2 text-sm text-slate-500">
+          <p className="mt-2 text-sm text-slate-500 pr-4 ">
             Digital banking enables a bank's customers to access banking
             products and services via an electronic/online platform
           </p>
@@ -20,7 +20,7 @@ const ServiceSection = () => {
           </div>
         </div>
 
-        <div className="grid mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-4  gap-8 ">
+        <div className="grid mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-8 ">
           <div className="h-60  rounded-lg p-4 bg-white relative">
             <h2 className="text-custom-green text-xl mt-8">Mobile Banking</h2>
             <p className="text-sm text-gray-500 mt-2">

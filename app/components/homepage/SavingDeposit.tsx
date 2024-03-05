@@ -55,12 +55,12 @@ const SavingDeposit = () => {
   };
   return (
     <>
-      <section className="mt-16">
-        <div className="mx-auto w-[85%]">
-          <h2 className="mt-8 text-2xl font-semibold">Saving and Deposit</h2>
+      <section className="mt-8">
+        <div className="mx-auto w-[95%] sm:w-[85%] 2xl:max-w-[1320px]">
+          <h2 className=" text-2xl font-semibold">Saving and Deposit</h2>
 
           <div className="flex items-center justify-between">
-            <p className="mt-4 text-sm text-[#666666]">
+            <p className="mt-4 pr-4 text-sm text-[#666666]">
               Managing your personal finances and building a savings account is
               all about big picture and staying motivated
             </p>
@@ -70,16 +70,16 @@ const SavingDeposit = () => {
             </div>
           </div>
 
-          <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 ">
+          <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4">
             <div className="relative">
               <img
                 src={"/images/kisan2.webp"}
                 alt="saving image"
                 // width={300}
                 // height={600}
-                className="w-full rounded-lg"
+                className="rounded-lg"
               />
-              <div className="absolute -bottom-4 right-8 w-44 rounded bg-white p-2 text-center shadow-sm shadow-slate-400 ">
+              <div className="absolute -bottom-4 left-0 right-0 mx-auto w-44 rounded bg-white p-2 text-center shadow-sm shadow-slate-400">
                 BalBachat Khata
               </div>
             </div>
@@ -92,7 +92,7 @@ const SavingDeposit = () => {
                 height={600}
                 className="w-full rounded-lg"
               />
-              <div className="absolute -bottom-4 right-8 w-44 rounded bg-custom-green p-2 text-center text-white shadow-sm shadow-slate-400">
+              <div className="absolute -bottom-4 bg-custom-green left-0 right-0 mx-auto w-44 rounded  p-2 text-center shadow-sm shadow-slate-400 text-white">
                 BalBachat Khata
               </div>
 
@@ -109,7 +109,7 @@ const SavingDeposit = () => {
                 height={600}
                 className="w-full rounded-lg"
               />
-              <div className="absolute -bottom-4 right-8 w-44 rounded bg-white p-2 text-center shadow-sm shadow-slate-400 ">
+              <div className="absolute -bottom-4 left-0 right-0 mx-auto w-44 rounded bg-white p-2 text-center shadow-sm shadow-slate-400">
                 BalBachat Khata
               </div>
             </div>
@@ -122,7 +122,7 @@ const SavingDeposit = () => {
                 height={600}
                 className="w-full rounded-lg"
               />
-              <div className="absolute -bottom-4 right-8 w-44 rounded bg-white p-2 text-center shadow-sm shadow-slate-400 ">
+              <div className="absolute -bottom-4 left-0 right-0 mx-auto w-44 rounded bg-white p-2 text-center shadow-sm shadow-slate-400 ">
                 BalBachat Khata
               </div>
             </div>

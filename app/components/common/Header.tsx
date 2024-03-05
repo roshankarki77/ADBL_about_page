@@ -26,9 +26,9 @@ const Header = (props: Props) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <>
-      <header className="xl:h:16 flex h-36 bg-white md:h-32 lg:h-32 ">
+      <header className="xl:h-20 flex h-36 bg-white md:h-32 lg:h-32 ">
         <div className=" mx-auto flex w-full max-w-[95%] md:max-w-[85%] 2xl:max-w-[1320px] flex-wrap items-center justify-between px-0 py-2">
-          <ul className="flex items-center space-x-12">
+          <ul className="flex items-center space-x-6 sm:space-x-12">
             <li className=" border-b-2 border-custom-red pb-1 text-sm  text-custom-red hover:text-custom-red md:text-base ">
               <Link href="#" className="flex items-center">
                 <IoPersonOutline />
@@ -60,7 +60,7 @@ const Header = (props: Props) => {
               <span className="mr-1 text-sm lg:text-base">Online Application</span>
               <GoTriangleDown />
             </li>
-            <li className="flex cursor-pointer items-center rounded-full bg-custom-red px-4 py-2 text-xs text-white md:text-sm lg:text-base ">
+            <li className="flex cursor-pointer items-center rounded-full bg-custom-red hover:bg-custom-light-red outline-none  border-none px-4 py-2 text-xs text-white md:text-sm lg:text-base ">
               <span className="mr-1"> Login</span>
               <GoTriangleDown />
             </li>
@@ -88,7 +88,7 @@ const Header = (props: Props) => {
             <Image
               src={"/images/adbl-logo.png"}
               alt={"logo"}
-              width={200}
+              width={300}
               height={200}
               className={"object-contain"}
             />

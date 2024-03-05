@@ -5,9 +5,9 @@ import { TriangleRightIcon } from "@radix-ui/react-icons";
 const LoanSection = () => {
   return (
     <>
-      <div className="my-8  bg-[#F5FFEF] ">
-        <div className="mx-auto w-[85%]">
-          <h2 className="pt-6 text-2xl font-semibold ">
+      <div className="my-8  bg-[#F5FFEF] pb-8">
+        <div className="mx-auto w-[95%] sm:w-[85%] 2xl:max-w-[1320px]">
+          <h2 className="pt-8 text-2xl font-semibold ">
             Are you looking for loan ?
           </h2>
           <p className="mt-4 text-sm text-[#666666]">
@@ -15,31 +15,60 @@ const LoanSection = () => {
             you need your financial support
           </p>
 
-          <section className="item-center mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
+          <section className="justify-items-center mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
             <div className="relative">
               <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
-                image
+                <img
+                  src="/images/looking1.png"
+                  alt=""
+                  className="rounded-full"
+                />
               </div>
               <div className="absolute -bottom-4 left-0 w-44 border-b-4 border-custom-green pb-4 text-center "></div>
             </div>
             <div className="relative">
               <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
-                image
+                <img
+                  src="/images/looking1.png"
+                  alt=""
+                  className="rounded-full"
+                />
               </div>
             </div>
             <div className="relative">
               <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
-                image
+                <img
+                  src="/images/looking1.png"
+                  alt=""
+                  className="rounded-full"
+                />
               </div>
             </div>
             <div className="relative">
               <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
-                image
+                <img
+                  src="/images/looking1.png"
+                  alt=""
+                  className="rounded-full"
+                />
               </div>
             </div>
             <div className="relative">
               <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
-                image
+                <img
+                  src="/images/looking1.png"
+                  alt=""
+                  className="rounded-full"
+                />
+              </div>
+            </div>
+            <div className="relative">
+              <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
+                <img
+                  src="/images/looking1.png"
+                  alt=""
+                  className="rounded-full"
+                />
               </div>
             </div>
           </section>
@@ -47,8 +76,8 @@ const LoanSection = () => {
           {/* striaght line */}
           <div className="border-b-2 border-gray-300 pb-4"></div>
 
-          <section className="mt-8 flex">
-            <div className="flex-1 ">
+          <section className="mt-8 flex flex-wrap">
+            <div className="md:flex-1">
               <img src="/images/kisan.png" alt="farmer image" />
             </div>
             <div className="flex-1 p-2">
@@ -58,7 +87,7 @@ const LoanSection = () => {
                 eveniet ea officia.
               </p>
               <h2 className="mt-4">Types of business loan</h2>
-              <ul className="mt-2">
+              <ul className="mt-2 ml-5">
                 <li className="list-disc text-[#666666]">Secured loans</li>
                 <li className="list-disc text-[#666666]">Unsecured loans</li>
                 <li className="list-disc text-[#666666]">
@@ -76,8 +105,8 @@ const LoanSection = () => {
                 Exercitationem, quibusdam.
               </p>
 
-              <div className="mt-4">
-                <Button variant={"default"} className="mr-2">
+              <div className="mt-4 grid grid-cols-1 gap-4 w-48 sm:grid-cols-2 sm:w-80 lg:w-96">
+                <Button variant={"default"}  className="">
                   View Details
                   <TriangleRightIcon />
                 </Button>
@@ -92,10 +121,10 @@ const LoanSection = () => {
       </div>
 
       {/* loan form section */}
-      <section className="mt-16  ">
-        <div className="mx-auto flex w-[85%]">
+      <section className="mt-8 ">
+        <div className="mx-auto flex w-[95%] sm:w-[85%] flex-wrap 2xl:max-w-[1320px]">
           {/* left */}
-          <div className="flex-1 p-2">
+          <div className="lg:flex-1 p-2">
             <h2 className="text-lg font-semibold leading-6">
               We usually follow 4 steps to get a better business loans.
             </h2>
@@ -105,42 +134,42 @@ const LoanSection = () => {
                 <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-custom-green text-custom-green">
                   1
                 </div>
-                <div className="mx-4 h-20  w-0.5 bg-custom-green"></div>
+                <div className="mx-4 h-24  w-0.5 bg-custom-green"></div>
                 <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-custom-green text-custom-green">
                   2
                 </div>
-                <div className="mx-4 h-20  w-0.5 bg-custom-green"></div>
+                <div className="mx-4 h-24  w-0.5 bg-custom-green"></div>
                 <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-custom-green text-custom-green">
                   3
                 </div>
-                <div className="mx-4 h-20  w-0.5 bg-custom-green"></div>
+                <div className="mx-4 h-24  w-0.5 bg-custom-green"></div>
                 <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-custom-green text-custom-green">
                   4
                 </div>
               </div>
               <div className="flex-0.8 ml-8  w-full">
-                <div className="flex h-24  flex-wrap">
+                <div className="flex h-28  flex-wrap">
                   <h2 className="font-semibold">Apply in 10 minutes</h2>
                   <p className="">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Corrupti, molestiae. asdfas asfds
                   </p>
                 </div>
-                <div className="mt-4 flex h-24 flex-wrap">
+                <div className="mt-4 flex h-28 flex-wrap">
                   <h2 className="font-semibold">Hear from us in 24 hour</h2>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Corrupti, molestiae.loream assdf asdf gasfs
                   </p>
                 </div>
-                <div className="mt-4 flex h-24 flex-wrap">
+                <div className="mt-4 flex h-28 flex-wrap">
                   <h2 className="font-semibold">A decision in 24 hours</h2>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Corrupti, molestiae.
                   </p>
                 </div>
-                <div className="mt-4 flex h-24 flex-wrap">
+                <div className="mt-4 flex h-28 flex-wrap">
                   <h2 className="font-semibold">Your loan is funded</h2>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -152,7 +181,7 @@ const LoanSection = () => {
           </div>
 
           {/* right */}
-          <div className="flex-1">
+          <div className="flex-1 pt-4 lg:pt-0">
             <form
               action=""
               className="m-2 rounded-lg p-4 shadow shadow-black/60"
@@ -233,9 +262,9 @@ const LoanSection = () => {
                   </div>
                 </div>
 
-                <Button variant={"default"}>
+                <Button variant={"default"} size={"default"} className="rounded-full">
                   Submit
-                  <TriangleRightIcon className="text-2xl" />
+                  <TriangleRightIcon />
                 </Button>
               </div>
             </form>

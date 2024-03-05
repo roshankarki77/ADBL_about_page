@@ -20,12 +20,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Ubuntu"
-        />
-      </Head>
       <body className={inter.className}>
         <Header />
         <SideMenu />

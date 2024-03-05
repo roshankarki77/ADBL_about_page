@@ -94,7 +94,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <About />
+      {/* <About /> */}
     </>
   );
 }

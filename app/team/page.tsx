@@ -10,7 +10,7 @@ export default function Team() {
             <div className="introduction font-bold mb-3">Team</div>
             <div className="introlinks list-none flex">
               <li>
-                <a href="#" className="mr-2 text-green-800">
+                <a href="/" className="mr-2 text-green-800">
                   Home
                 </a>
               </li>

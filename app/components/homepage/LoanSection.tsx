@@ -5,7 +5,7 @@ import { TriangleRightIcon } from "@radix-ui/react-icons";
 const LoanSection = () => {
   return (
     <>
-      <div className="my-8 h-[908px] bg-[#F5FFEF] ">
+      <div className="my-8  bg-[#F5FFEF] ">
         <div className="mx-auto w-[85%]">
           <h2 className="pt-6 text-2xl font-semibold ">
             Are you looking for loan ?
@@ -26,25 +26,21 @@ const LoanSection = () => {
               <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
                 image
               </div>
-              {/* <div className="border-b-4 w-44 border-custom-green pb-4 text-center absolute -bottom-4 right-0 "></div> */}
             </div>
             <div className="relative">
               <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
                 image
               </div>
-              {/* <div className="border-b-4 w-44 border-custom-green pb-4 text-center absolute -bottom-4 right-0 "></div> */}
             </div>
             <div className="relative">
               <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
                 image
               </div>
-              {/* <div className="border-b-4 w-44 border-custom-green pb-4 text-center absolute -bottom-4 right-0 "></div> */}
             </div>
             <div className="relative">
               <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
                 image
               </div>
-              {/* <div className="border-b-4 w-44 border-custom-green pb-4 text-center absolute -bottom-4 right-0 "></div> */}
             </div>
           </section>
 
@@ -96,7 +92,7 @@ const LoanSection = () => {
       </div>
 
       {/* loan form section */}
-      <section className="mt-16 flex bg-red-500">
+      <section className="mt-16  ">
         <div className="mx-auto flex w-[85%]">
           {/* left */}
           <div className="flex-1 p-2">

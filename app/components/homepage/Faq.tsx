@@ -19,7 +19,7 @@ const Faq = () => {
             </h2>
 
             <div className="flex flex-col ">
-              <div className="mt-8 flex h-auto justify-between  rounded border-2 border-[#CCCCCC] px-4 py-6 ">
+              <div className="mt-8 flex justify-between rounded border-2 border-[#CCCCCC] px-4 py-6 mr-4">
                 <Image
                   src={"/images/info-officer.png"}
                   alt="information officer"
@@ -47,7 +47,7 @@ const Faq = () => {
                 </div>
               </div>
 
-              <div className="mt-8 flex h-auto  justify-between  rounded border-2 border-[#CCCCCC] px-4 py-6 ">
+              <div className="mt-8 flex h-auto  justify-between  rounded border-2 border-[#CCCCCC] px-4 py-6 mr-4">
                 <Image
                   src={"/images/grievance.png"}
                   alt="information officer"

@@ -32,7 +32,7 @@ const Header = (props: Props) => {
             <li className=" border-b-2 border-custom-red pb-1 text-sm  text-custom-red hover:text-custom-red md:text-base ">
               <Link href="#" className="flex items-center">
                 <IoPersonOutline />
-                <span className="ml-1 ">Personal Banking</span>
+                <span className="ml-1 ">Personal Banking X</span>
               </Link>
             </li>
             <li className=" text-sm md:text-base ">

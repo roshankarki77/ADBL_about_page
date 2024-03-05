@@ -4,11 +4,11 @@ import Image from "next/image";
 
 const OfferSection = () => {
   return (
-    <div className="mx-auto mt-12 w-[85%] ">
+    <div className="mx-auto mt-12 max-w-[95%] md:max-w-[85%]">
       <h2 className="text-2xl font-bold ">Offers for You</h2>
 
       <div className="mb-8 flex items-center justify-between">
-        <p className="mt-8">
+        <p className="mt-4 max-w-80">
           Explore and experience the ways we make your life better through our
           offerings
         </p>

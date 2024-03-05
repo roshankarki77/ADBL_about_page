@@ -26,13 +26,13 @@ const Header = (props: Props) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <>
-      <header className="xl:h:16 flex h-32 bg-white md:h-16 lg:h-32 ">
-        <div className=" mx-auto flex w-full max-w-[85%] flex-wrap items-center justify-between px-0 py-2">
+      <header className="xl:h:16 flex h-36 bg-white md:h-32 lg:h-32 ">
+        <div className=" mx-auto flex w-full max-w-[95%] md:max-w-[85%] 2xl:max-w-[1320px] flex-wrap items-center justify-between px-0 py-2">
           <ul className="flex items-center space-x-12">
             <li className=" border-b-2 border-custom-red pb-1 text-sm  text-custom-red hover:text-custom-red md:text-base ">
               <Link href="#" className="flex items-center">
                 <IoPersonOutline />
-                <span className="ml-1 ">Personal Banking X</span>
+                <span className="ml-1 ">Personal Banking</span>
               </Link>
             </li>
             <li className=" text-sm md:text-base ">
@@ -57,7 +57,7 @@ const Header = (props: Props) => {
 
           <ul className="mt-2 flex items-center justify-evenly space-x-2 sm:space-x-6 md:mt-0 lg:mt-0 xl:mt-0">
             <li className="text-xm flex cursor-pointer items-center rounded-full bg-custom-green px-4 py-2 text-white md:text-base lg:text-base">
-              <span className="mr-1 ">Online Application</span>
+              <span className="mr-1 text-sm lg:text-base">Online Application</span>
               <GoTriangleDown />
             </li>
             <li className="flex cursor-pointer items-center rounded-full bg-custom-red px-4 py-2 text-xs text-white md:text-sm lg:text-base ">
@@ -83,8 +83,8 @@ const Header = (props: Props) => {
       </header>
 
       <nav className="flex h-24 items-center bg-custom-green ">
-        <div className=" mx-auto flex w-full max-w-[85%] items-center justify-between">
-          <div className="flex cursor-pointer items-center">
+        <div className=" mx-auto flex w-full max-w-[95%] md:max-w-[85%] 2xl:max-w-[1320px] items-center justify-between">
+          <div className="flex cursor-pointer items-center  ">
             <Image
               src={"/images/adbl-logo.png"}
               alt={"logo"}
@@ -93,8 +93,8 @@ const Header = (props: Props) => {
               className={"object-contain"}
             />
           </div>
-          <div className={`hidden items-center text-white lg:flex`}>
-            <ul className="flex items-center justify-center ">
+          <div className=" items-center text-white hidden lg:ml-4  xl:flex">
+            <ul className="flex items-center justify-center lg:space-x-4 xl:space-x-12">
               <li className="flex cursor-pointer hover:text-custom-light-green">
                 <span className=" text-xs sm:text-sm md:text-base lg:text-base ">
                   Savings and Deposits
@@ -121,7 +121,7 @@ const Header = (props: Props) => {
 
           <div
             className={`${
-              isNavOpen ? "hidden" : "block space-y-2 md:hidden"
+              isNavOpen ? "hidden" : "block space-y-2 xl:hidden"
             } transition delay-150 ease-in-out`}
             onClick={() => setIsNavOpen((prev) => !prev)}
           >

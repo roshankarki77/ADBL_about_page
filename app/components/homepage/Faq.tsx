@@ -12,18 +12,18 @@ const Faq = () => {
   return (
     <section className="my-8 ">
       <div className="mx-auto w-[95%] sm:w-[85%] pt-8 2xl:max-w-[1320px]">
-        <div className="flex flex-wrap"> 
-          <h2 className="text-xl font-semibold">
+        <h2 className="text-xl font-semibold">
             Information and Grievance Officers
-          </h2>
-          <div className="flex flex-col   w-full">
+        </h2>
+        <div className="flex flex-wrap xl:flex-row"> 
+          <div className="flex flex-col">
             <div className="flex flex-col ">
               <div className="mt-8 flex flex-col lg:flex-row flex-wrap justify-between rounded border-2 border-[#CCCCCC] pl-4">
                 <img
                   src={"/images/info-officer.png"}
                   alt="information officer"
-                  // width={100}
-                  // height={100}
+                  width={100}
+                  height={100}
                   className="overflow-hidden rounded-full mx-auto"
                 />
                 <div className=" mt-8 ">
@@ -76,7 +76,7 @@ const Faq = () => {
               </div>
             </div>
           </div>
-          <div className="lg:flex-1 w-full mt-16">
+          <div className="mt-16">
             <h2 className="text-xl font-semibold">
               Frequently Asked Questions
             </h2>

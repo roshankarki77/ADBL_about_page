@@ -95,8 +95,21 @@ body {
 
 .card {
   @apply h-80 w-72 rounded-lg border border-card-foreground bg-card text-card-foreground;
-  width:100%;
+  width: 100%;
   height: auto;
+}
+
+.hoverGreenEffect {
+  @apply ease-in-out hover:bg-custom-light-green hover:duration-300;
+}
+.hoverRedEffect {
+  @apply ease-in-out hover:bg-custom-light-red hover:duration-300;
+}
+.hoverTextRedEffect {
+  @apply ease-in-out hover:text-custom-light-red hover:duration-300;
+}
+.hoverTextGreenEffect {
+  @apply ease-in-out hover:text-custom-light-green hover:duration-300;
 }
 
 @layer utilities {

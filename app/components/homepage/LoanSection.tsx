@@ -1,8 +1,10 @@
 import React from "react";
 import { Button } from "@/app/components/ui/button";
 import { TriangleRightIcon } from "@radix-ui/react-icons";
+import { useState } from "react";
 
 const LoanSection = () => {
+
   return (
     <>
       <div className="my-8  bg-[#F5FFEF] pb-8">
@@ -16,36 +18,21 @@ const LoanSection = () => {
           </p>
 
           <section className="justify-items-center mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
-            <div className="relative">
-              <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
+            <div className="relative ">
+              <div className="grid h-24 w-24 place-content-center rounded-full bg-white mx-auto">
                 <img
                   src="/images/looking1.png"
                   alt=""
                   className="rounded-full"
                 />
               </div>
-              <div className="absolute -bottom-4 left-0 w-44 border-b-4 border-custom-green pb-4 text-center "></div>
-            </div>
-            <div className="relative">
-              <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
-                <img
-                  src="/images/looking1.png"
-                  alt=""
-                  className="rounded-full"
-                />
+              <div className="text-center font-bold mt-4">
+                Personal Loan
               </div>
+              <div className="absolute -bottom-4 left-0 w-full border-b-4 border-custom-green pb-4 text-center "></div>
             </div>
             <div className="relative">
-              <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
-                <img
-                  src="/images/looking1.png"
-                  alt=""
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <div className="relative">
-              <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
+              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
                 <img
                   src="/images/looking1.png"
                   alt=""
@@ -54,7 +41,7 @@ const LoanSection = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
+              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
                 <img
                   src="/images/looking1.png"
                   alt=""
@@ -63,7 +50,25 @@ const LoanSection = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="grid h-44 w-44 place-content-center rounded-full bg-white">
+              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
+                <img
+                  src="/images/looking1.png"
+                  alt=""
+                  className="rounded-full"
+                />
+              </div>
+            </div>
+            <div className="relative">
+              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
+                <img
+                  src="/images/looking1.png"
+                  alt=""
+                  className="rounded-full"
+                />
+              </div>
+            </div>
+            <div className="relative">
+              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
                 <img
                   src="/images/looking1.png"
                   alt=""

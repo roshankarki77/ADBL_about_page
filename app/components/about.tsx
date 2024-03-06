@@ -5,7 +5,7 @@ export default function About() {
     <div className="flex mt-24 px-8 justify-center flex-col  flex-wrap lg:flex-row ">
       <div className="flex flex-col flex-wrap md:justify-center  lg:flex-row lg:mr-4">
         <div className=" flex flex-col md:justify-center md:flex-row">
-        <div className="min-w-[230px] lg:mx-9">
+        <div className="mb-6 min-w-[230px] lg:mx-9">
           <div className="font-bold text-xl text-green-600 mb-3">
             About Us
           </div>

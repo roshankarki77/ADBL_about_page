@@ -55,7 +55,7 @@ const SavingDeposit = () => {
   };
   return (
     <>
-      <section className="mt-8">
+      <section className="mt-8 mb-16">
         <div className="mx-auto w-[95%] sm:w-[85%] 2xl:max-w-[1320px]">
           <h2 className=" text-2xl font-semibold">Saving and Deposit</h2>
 

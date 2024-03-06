@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const OfferSection = () => {
   return (
-    <div className="mx-auto mt-12 max-w-[95%] md:max-w-[85%] 2xl:max-w-[1320px]">
+    <div className="mx-auto my-12 max-w-[95%] md:max-w-[85%] 2xl:max-w-[1320px]">
       <h2 className="text-2xl font-bold ">Offers for You</h2>
 
       <div className="mb-8 flex items-center justify-between">

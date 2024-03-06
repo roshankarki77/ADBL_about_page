@@ -37,11 +37,11 @@ const SliderSection = () => {
             </div>
           </div>
           <div className=" items-center space-x-1 flex md:space-x-4 w-full justify-center">
-            <span>notice 1</span>
+            <span>मौजुदा सूचीमा सूची दर्ता गराउने बारेको सूचना                      </span>
             <span>/</span>
-            <span>notice 2</span>
+            <span>सिलवन्दी दरभाउपत्र स्वीकृत भएको सूचना</span>
             <span>/</span>
-            <span>notice 3</span>
+            <span>16th AGM Minute 2079 Chaitra 14</span>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ const OfferSection = () => {
       <h2 className="text-2xl font-bold ">Offers for You</h2>
 
       <div className="mb-8 flex items-center justify-between">
-        <p className="mt-4 max-w-96 md:max-w-[1800px] pr-8">
+        <p className="mt-4 max-w-96 pr-8 md:max-w-[1800px]">
           Explore and experience the ways we make your life better through our
           offerings
         </p>
@@ -19,42 +19,69 @@ const OfferSection = () => {
       </div>
 
       <div className="grid-col-1 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="card border-none  outline-none ">
-          <div className="relative w-full">
+        <div className="card transform border-none outline-none ">
+          <div className="relative w-full transform cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
             <img
+              className="w-full"
               src={"/images/nari-bachat.png"}
               alt="nari bachat"
             />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 hover:opacity-100">
+              <p className="text-center text-lg text-white">
+                Special discount offer on the occasion of Teej Festival
+              </p>
+            </div>
           </div>
-          <p className="mt-2 text-base">
-            Special discount offer on the occasion of Teej Festival
-          </p>
+          <p className="mt-2 text-base">Nari Bachaat</p>
         </div>
-        <div className="card overflow-hidden border-none outline-none">
-          <div className="relative ">
-            <img src={"/images/img2.png"} alt="nari bachat"  />
+
+        <div className="card transform border-none outline-none ">
+          <div className="relative w-full transform cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+            <img
+              className="w-full"
+              src={"/images/img2.png"}
+              alt="nari bachat"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 hover:opacity-100">
+              <p className="text-center text-lg text-white">
+                Easy fund transfer send and received via ADBL Smart Banking
+              </p>
+            </div>
           </div>
-          <p className="mt-2 text-base">
-            Easy fund transfer send and received via ADBL Smart Banking
-          </p>
+          <p className="mt-2 text-base">ADBL Smart Banking</p>
         </div>
-        <div className="card overflow-hidden border-none outline-none">
-          <div className="relative ">
-            <img src={"/images/img3.png"} alt="nari bachat"  />
+
+        <div className="card transform border-none outline-none ">
+          <div className="relative w-full transform cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+            <img
+              className="w-full"
+              src={"/images/img3.png"}
+              alt="nari bachat"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 hover:opacity-100">
+              <p className="text-center text-lg text-white">
+                ADBL offers personal auto loan at Auto Nada Show
+              </p>
+            </div>
           </div>
-          <p className="mt-2 text-base">
-            ADBL offers personal auto loan at Auto Nada Show
-          </p>
+          <p className="mt-2 text-base">Personal Auto Loan</p>
         </div>
-        <div className="card overflow-hidden border-none outline-none">
-          <div className="relative ">
-            <img src={"/images/img3.png"} alt="nari bachat"  />
+
+        <div className="card transform border-none outline-none ">
+          <div className="relative w-full transform cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+            <img
+              className="w-full"
+              src={"/images/img4.png"}
+              alt="nari bachat"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 hover:opacity-100">
+              <p className="text-center text-lg text-white">
+                Smart way to send and receive money from world wide
+              </p>
+            </div>
           </div>
-          <p className="mt-2 text-base">
-            Smart way to send and receive money from world wide
-          </p>
+          <p className="mt-2 text-base">ADBL Money Transfer</p>
         </div>
-        
       </div>
     </div>
   );

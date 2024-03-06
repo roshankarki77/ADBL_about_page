@@ -12,22 +12,23 @@ const Faq = () => {
   return (
     <section className="my-8 ">
       <div className="mx-auto w-[95%] sm:w-[85%] pt-8 2xl:max-w-[1320px]">
-        <h2 className="text-xl font-semibold">
+        
+        <div className="flex flex-wrap xl:justify-between flex-col xl:flex-row"> 
+          <div className="flex flex-col basis-[48%]">
+          <h2 className="text-xl font-semibold">
             Information and Grievance Officers
         </h2>
-        <div className="flex flex-wrap xl:flex-row"> 
-          <div className="flex flex-col">
-            <div className="flex flex-col ">
-              <div className="mt-8 flex flex-col lg:flex-row flex-wrap justify-between rounded border-2 border-[#CCCCCC] pl-4">
-                <img
-                  src={"/images/info-officer.png"}
-                  alt="information officer"
-                  width={100}
-                  height={100}
-                  className="overflow-hidden rounded-full mx-auto"
-                />
-                <div className=" mt-8 ">
-                  <h3 className="text-custom-green text-xl">
+              <div className="mt-8 flex flex-col lg:flex-row flex-wrap justify-between rounded border-2 border-[#CCCCCC] p-8">
+                <div className="basis-1/4 w-full">
+                  <img
+                     src={"/images/info-officer.png"}
+                     alt="information officer"
+                     className="overflow-hidden rounded-full mx-auto"
+                     height="auto"
+                  />
+                </div>
+                <div className="mt-12 ml-12 lg:ml-0 lg:my-auto pl-4 basis-3/4 ">
+                  <h3 className="text-custom-green font-bold text-xl">
                     Information Officer & Spokeperson
                   </h3>
 
@@ -45,28 +46,27 @@ const Faq = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-8 flex flex-col lg:flex-row flex-wrap justify-between rounded border-2 border-[#CCCCCC] pl-4">
-                <img
-                  src={"/images/grievance.png"}
-                  alt="information officer"
-                  // width={100}
-                  // height={100}
-                  className="overflow-hidden rounded-full mx-auto"
-                />
-                <div className=" mt-8 ">
-                  <h3 className="text-custom-green text-xl">
+              <div className="mt-8 flex flex-col lg:flex-row flex-wrap justify-between rounded border-2 border-[#CCCCCC] p-8">
+                <div className=" basis-1/4 w-full">
+                  <img
+                     src={"/images/grievance.png"}
+                     alt="information officer"
+                     className="overflow-hidden rounded-full mx-auto"
+                     height="auto"
+                  />
+                </div>
+                <div className="my-auto basis-3/4 pl-4">
+                  <h3 className="text-custom-green font-bold text-xl">
                   Grievance Officer
                   </h3>
 
                   <h2 className="text-normal py-2 font-semibold">
                   Mr. Hira Bahadur Ale
                   </h2>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col  ">
+                    <span className="text-slate-500">Mobile: +9779851328566</span>
                     <span className="text-slate-500">
-                      Mobile: +9779851328566
-                    </span>
-                    <span className="text-slate-500">
-                      Email: gunaso@adbl.gov.np
+                    Email: gunaso@adbl.gov.np
                     </span>
                     <span className="text-slate-500">
                       Phone: +977-01-4264016(Office)
@@ -74,9 +74,9 @@ const Faq = () => {
                   </div>
                 </div>
               </div>
-            </div>
+             
           </div>
-          <div className="mt-16">
+          <div className="basis-[48%] mt-12  lg:mt-52 xl:mt-0">
             <h2 className="text-xl font-semibold">
               Frequently Asked Questions
             </h2>

@@ -55,7 +55,7 @@ const Faq = () => {
                      height="auto"
                   />
                 </div>
-                <div className="my-auto basis-3/4 pl-4">
+                <div className="mt-12 ml-12 lg:ml-0 lg:my-auto basis-3/4 pl-4">
                   <h3 className="text-custom-green font-bold text-xl">
                   Grievance Officer
                   </h3>

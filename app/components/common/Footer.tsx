@@ -11,28 +11,28 @@ const Footer = () => {
               About Us
             </div>
             <div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Introduction
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Organizational Structure
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Capital Ownership Structure
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Board of Directors
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Management Team
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Department Head
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Financial Literacy Program
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Customer Care and Support
               </div>
             </div>
@@ -42,28 +42,28 @@ const Footer = () => {
               Reports & Rates
             </div>
             <div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Annual Reports
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Quarterly Reports
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Basel Reports
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Interest Rate
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Base Rate
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Spread Rate
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Foreign Exchange Rates
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Service Charges
               </div>
             </div>
@@ -75,28 +75,28 @@ const Footer = () => {
               News & Media
             </div>
             <div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 News & Events
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Notices
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Articles
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Photo Gallery
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3  hoverTextGreenEffect hover:cursor-pointer">
                 Video Gallery
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 CSR
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Downloads
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 ADBL Projects
               </div>
             </div>
@@ -106,28 +106,28 @@ const Footer = () => {
               Quick Links
             </div>
             <div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Branches
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 ATM Location
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Extension Counters
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 EMI Calculator
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Career Notice
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Syllabus
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Online Job Apply
               </div>
-              <div className="text-stone-500 font-medium text-base mb-3">
+              <div className="text-stone-500 font-medium text-base mb-3 hoverTextGreenEffect hover:cursor-pointer">
                 Contact Us
               </div>
             </div>

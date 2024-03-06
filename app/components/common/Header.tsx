@@ -26,29 +26,23 @@ const Header = (props: Props) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <>
-      <header className="xl:h-20 flex h-36 bg-white md:h-32 lg:h-32 ">
-        <div className=" mx-auto flex w-full max-w-[95%] md:max-w-[85%] 2xl:max-w-[1320px] flex-wrap items-center justify-between px-0 py-2">
+      <header className="flex h-36 bg-white md:h-32 lg:h-32 xl:h-20 ">
+        <div className=" mx-auto flex w-full max-w-[95%] flex-wrap items-center justify-between px-0 py-2 md:max-w-[85%] 2xl:max-w-[1320px]">
           <ul className="flex items-center space-x-6 sm:space-x-12">
-            <li className=" border-b-2 border-custom-red pb-1 text-sm  text-custom-red hover:text-custom-red md:text-base ">
+            <li className=" hoverTextRedEffect border-b-2 border-custom-red pb-1  text-sm text-custom-red md:text-base ">
               <Link href="#" className="flex items-center">
                 <IoPersonOutline />
                 <span className="ml-1 ">Personal Banking</span>
               </Link>
             </li>
             <li className=" text-sm md:text-base ">
-              <Link
-                href="#"
-                className="flex items-center hover:text-custom-red"
-              >
+              <Link href="#" className="hoverTextRedEffect flex items-center">
                 <BsBriefcase />
                 <span className="ml-1">Business Banking</span>
               </Link>
             </li>
             <li className="text-sm md:text-base">
-              <Link
-                href="#"
-                className="flex items-center hover:text-custom-red"
-              >
+              <Link href="#" className="hoverTextRedEffect flex items-center">
                 <PiMoneyLight />
                 <span className="ml-1">Remitance</span>
               </Link>
@@ -56,11 +50,13 @@ const Header = (props: Props) => {
           </ul>
 
           <ul className="mt-2 flex items-center justify-evenly space-x-2 sm:space-x-6 md:mt-0 lg:mt-0 xl:mt-0">
-            <li className="text-xm flex cursor-pointer items-center rounded-full bg-custom-green px-4 py-2 text-white md:text-base lg:text-base">
-              <span className="mr-1 text-sm lg:text-base">Online Application</span>
+            <li className="text-xm hoverGreenEffect flex cursor-pointer items-center rounded-full bg-custom-green px-4 py-2 text-white  md:text-base lg:text-base">
+              <span className="mr-1 text-sm lg:text-base">
+                Online Application
+              </span>
               <GoTriangleDown />
             </li>
-            <li className="flex cursor-pointer items-center rounded-full bg-custom-red hover:bg-custom-light-red outline-none  border-none px-4 py-2 text-xs text-white md:text-sm lg:text-base ">
+            <li className="hoverRedEffect flex cursor-pointer items-center rounded-full border-none bg-custom-red px-4 py-2  text-xs text-white outline-none hover:ease-in-out md:text-sm lg:text-base ">
               <span className="mr-1"> Login</span>
               <GoTriangleDown />
             </li>
@@ -83,7 +79,7 @@ const Header = (props: Props) => {
       </header>
 
       <nav className="flex h-24 items-center bg-custom-green ">
-        <div className=" mx-auto flex w-full max-w-[95%] md:max-w-[85%] 2xl:max-w-[1320px] items-center justify-between">
+        <div className=" mx-auto flex w-full max-w-[95%] items-center justify-between md:max-w-[85%] 2xl:max-w-[1320px]">
           <div className="flex cursor-pointer items-center  ">
             <Image
               src={"/images/adbl-logo.png"}
@@ -93,27 +89,27 @@ const Header = (props: Props) => {
               className={"object-contain"}
             />
           </div>
-          <div className=" items-center text-white hidden lg:ml-4  xl:flex">
+          <div className=" hidden items-center text-white lg:ml-4  xl:flex">
             <ul className="flex items-center justify-center lg:space-x-4 xl:space-x-12">
-              <li className="flex cursor-pointer hover:text-custom-light-green">
+              <li className="hoverTextGreenEffect flex cursor-pointer">
                 <span className=" text-xs sm:text-sm md:text-base lg:text-base ">
                   Savings and Deposits
                 </span>
                 <ChevronDownIcon className="mt-[2px]" />
               </li>
-              <li className="flex cursor-pointer hover:text-custom-light-green">
+              <li className="hoverTextGreenEffect flex cursor-pointer">
                 <span className="">Loan and Advances</span>
                 <ChevronDownIcon className="mt-[2px]" />
               </li>
-              <li className="flex cursor-pointer hover:text-custom-light-green">
+              <li className="hoverTextGreenEffect flex cursor-pointer">
                 <span className="">Services</span>
                 <ChevronDownIcon className="mt-[2px]" />
               </li>
-              <li className="flex cursor-pointer hover:text-custom-light-green">
+              <li className="hoverTextGreenEffect flex cursor-pointer">
                 <span className=""> Financial Reports</span>
                 <ChevronDownIcon className="mt-[2px]" />
               </li>
-              <li className="flex cursor-pointer hover:text-custom-light-green">
+              <li className="hoverTextGreenEffect flex cursor-pointer">
                 Cards
               </li>
             </ul>

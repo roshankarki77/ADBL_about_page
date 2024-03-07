@@ -26,8 +26,8 @@ const Header = (props: Props) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <>
-      <header className="flex h-36 bg-white md:h-32 lg:h-32 xl:h-20 ">
-        <div className=" mx-auto flex w-full max-w-[95%] flex-wrap items-center justify-between px-0 py-2 md:max-w-[85%] 2xl:max-w-[1320px]">
+      <header className="flex h-32 sm:h-24 bg-white  md:h-32 lg:h-24 xl:h-24 ">
+        <div className=" mx-auto flex w-full max-w-[95%] flex-wrap items-center justify-between px-0 py-2 md:max-w-[90%] 2xl:max-w-[1320px]">
           <ul className="flex items-center space-x-6 sm:space-x-12">
             <li className=" hoverTextRedEffect border-b-2 border-custom-red pb-1  text-sm text-custom-red md:text-base ">
               <Link href="#" className="flex items-center">
@@ -49,7 +49,7 @@ const Header = (props: Props) => {
             </li>
           </ul>
 
-          <ul className="mt-2 flex items-center justify-evenly space-x-2 sm:space-x-6 md:mt-0 lg:mt-0 xl:mt-0">
+          <ul className="mt-0 flex items-center justify-evenly space-x-2 sm:space-x-6 md:mt-0 lg:mt-0 xl:mt-0">
             <li className="text-xm hoverGreenEffect flex cursor-pointer items-center rounded-full bg-custom-green px-4 py-2 text-white  md:text-base lg:text-base">
               <span className="mr-1 text-sm lg:text-base">
                 Online Application
@@ -79,14 +79,14 @@ const Header = (props: Props) => {
       </header>
 
       <nav className="flex h-24 items-center bg-custom-green ">
-        <div className=" mx-auto flex w-full max-w-[95%] items-center justify-between md:max-w-[85%] 2xl:max-w-[1320px]">
+        <div className=" mx-auto flex w-full max-w-[95%] items-center justify-between  2xl:max-w-[1320px]">
           <div className="flex cursor-pointer items-center  ">
             <Image
               src={"/images/adbl-logo.png"}
               alt={"logo"}
-              width={300}
+              width={250}
               height={200}
-              className={"object-contain"}
+              className={"object-cover"}
             />
           </div>
           <div className=" hidden items-center text-white lg:ml-4  xl:flex">

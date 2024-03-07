@@ -10,78 +10,81 @@ import {
 
 const Faq = () => {
   return (
-    <section className="my-8 ">
-      <div className="mx-auto w-[95%] sm:w-[85%] pt-8 2xl:max-w-[1320px]">
-        
-        <div className="flex flex-wrap xl:justify-between flex-col xl:flex-row"> 
-          <div className="flex flex-col basis-[48%]">
-          <h2 className="text-xl font-semibold">
-            Information and Grievance Officers
-        </h2>
-              <div className="mt-8 flex flex-col lg:flex-row flex-wrap justify-between rounded border-2 border-[#CCCCCC] p-8">
-                <div className="basis-1/4 w-full">
+    <section className="my-2 ">
+      <div className="mx-auto w-[95%] pt-4 md:w-[90%] 2xl:max-w-[1320px]">
+        <div className="flex flex-col flex-wrap xl:flex-row xl:justify-between">
+          <div className="flex flex-col ">
+            <h2 className="text-xl font-semibold">
+              Information and Grievance Officers
+            </h2>
+            <div className="mt-4 flex w-full flex-col rounded border-2  border-[#CCCCCC]">
+              <h3 className="mt-2 text-center text-base font-bold text-custom-green ">
+                Information Officer & Spokeperson
+              </h3>
+              <div className="mb-2 flex">
+                <div className="flex align-center ml-1  flex-1 flex-col justify-center items-center">
                   <img
-                     src={"/images/info-officer.png"}
-                     alt="information officer"
-                     className="overflow-hidden rounded-full mx-auto"
-                     height="auto"
+                    src={"/images/info-officer.png"}
+                    alt="information officer"
+                    className="h-28 w-28 overflow-hidden rounded-full"
                   />
                 </div>
-                <div className="mt-12 md:ml-36 lg:ml-0 lg:pl-16 lg:my-auto  basis-3/4 pl-4">
-                  <h3 className="text-custom-green font-bold text-xl">
-                    Information Officer & Spokeperson
-                  </h3>
-
-                  <h2 className="text-normal py-2 font-semibold">
+                <div className="my-5 ml-2 flex-1 md:ml-36 lg:my-auto lg:ml-0 lg:pl-16">
+                  <h2 className="mt-1 text-sm font-semibold">
                     Himalal Paudyal
                   </h2>
                   <div className="flex flex-col  ">
-                    <span className="text-slate-500">Mobile: 9851322990</span>
-                    <span className="text-slate-500">
+                    <span className="text-sm text-slate-500">
+                      Mobile: 9851322990
+                    </span>
+                    <span className="text-sm text-slate-500">
                       Email: himal.paudyal@adbl.gob.np
                     </span>
-                    <span className="text-slate-500">
+                    <span className="text-sm text-slate-500">
                       Phone: +977-01-4264016
                     </span>
                   </div>
                 </div>
               </div>
-              <div className="mt-8 flex flex-col lg:flex-row flex-wrap justify-between rounded border-2 border-[#CCCCCC] p-8">
-                <div className=" basis-1/4 w-full">
+            </div>
+            <div className="mt-4 flex w-full flex-col rounded border-2  border-[#CCCCCC]">
+              <h3 className="mt-2 text-center text-base font-bold text-custom-green ">
+              Grievance Officer
+              </h3>
+              <div className="mb-2 flex">
+                <div className="flex align-center ml-1  flex-1 flex-col justify-center items-center">
                   <img
-                     src={"/images/grievance.png"}
-                     alt="information officer"
-                     className="overflow-hidden rounded-full mx-auto"
-                     height="auto"
+                    src={"/images/grievance.png"}
+                    alt="information officer"
+                    className="h-28 w-28 overflow-hidden rounded-full"
                   />
                 </div>
-                <div className="mt-12 md:ml-36 lg:ml-0 lg:pl-16 lg:my-auto basis-3/4 pl-4">
-                  <h3 className="text-custom-green font-bold text-xl">
-                  Grievance Officer
-                  </h3>
-
-                  <h2 className="text-normal py-2 font-semibold">
+                <div className="my-5 ml-2 flex-1 md:ml-36 lg:my-auto lg:ml-0 lg:pl-16">
+                  <h2 className="mt-1 text-sm font-semibold">
                   Mr. Hira Bahadur Ale
                   </h2>
                   <div className="flex flex-col  ">
-                    <span className="text-slate-500">Mobile: +9779851328566</span>
-                    <span className="text-slate-500">
+                    <span className="text-sm text-slate-500">
+                    Mobile: 9851328566
+                    </span>
+                    <span className="text-sm text-slate-500">
                     Email: gunaso@adbl.gov.np
                     </span>
-                    <span className="text-slate-500">
-                      Phone: +977-01-4264016(Office)
+                    <span className="text-sm text-slate-500">
+                    Phone: +977-01-4264016(Office)
                     </span>
                   </div>
                 </div>
               </div>
-             
+            </div>
+            
           </div>
-          <div className="basis-[48%] mt-12  lg:mt-52 xl:mt-0">
+          <div className="mt-4 basis-[48%]  lg:mt-52 xl:mt-0">
             <h2 className="text-xl font-semibold">
               Frequently Asked Questions
             </h2>
 
-            <div className="mt-8 border-2 border-[#CCCCCC] p-4">
+            <div className="mt-2 border-2 border-[#CCCCCC] p-4">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
                   <AccordionTrigger>

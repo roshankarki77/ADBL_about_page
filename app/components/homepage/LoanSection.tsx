@@ -7,17 +7,17 @@ const LoanSection = () => {
 
   return (
     <>
-      <div className="my-8  bg-[#F5FFEF] pb-8">
-        <div className="mx-auto w-[95%] sm:w-[85%] 2xl:max-w-[1320px]">
-          <h2 className="pt-8 text-2xl font-semibold ">
+      <div className="my-4  bg-[#F5FFEF] pb-8">
+        <div className="mx-auto w-[95%] md:w-[90%] 2xl:max-w-[1320px]">
+          <h2 className="pt-4 text-2xl font-semibold ">
             Are you looking for loan ?
           </h2>
-          <p className="mt-4 text-sm text-[#666666]">
+          <p className="mt-2 text-sm text-[#666666]">
             Its time to make your dream come true.We are here to help you when
             you need your financial support
           </p>
 
-          <section className="justify-items-center mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
+          <section className="justify-items-center mt-8 grid grid-cols-3 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
             <div className="relative ">
               <div className="grid h-24 w-24 place-content-center rounded-full bg-white mx-auto">
                 <img
@@ -39,14 +39,8 @@ const LoanSection = () => {
                   className="rounded-full"
                 />
               </div>
-            </div>
-            <div className="relative">
-              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
-                <img
-                  src="/images/looking1.png"
-                  alt=""
-                  className="rounded-full"
-                />
+              <div className="text-center font-bold mt-4">
+                Business Loan
               </div>
             </div>
             <div className="relative">
@@ -57,14 +51,8 @@ const LoanSection = () => {
                   className="rounded-full"
                 />
               </div>
-            </div>
-            <div className="relative">
-              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
-                <img
-                  src="/images/looking1.png"
-                  alt=""
-                  className="rounded-full"
-                />
+              <div className="text-center font-bold mt-4">
+                Education Loan
               </div>
             </div>
             <div className="relative">
@@ -74,6 +62,33 @@ const LoanSection = () => {
                   alt=""
                   className="rounded-full"
                 />
+              </div>
+              <div className="text-center font-bold mt-4">
+                House Loan
+              </div>
+            </div>
+            <div className="relative">
+              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
+                <img
+                  src="/images/looking1.png"
+                  alt=""
+                  className="rounded-full"
+                />
+              </div>
+              <div className="text-center font-bold mt-4">
+                Payday Loan
+              </div>
+            </div>
+            <div className="relative">
+              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
+                <img
+                  src="/images/looking1.png"
+                  alt=""
+                  className="rounded-full"
+                />
+              </div>
+              <div className="text-center font-bold mt-4">
+                Agricultural Loan
               </div>
             </div>
           </section>
@@ -110,7 +125,7 @@ const LoanSection = () => {
                 Exercitationem, quibusdam.
               </p>
 
-              <div className="mt-4 grid grid-cols-1 gap-4 w-48 sm:grid-cols-2 sm:w-80 lg:w-96">
+              <div className="mt-4 grid grid-cols-2 gap-4 w-84 sm:grid-cols-2 sm:w-80 lg:w-96">
                 <Button variant={"default"}  className="">
                   View Details
                   <TriangleRightIcon />
@@ -127,7 +142,7 @@ const LoanSection = () => {
 
       {/* loan form section */}
       <section className="mt-8 ">
-        <div className="mx-auto flex w-[95%] sm:w-[85%] flex-wrap 2xl:max-w-[1320px]">
+        <div className="mx-auto flex w-[95%] md:w-[90%] flex-wrap 2xl:max-w-[1320px]">
           {/* left */}
           <div className="lg:flex-1 p-2">
             <h2 className="text-lg font-semibold leading-6">

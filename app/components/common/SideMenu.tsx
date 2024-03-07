@@ -8,7 +8,7 @@ import { FaMoneyCheckDollar } from "react-icons/fa6";
 import { HiOutlinePhone } from "react-icons/hi";
 const SideMenu = () => {
   return (
-    <div className="fixed top-28 z-50 hidden h-[510px] w-[65px] justify-evenly rounded-r-md bg-custom-red md:flex">
+    <div className="fixed top-28 z-50 hidden h-[510px] w-[65px] justify-evenly rounded-r-md bg-custom-red lg:flex">
       <ul className="flex  flex-col justify-evenly text-sm text-white ">
         <li className="hoverTextRedEffect flex cursor-pointer flex-col items-center justify-center space-y-2 text-xs">
           <GrAtm className="text-lg" />

@@ -55,12 +55,12 @@ const SavingDeposit = () => {
   };
   return (
     <>
-      <section className="mt-8 mb-16">
-        <div className="mx-auto w-[95%] sm:w-[85%] 2xl:max-w-[1320px]">
+      <section className="mt-4 mb-16">
+        <div className="mx-auto w-[95%] md:w-[90%] 2xl:max-w-[1320px]">
           <h2 className=" text-2xl font-semibold">Saving and Deposit</h2>
 
           <div className="flex items-center justify-between">
-            <p className="mt-4 pr-4 text-sm text-[#666666]">
+            <p className=" pr-4 text-sm text-[#666666]">
               Managing your personal finances and building a savings account is
               all about big picture and staying motivated
             </p>

@@ -4,17 +4,17 @@ import Image from "next/image";
 
 const OfferSection = () => {
   return (
-    <div className="mx-auto my-12 max-w-[95%] md:max-w-[85%] 2xl:max-w-[1320px]">
-      <h2 className="text-2xl font-bold ">Offers for You</h2>
+    <div className="mx-auto my-8 max-w-[95%] md:max-w-[90%] 2xl:max-w-[1320px]">
+      <h2 className="text-xl font-bold ">Offers for You</h2>
 
       <div className="mb-8 flex items-center justify-between">
-        <p className="mt-4 max-w-96 pr-8 md:max-w-[1800px]">
+        <p className="mt-0 max-w-96 pr-8 md:max-w-[1800px]">
           Explore and experience the ways we make your life better through our
           offerings
         </p>
-        <div className="flex cursor-pointer items-center space-x-2 text-custom-red hover:text-custom-light-red">
-          <span>View All</span>
-          <DoubleArrowRightIcon />
+        <div className="flex cursor-pointer justify-center items-center space-x-2 text-custom-red hover:text-custom-light-red">
+          <span className="w-9 text-sm">View All</span>
+          <DoubleArrowRightIcon className="m-0 p-0" />
         </div>
       </div>
 

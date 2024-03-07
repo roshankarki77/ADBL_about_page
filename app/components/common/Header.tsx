@@ -163,33 +163,9 @@ const Header = (props: Props) => {
                 </ul>
                 <ChevronDownIcon className="mt-[2px]" />
               </li>
-              <li className="hoverTextGreenEffect flex cursor-pointer w-full justify-between">
-                <ul className=" sm:text-sm md:text-base lg:text-base ">
-                  Loan and Advances
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                </ul>
-                <ChevronDownIcon className="mt-[2px]" />
-              </li>
-              <li className="hoverTextGreenEffect flex cursor-pointer w-full justify-between">
-                <ul className=" sm:text-sm md:text-base lg:text-base ">
-                  Services
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                </ul>
-                <ChevronDownIcon className="mt-[2px]" />
-              </li>
-              <li className="hoverTextGreenEffect flex cursor-pointer w-full justify-between">
-                <span className=""> Financial Reports</span>
-                <ChevronDownIcon className="mt-[2px]" />
-              </li>
-              <li className="hoverTextGreenEffect flex cursor-pointer w-full justify-between">
-                Cards
-              </li>
+              <li className="hoverTextGreenEffect pl-4">save</li>
+              <li className="hoverTextGreenEffect pl-4">save</li>
+              <li className="hoverTextGreenEffect pl-4">save</li>
             </ul>
       </div> */}
     </>

@@ -39,8 +39,8 @@ const EMICalculator = () => {
         <h2 className="my-8 text-center text-xl font-semibold">
           EMI Calculator
         </h2>
-        <div className="flex flex-col lg:flex-row">
-          <div className="relative  lg:basis-1/3">
+        <div className="flex flex-col xl:flex-row">
+          <div className="relative  lg:basis-1/3 ">
             <div className="absolute right-0 top-0 flex w-12 flex-col">
               <div className="bg-green-900">
                 <img src="images/emihome.png" alt="" />
@@ -53,32 +53,33 @@ const EMICalculator = () => {
               </div>
             </div>
             <div className="w-full h-full">
-              <img src="images/emipeople.png" className="w-full h-full object-cover" alt="" />
+              <img src="images/emipeople.png" className="w-full h-full object-cover rounded-t-3xl lg:rounded-t-none lg:rounded-l-3xl" alt="" />
             </div>
           </div>
 
-          <div className="bg-[#F8F6E9] p-12 basis-1/1 lg:basis-2/3">
+          <div className="bg-[#F8F6E9] p-6  xl:p-20 basis-1/1 lg:basis-2/3 rounded-b-3xl lg:rounded-b-none lg:rounded-r-3xl">
             <div className="">
+
               <div className="mb-8">
                 <label htmlFor="loanAmount">Loan Amount:</label>
-                <div className="flex ">
-                <Slider value={[loanAmount]} max={1500000} step={1} className="mt-2 flex-0.6 mr-20"   onValueChange={handleLoanAmountChange}/>
-                <div className="mt-4 w-24 border-2 p-2 flex-0.2">{loanAmount }</div>
-
+                <div className="flex flex-col md:flex-row">
+                  <Slider value={[loanAmount]} max={1500000} step={1} className="flex-0.6 mr-20 mt-6 md:my-auto"   onValueChange={handleLoanAmountChange}/>
+                  <div className="mt-6 md:my-auto w-24 border-2 p-2 flex-0.2 min-w-24 text-center">{loanAmount }</div>
                 </div>
               </div>
               <div className="mb-8">
                 <label htmlFor="loanTerm">Loan Term (years):</label>
-                <div className="flex ">
-                <Slider value={[loanTerm]} max={20} step={1} className="mt-2 flex-0.6 mr-20" onValueChange={handleLoanTermChange}/>
-                <div className="mt-4 w-24 border-2 p-2">{loanTerm} yrs</div>
+                <div className="flex flex-col md:flex-row">
+                <Slider value={[loanTerm]} max={20} step={1} className="flex-0.6 mr-20 mt-6 md:my-auto" onValueChange={handleLoanTermChange}/>
+                <div className="mt-6 md:my-auto w-24 border-2 p-2 flex-0.2 min-w-24 text-center">{loanTerm} yrs</div>
                 </div>
               </div>
+
               <div className="mb-8">
                 <label htmlFor="interestRate">Interest Rate (%):</label>
-                <div className="flex ">
-                <Slider value={[interestRate]} max={20} step={1} className="mt-2 flex-0.6 mr-20" onValueChange={handleInterestRateChange}/>
-                <div className="mt-4 w-24 border-2 p-2">{interestRate} %</div>
+                <div className="flex flex-col md:flex-row">
+                <Slider value={[interestRate]} max={20} step={1} className="flex-0.6 mr-20 mt-6 md:my-auto" onValueChange={handleInterestRateChange}/>
+                <div className="mt-6 md:my-auto w-24 border-2 p-2 flex-0.2 min-w-24 text-center">{interestRate} %</div>
                 </div>
               </div>
             </div>

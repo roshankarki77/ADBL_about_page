@@ -211,3 +211,14 @@ body {
 .left-0 {
   @apply transform translate-x-0; /* Move menu to left when open */
 }
+.child{
+  position: absolute;
+
+}
+@media (min-width: 1024px) {
+  .child {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+}

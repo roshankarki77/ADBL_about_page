@@ -148,49 +148,57 @@ const Header = (props: Props) => {
         </div>
       </nav>
 
-      <div className={`menu bg-custom-green`}>
-      <ul className={`flex items-center justify-center w-[95%] mx-auto lg:space-x-4 xl:space-x-12 text-white flex-col space-y-4 py-8  display-none ${isNavOpen ? 'block' : 'display-hidden'}`}>
-              <li className=" flex cursor-pointer  w-full justify-between">
-                <ul className=" sm:text-sm md:text-base lg:text-base w-full">
-                  <div className="text-custom-light-green animate-pulse">Savings and Deposits</div>
-                  <li className="pl-4 flex justify-between items-center">
-                    <p className="">save</p>
-                    <ChevronDownIcon className="mt-[2px]" />
-                  </li>
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                </ul>
+      {/* display-none ${isNavOpen ? 'block' : 'display-hidden'} */}
+      <div
+        className={` display-none bg-custom-green ${isNavOpen ? "block" : "hidden"}`}
+      >
+        <ul
+          className={`mx-auto flex w-[95%] flex-col items-center justify-center space-y-4 bg-custom-green py-8 text-white lg:space-x-4 xl:space-x-12 `}
+        >
+          <li className=" flex w-full  cursor-pointer justify-between">
+            <ul className=" w-full sm:text-sm md:text-base lg:text-base">
+              <div className="animate-pulse text-custom-light-green">
+                <h2 className="hoverTextGreenEffect">Savings and Deposits</h2>
+              </div>
+              <li className="hoverTextGreenEffect flex items-center justify-between pl-4">
+                <p className="hoverTextGreenEffect">save</p>
                 <ChevronDownIcon className="mt-[2px]" />
               </li>
-              <li className="hoverTextGreenEffect flex cursor-pointer w-full justify-between">
-                <ul className=" sm:text-sm md:text-base lg:text-base ">
-                  Loan and Advances
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                </ul>
-                <ChevronDownIcon className="mt-[2px]" />
-              </li>
-              <li className="hoverTextGreenEffect flex cursor-pointer w-full justify-between">
-                <ul className=" sm:text-sm md:text-base lg:text-base ">
-                  Services
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                </ul>
-                <ChevronDownIcon className="mt-[2px]" />
-              </li>
-              <li className="hoverTextGreenEffect flex cursor-pointer w-full justify-between">
-                <span className=""> Financial Reports</span>
-                <ChevronDownIcon className="mt-[2px]" />
-              </li>
-              <li className="hoverTextGreenEffect flex cursor-pointer w-full justify-between">
-                Cards
-              </li>
+              <li className="hoverTextGreenEffect pl-4">save</li>
+              <li className="hoverTextGreenEffect pl-4">save</li>
+              <li className="hoverTextGreenEffect pl-4">save</li>
             </ul>
+            <ChevronDownIcon className="mt-[2px]" />
+          </li>
+          <li className=" flex w-full cursor-pointer justify-between">
+            <ul className=" sm:text-sm md:text-base lg:text-base ">
+              <h2 className="hoverTextGreenEffect"> Loan and Advances</h2>
+              <li className="hoverTextGreenEffect pl-4">save</li>
+              <li className="hoverTextGreenEffect pl-4">save</li>
+              <li className="hoverTextGreenEffect pl-4">save</li>
+              <li className="hoverTextGreenEffect pl-4">save</li>
+            </ul>
+            <ChevronDownIcon className="mt-[2px]" />
+          </li>
+          <li className=" flex w-full cursor-pointer justify-between">
+            <ul className=" sm:text-sm md:text-base lg:text-base ">
+              <h2 className="hoverTextGreenEffect"> Services</h2>
+              <li className="hoverTextGreenEffect pl-4">save</li>
+              <li className="hoverTextGreenEffect pl-4">save</li>
+              <li className="hoverTextGreenEffect pl-4">save</li>
+              <li className="hoverTextGreenEffect pl-4">save</li>
+            </ul>
+            <ChevronDownIcon className="mt-[2px]" />
+          </li>
+          <li className=" flex w-full cursor-pointer justify-between">
+            <h2 className="hoverTextGreenEffect"> Financial Reports</h2>
+
+            <ChevronDownIcon className="mt-[2px]" />
+          </li>
+          <li className="hoverTextGreenEffect flex w-full cursor-pointer justify-between">
+            <h2 className="hoverTextGreenEffect">Cards</h2>
+          </li>
+        </ul>
       </div>
     </>
   );

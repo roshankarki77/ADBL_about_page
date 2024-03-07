@@ -148,7 +148,7 @@ const Header = (props: Props) => {
         </div>
       </nav>
 
-      <div className={`menu bg-custom-green`}>
+      {/* <div className={`menu bg-custom-green`}>
       <ul className={`flex items-center justify-center w-[95%] mx-auto lg:space-x-4 xl:space-x-12 text-white flex-col space-y-4 py-8  display-none ${isNavOpen ? 'block' : 'display-hidden'}`}>
               <li className=" flex cursor-pointer  w-full justify-between">
                 <ul className=" sm:text-sm md:text-base lg:text-base w-full">
@@ -191,7 +191,7 @@ const Header = (props: Props) => {
                 Cards
               </li>
             </ul>
-      </div>
+      </div> */}
     </>
   );
 };

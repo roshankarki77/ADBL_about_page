@@ -85,12 +85,12 @@ const EMICalculator = () => {
 
             <div className="flex bg-white p-8 rounded-md items-center justify-around">
               <div className="flex flex-col md:flex-row flex-1 justify-center items-center">
-                  <div className="mb-4">
-                    <img src="images/emihand.png" alt="" />
+                  <div className="mb-4 max-w-16">
+                    <img src="images/emihand.png" alt="" className="w-full" />
                   </div>
-                  <div className="ml-8 text-center pr-7">
-                    <div className="text-lg font-bold">Monthly EMI</div>
-                    <div className="text-3xl font-bold">{monthlyEmi}</div>
+                  <div className="ml-8 text-center pr-7 max-w-16">
+                    <div className="text-lg font-bold max-w-16">Monthly EMI</div>
+                    <div className="text-md md:text-3xl font-bold ">{monthlyEmi}</div>
                   </div>
               </div>
               

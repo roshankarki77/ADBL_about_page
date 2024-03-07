@@ -1,7 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+} */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -9,63 +27,63 @@
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
- 
+
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
- 
+
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
- 
+
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
- 
+
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
- 
+
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
- 
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
- 
+
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
- 
+
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
- 
+
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
- 
+
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
- 
+
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
- 
+
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
- 
+
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
- 
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
- 
+
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
@@ -73,4 +91,123 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.card {
+  @apply h-80 w-72 rounded-lg border border-card-foreground bg-card text-card-foreground;
+  width: 100%;
+  height: auto;
+}
+
+.hoverGreenEffect {
+  @apply ease-in-out hover:bg-custom-light-green hover:duration-300;
+}
+.hoverRedEffect {
+  @apply ease-in-out hover:bg-custom-light-red hover:duration-300;
+}
+.hoverTextRedEffect {
+  @apply ease-in-out hover:text-custom-light-red hover:duration-300;
+}
+.hoverTextGreenEffect {
+  @apply ease-in-out hover:text-custom-light-green hover:duration-300;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.intro {
+  /* background: #e8ffdb; */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 168px;
+}
+.introduction {
+  font-family: Tahoma;
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: -0.015em;
+  text-align: left;
+}
+
+.introlinks > li > a {
+  font-size: 14px;
+}
+.objective {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.015em;
+}
+
+.quote {
+  background: #ebf7ea;
+  font-size: 19px;
+  line-height: 1.8;
+  padding: 15px;
+  border-left: 7px solid green;
+  letter-spacing: -0.005em;
+}
+.works {
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.015em;
+  border-radius: 50px;
+}
+
+.goal {
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 20px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+.goaltitle {
+  padding: 6px 0px;
+  font-weight: 600;
+  color: green;
+  font-size: 19px;
+}
+.goal > img {
+  width: 16%;
+}
+
+.officeicon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.officeicon > img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-family: Ubuntu;
+}
+.image-wrapper {
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  @apply  h-full transition-transform duration-300 ease-in-out;
+  transform: translateX(-100%); /* Initially off screen */
+  z-index: 500;
+}
+
+.left-0 {
+  @apply transform translate-x-0; /* Move menu to left when open */
 }

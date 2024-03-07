@@ -84,20 +84,21 @@ const EMICalculator = () => {
               </div>
             </div>
 
-            <div className="flex bg-white p-8 rounded-md items-center justify-around">
-              <div className="flex flex-col md:flex-row flex-1 justify-center items-center">
-                  <div className="mb-4 max-w-16">
+            <div className="flex flex-col md:flex-row bg-white p-8 rounded-md items-center">
+              <div className="flex  flex-1 justify-center items-center">
+                  <div className=" max-w-20 p-4 border-2 border-[#CCCCCC] rounded-full ">
                     <img src="images/emihand.png" alt="" className="w-full" />
                   </div>
-                  <div className="ml-8 text-center pr-7 max-w-16">
-                    <div className="text-lg font-bold max-w-16">Monthly EMI</div>
+                  <div className="ml-8 text-center pr-7 max-w-20">
+                    <div className="text-lg font-bold min-w-16">Monthly EMI</div>
                     <div className="text-md md:text-3xl font-bold ">{monthlyEmi}</div>
                   </div>
               </div>
               
-              <div className="px-4 border-r-2 h-32 border-[#CCCCCC]"></div>
+              <div className="px-4 mx-8 border-r-2 h-32 border-[#CCCCCC] hidden md:block"></div>
+
               <div className="flex-1">
-                <div className="flex flex-row mb-12">
+                <div className="flex flex-row">
                   <div className="mx-8">
                     <img src="images/emiarrow.png" width={30} alt="" />
                   </div>
@@ -106,7 +107,8 @@ const EMICalculator = () => {
                     <div>800000</div>
                   </div>
                 </div>
-                <div className="flex flex-row">
+                <div className="h-[2px] w-62 bg-[hsl(0,5%,80%)] ml-8 my-6"></div>
+                <div className="flex flex-row ">
                   <div className="mx-8">
                     <img src="images/emiarrow.png" width={30} alt="" />
                   </div>

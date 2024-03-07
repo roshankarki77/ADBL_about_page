@@ -97,7 +97,7 @@ const EMICalculator = () => {
               
               <div className="px-4 mx-8 border-r-2 h-32 border-[#CCCCCC] hidden md:block"></div>
 
-              <div className="flex-1">
+              <div className="flex-1 mt-8 md:mt-0">
                 <div className="flex flex-row">
                   <div className="mx-8">
                     <img src="images/emiarrow.png" width={30} alt="" />

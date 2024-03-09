@@ -26,11 +26,11 @@ const SliderSection = () => {
             src={"/images/slider-image.png"}
             alt="slider-image"
             layout="fill"
-            objectFit="cover"
+            className="object-cover  object-left md:object-center"
             priority={true}
           />
-          <div className="absolute right-12 top-24 hidden h-48 w-80 rounded-xl bg-white p-4 md:block xl:w-[600px] 2xl:right-72">
-            <h2 className="mb-2 text-lg font-bold text-green-900 lg:text-xl xl:text-3xl">
+          <div className="absolute right-12 top-24 hidden h-56 w-96 rounded-xl bg-white pt-8 px-12 md:block xl:w-[500px] 2xl:right-72">
+            <h2 className="mb-2 text-xl font-bold text-green-900 lg:text-xl xl:text-3xl">
               Agriculture & MSME Credit
             </h2>
             <p className="text-justify text-sm">
@@ -39,7 +39,7 @@ const SliderSection = () => {
               सर्वविदितै छ |
             </p>
             <Button
-              className="mt-4 rounded-3xl bg-custom-red px-2 h-7 text-white text-xs"
+              className="mt-4 rounded-3xl bg-custom-red p-4 h-7 text-white text-xs"
               variant={"destructive"}
             >
               Read more

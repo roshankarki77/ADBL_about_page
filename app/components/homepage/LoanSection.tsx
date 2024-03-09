@@ -32,7 +32,7 @@ const LoanSection = () => {
               <div className="absolute -bottom-4 left-0 w-full border-b-4 border-custom-green pb-4 text-center "></div>
             </div>
             <div className="relative">
-              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
+              <div className="grid h-24 w-24 place-content-center rounded-full bg-white mx-auto">
                 <img
                   src="/images/looking1.png"
                   alt=""
@@ -44,7 +44,7 @@ const LoanSection = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
+              <div className="grid h-24 w-24 place-content-center rounded-full bg-white mx-auto">
                 <img
                   src="/images/looking1.png"
                   alt=""
@@ -56,7 +56,7 @@ const LoanSection = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
+              <div className="grid h-24 w-24 place-content-center rounded-full bg-white mx-auto">
                 <img
                   src="/images/looking1.png"
                   alt=""
@@ -68,7 +68,7 @@ const LoanSection = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
+              <div className="grid h-24 w-24 place-content-center rounded-full bg-white mx-auto">
                 <img
                   src="/images/looking1.png"
                   alt=""
@@ -80,7 +80,7 @@ const LoanSection = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="grid h-24 w-24 place-content-center rounded-full bg-white">
+              <div className="grid h-24 w-24 place-content-center rounded-full bg-white mx-auto">
                 <img
                   src="/images/looking1.png"
                   alt=""

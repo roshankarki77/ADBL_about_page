@@ -44,7 +44,7 @@ const Header = (props: Props) => {
             <li className="text-sm md:text-base">
               <Link href="#" className="hoverTextRedEffect flex items-center">
                 <PiMoneyLight />
-                <span className="ml-1">Remitance</span>
+                <span className="ml-1">Remittance</span>
               </Link>
             </li>
           </ul>

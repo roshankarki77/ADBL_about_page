@@ -41,23 +41,23 @@ const EMICalculator = () => {
         </h2>
         <div className="flex flex-col xl:flex-row">
           <div className="relative  lg:basis-1/3 ">
-            <div className="absolute bottom-4 left-0 right-0 mx-auto  w-64 h-12 md:h-16 flex  flex-row  xl:w-12 xl:flex-col xl:top-36 xl:right-0 xl:left-auto xl:mx-0 xl:transform   xl:translate-x-1/3">
+            <div className="absolute bottom-4 left-0 right-0 mx-auto  w-64 h-12 md:h-16 flex justify-center align-center flex-row  xl:w-12 xl:flex-col xl:top-36 xl:right-0 xl:left-auto xl:mx-0 xl:transform   xl:translate-x-1/3">
               <div className="bg-green-900 mr-6 xl:mb-6 rounded-full p-3 md:p-4 w-12 md:w-16">
                 <img src="images/emihome.png" className="w-8 md:w-12" alt="" />
               </div>
               <div className="bg-white mr-6 xl:mb-6 rounded-full p-3 md:p-4 w-12 md:w-16">
                 <img src="images/emicar.png" className="w-12" alt="" />
               </div>
-              <div className="bg-white mr-6 rounded-full p-3 md:p-4 w-12 md:w-16">
+              <div className="bg-white rounded-full p-3 md:p-4 w-12 md:w-16">
                 <img src="images/emibag.png" className="w-12" alt="" />
               </div>
             </div>
-            <div className="w-full h-44 md:h-64 xl:h-full">
-              <img src="images/emipeople.png" className="w-full h-full  object-cover rounded-t-3xl xl:rounded-t-l-[0px] lg:rounded-l-3xl" alt="" />
+            <div className="w-full h-44 sm:h-64 lg:h-96 xl:h-full">
+              <img src="images/emipeople.png" className="w-full h-full  object-cover rounded-tl-3xl rounded-tr-3xl xl:rounded-tr-[0px] xl:rounded-bl-3xl" alt="" />
             </div>
           </div>
 
-          <div className="bg-[#F8F6E9] p-6  xl:p-20 basis-1/1 lg:basis-2/3 rounded-b-3xl lg:rounded-b-none lg:rounded-r-3xl">
+          <div className="bg-[#F8F6E9] p-6  xl:p-20 basis-1/1 lg:basis-2/3 rounded-bl-3xl rounded-br-3xl xl:rounded-bl-[0px] xl:rounded-tr-3xl">
             <div className="">
 
               <div className="mb-4">
@@ -83,14 +83,14 @@ const EMICalculator = () => {
                 </div>
               </div>
             </div>
-
-            <div className="flex flex-col md:flex-row bg-white p-8 rounded-md items-center">
+            <div className="flex flex-col md:flex-row bg-white p-8 rounded-xl items-center shadow-lg">
+              <div className="flex flex-col md:flex-row justify-start items-start">
               <div className="flex  flex-1 justify-center items-center">
                   <div className=" max-w-20 p-4 border-2 border-[#CCCCCC] rounded-full ">
                     <img src="images/emihand.png" alt="" className="w-full" />
                   </div>
-                  <div className="ml-8 text-center pr-7 max-w-20">
-                    <div className="text-lg font-bold min-w-20">Monthly EMI</div>
+                  <div className="ml-4 text-left pr-7 max-w-20">
+                    <div className="text-lg font-bold min-w-32">Monthly EMI</div>
                     <div className="text-md md:text-3xl font-bold ">{monthlyEmi}</div>
                   </div>
               </div>
@@ -118,7 +118,9 @@ const EMICalculator = () => {
                   </div>
                 </div>
               </div>
+              </div>
             </div>
+            
           </div>
         </div>
       </div>

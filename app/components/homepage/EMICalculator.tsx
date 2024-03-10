@@ -105,7 +105,7 @@ const EMICalculator = () => {
                     onChange={handleLoanAmountInputChange}
                     min={0}
                     max={1500000}
-                    className="bg-transparent w-full text-center border-none outline-none"
+                    className="bg-transparent w-full text-center border-none outline-none appearance-none"
                     step={1} >
                       </input>
                   </div>
@@ -124,7 +124,7 @@ const EMICalculator = () => {
                     onChange={handleLoanTermInputChange}
                     min={0}
                     max={20}
-                    className="inline w-12 bg-transparent  text-right mr-1 border-none outline-none"
+                    className="inline w-6 bg-transparent border-none outline-none appearance-none text-center"
                     step={1} >
                       </input><span>Yrs</span>
                   </div>
@@ -144,7 +144,7 @@ const EMICalculator = () => {
                     onChange={handleInterestRateInputChange}
                     min={0}
                     max={20}
-                    className="inline w-12 bg-transparent mr-1 text-right border-none outline-none"
+                    className="inline w-6 bg-transparent border-none outline-none appearance-none text-center"
                     step={1} >
                       </input><span>%</span>
                   </div>

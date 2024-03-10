@@ -100,7 +100,7 @@ const LoanSection = () => {
             <div className="md:flex-1">
               <img src="/images/kisan.png" alt="farmer image" />
             </div>
-            <div className="flex-1 p-2">
+            <div className="flex-1 py-2">
               <p className="text-[#666666]">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
                 ab architecto molestiae quis dolore doloremque quae tempora,
@@ -144,7 +144,7 @@ const LoanSection = () => {
       <section className="mt-8 ">
         <div className="mx-auto flex w-[95%] md:w-[90%] flex-wrap 2xl:max-w-[1320px]">
           {/* left */}
-          <div className="lg:flex-1 p-2">
+          <div className="lg:flex-1 py-2">
             <h2 className="text-lg font-semibold leading-6">
               We usually follow 4 steps to get a better business loans.
             </h2>
@@ -204,7 +204,7 @@ const LoanSection = () => {
           <div className="flex-1 pt-4 lg:pt-0">
             <form
               action=""
-              className="m-2 rounded-lg p-4 shadow shadow-black/60"
+              className="my-2 rounded-lg p-4 shadow shadow-black/60"
             >
               <h2 className="text-base font-semibold leading-7">
                 Get a call back

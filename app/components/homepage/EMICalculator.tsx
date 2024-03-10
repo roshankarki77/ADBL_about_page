@@ -90,9 +90,8 @@ const EMICalculator = () => {
           </div>
 
           <div className="bg-[#F8F6E9] p-6  xl:p-20 basis-1/1 lg:basis-2/3 rounded-bl-3xl rounded-br-3xl xl:rounded-bl-[0px] xl:rounded-tr-3xl">
-            <div className="">
-
-              <div className="mb-4">
+            <div className="mb-8">
+              <div className="relative mb-5">
                 <label htmlFor="loanAmount" className="font-bold">Loan Amount(NPR):</label>
                 <div className="flex flex-col md:flex-row">
                   <Slider value={[loanAmount]} max={1500000} step={1} className="flex-0.6 mr-20 mt-2 md:my-auto"   onValueChange={handleLoanAmountChange}/>
@@ -110,8 +109,11 @@ const EMICalculator = () => {
                       </input>
                   </div>
                 </div>
+                <div className="absolute top-[52px] right-0 md:left-0 text-stone-500">
+                  0-1500000
+                </div>
               </div>
-              <div className="mb-4">
+              <div className="relative mb-5">
                 <label htmlFor="loanTerm" className="font-bold">Loan Term (years):</label>
                 <div className="flex flex-col md:flex-row">
                 <Slider value={[loanTerm]} max={20} step={1} className="flex-0.6 mr-20 mt-2 md:my-auto" onValueChange={handleLoanTermChange}/>
@@ -129,9 +131,12 @@ const EMICalculator = () => {
                       </input><span>Yrs</span>
                   </div>
                 </div>
+                <div className="absolute top-[52px] right-0 md:left-0 text-stone-500">
+                  0-20
+                </div>
               </div>
 
-              <div className="mb-4">
+              <div className="mb-5 relative">
                 <label htmlFor="interestRate" className="font-bold">Interest Rate (%):</label>
                 <div className="flex flex-col md:flex-row">
                 <Slider value={[interestRate]} max={20} step={1} className="flex-0.6 mr-20 mt-2 md:my-auto" onValueChange={handleInterestRateChange}/>
@@ -149,9 +154,12 @@ const EMICalculator = () => {
                       </input><span>%</span>
                   </div>
                 </div>
+                <div className="absolute top-[52px] right-0 md:left-0 text-stone-500">
+                  0-20
+                </div>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row bg-white p-8 rounded-xl items-center shadow-lg">
+            <div className="flex flex-col md:flex-row bg-white p-8 rounded-xl md:justify-center items-center shadow-lg">
               <div className="flex flex-col md:flex-row justify-start items-start">
               <div className="flex  flex-1 justify-center items-center">
                   <div className=" max-w-20 p-4 border-2 border-[#CCCCCC] rounded-full ">

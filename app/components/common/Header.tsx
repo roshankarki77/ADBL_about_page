@@ -50,7 +50,7 @@ const Header = (props: Props) => {
           </ul>
 
           <ul className="mt-0 flex items-center justify-evenly space-x-2 sm:space-x-6 md:mt-0">
-            <li className="text-xm hoverGreenEffect flex cursor-pointer items-center rounded-full bg-custom-green px-4 py-2 text-white  md:text-base lg:text-base">
+            <li className="text-xm hoverGreenEffect flex cursor-pointer items-center rounded-full bg-custom-green px-2 sm:px-4 py-2 text-white  md:text-base lg:text-base">
               <span className="mr-1 text-sm lg:text-base">
                 Online Application
               </span>

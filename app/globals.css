@@ -18,6 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: "Ubuntu";
 }
 
 @layer base {
@@ -125,7 +126,6 @@ body {
   height: 168px;
 }
 .introduction {
-  font-family: Tahoma;
   font-size: 29px;
   font-weight: 500;
   line-height: 52px;

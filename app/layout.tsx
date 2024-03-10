@@ -8,6 +8,9 @@ import Footer from "./components/common/Footer";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "@fontsource/ubuntu"; // Defaults to weight 400
+import "@fontsource/ubuntu/400.css"; // Specify weight
+import "@fontsource/ubuntu/400-italic.css"; // Specify weight and style
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} style={{fontFamily:"Ubuntu"}}>
         <Header />
         <SideMenu />
         {children}

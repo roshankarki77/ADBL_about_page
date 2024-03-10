@@ -7,7 +7,9 @@ const EMICalculator = () => {
   const [loanAmount, setLoanAmount] = useState(1000000);
   const [loanTerm, setLoanTerm] = useState(8);
   const [interestRate, setInterestRate] = useState(10);
-  const [monthlyEmi, setMonthlyEmi] = useState(18750);
+  const [monthlyEmi, setMonthlyEmi] = useState("0");
+  const [totalInterest, setTotalInterest] = useState("0");
+  const [totalPayableAmount, setTotalPayableAmount] = useState("0");
 
   useEffect(() => {
     calculateEmi();
@@ -19,18 +21,48 @@ const EMICalculator = () => {
     const time = loanTerm * 12; // loan term in months
 
     const emi = (principal * rate * Math.pow(1 + rate, time)) / (Math.pow(1 + rate, time) - 1);
-    setMonthlyEmi(isFinite(emi) ? parseFloat(emi.toFixed(2)) : 0);
+    const totalAmount = emi * time;
+    const totalInterestAmount = totalAmount - principal;
+
+    const formattedEmi = emi.toLocaleString('en-IN', {
+      maximumFractionDigits: 0,
+      style: 'currency',
+      currency: 'INR'
+    });
+    const formattedTotalAmount = totalAmount.toLocaleString('en-IN', {
+      maximumFractionDigits: 0,
+      style: 'currency',
+      currency: 'INR'
+    });
+    const formattedTotalInterest = totalInterestAmount.toLocaleString('en-IN', {
+      maximumFractionDigits: 0,
+      style: 'currency',
+      currency: 'INR'
+    });
+    
+    setMonthlyEmi(isFinite(emi) ? String(formattedEmi) : "0");
+    setTotalPayableAmount(isFinite(totalAmount) ? String(formattedTotalAmount) : "0");
+    setTotalInterest(isFinite(totalInterestAmount) ? String(formattedTotalInterest) : "0");
   };
   const handleLoanAmountChange = (value:any) => {
     setLoanAmount(value);
   };
+  const handleLoanAmountInputChange = (e:any) => {
+    setLoanAmount(e.target.value);
+  }
 
   const handleLoanTermChange = (value:any) => {
     setLoanTerm(value);
   };
+  const handleLoanTermInputChange = (e:any) => {
+    setLoanTerm(e.target.value);
+  };
 
   const handleInterestRateChange = (value:any) => {
     setInterestRate(value);
+  };
+  const handleInterestRateInputChange = (e:any) => {
+    setInterestRate(e.target.value);
   };
 
   return (
@@ -42,7 +74,7 @@ const EMICalculator = () => {
         <div className="flex flex-col xl:flex-row">
           <div className="relative  lg:basis-1/3 ">
             <div className="absolute bottom-4 left-0 right-0 mx-auto  w-64 h-12 md:h-16 flex justify-center align-center flex-row  xl:w-12 xl:flex-col xl:top-36 xl:right-0 xl:left-auto xl:mx-0 xl:transform   xl:translate-x-1/3">
-              <div className="bg-green-900 mr-6 xl:mb-6 rounded-full p-3 md:p-4 w-12 md:w-16">
+              <div className="bg-custom-green mr-6 xl:mb-6 rounded-full p-3 md:p-4 w-12 md:w-16">
                 <img src="images/emihome.png" className="w-8 md:w-12" alt="" />
               </div>
               <div className="bg-white mr-6 xl:mb-6 rounded-full p-3 md:p-4 w-12 md:w-16">
@@ -61,25 +93,61 @@ const EMICalculator = () => {
             <div className="">
 
               <div className="mb-4">
-                <label htmlFor="loanAmount">Loan Amount:</label>
+                <label htmlFor="loanAmount" className="font-bold">Loan Amount(NPR):</label>
                 <div className="flex flex-col md:flex-row">
                   <Slider value={[loanAmount]} max={1500000} step={1} className="flex-0.6 mr-20 mt-2 md:my-auto"   onValueChange={handleLoanAmountChange}/>
-                  <div className="mt-3 md:my-auto w-24 border-2 p-2 flex-0.2 min-w-24 text-center">{loanAmount }</div>
+                  <div className="mt-3 md:my-auto w-24 border-2 p-2 flex-0.2 min-w-24 text-center">
+                    <input
+                    type="number" 
+                    id="loanAmountInput" 
+                    name="loanAmountInput" 
+                    value={loanAmount} 
+                    onChange={handleLoanAmountInputChange}
+                    min={0}
+                    max={1500000}
+                    className="bg-transparent w-full text-center border-none outline-none"
+                    step={1} >
+                      </input>
+                  </div>
                 </div>
               </div>
               <div className="mb-4">
-                <label htmlFor="loanTerm">Loan Term (years):</label>
+                <label htmlFor="loanTerm" className="font-bold">Loan Term (years):</label>
                 <div className="flex flex-col md:flex-row">
                 <Slider value={[loanTerm]} max={20} step={1} className="flex-0.6 mr-20 mt-2 md:my-auto" onValueChange={handleLoanTermChange}/>
-                <div className="mt-3 md:my-auto w-24 border-2 p-2 flex-0.2 min-w-24 text-center">{loanTerm} yrs</div>
+                <div className="mt-3 md:my-auto w-24 border-2 p-2 flex-0.2 min-w-24 text-center">
+                    <input
+                    type="number" 
+                    id="loantTermInput" 
+                    name="loanTermInput" 
+                    value={loanTerm} 
+                    onChange={handleLoanTermInputChange}
+                    min={0}
+                    max={20}
+                    className="inline w-12 bg-transparent  text-right mr-1 border-none outline-none"
+                    step={1} >
+                      </input><span>Yrs</span>
+                  </div>
                 </div>
               </div>
 
               <div className="mb-4">
-                <label htmlFor="interestRate">Interest Rate (%):</label>
+                <label htmlFor="interestRate" className="font-bold">Interest Rate (%):</label>
                 <div className="flex flex-col md:flex-row">
                 <Slider value={[interestRate]} max={20} step={1} className="flex-0.6 mr-20 mt-2 md:my-auto" onValueChange={handleInterestRateChange}/>
-                <div className="mt-3 md:my-auto w-24 border-2 p-2 flex-0.2 min-w-24 text-center">{interestRate} %</div>
+                <div className="mt-3 md:my-auto w-24 border-2 p-2 flex-0.2 min-w-24 text-center">
+                    <input
+                    type="number" 
+                    id="interestRateInput" 
+                    name="interestRateInput" 
+                    value={interestRate} 
+                    onChange={handleInterestRateInputChange}
+                    min={0}
+                    max={20}
+                    className="inline w-12 bg-transparent mr-1 text-right border-none outline-none"
+                    step={1} >
+                      </input><span>%</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -104,7 +172,7 @@ const EMICalculator = () => {
                   </div>
                   <div>
                     <div className="font-bold">Interest Amount</div>
-                    <div>800000</div>
+                    <div>{totalInterest}</div>
                   </div>
                 </div>
                 <div className="h-[2px] w-56 bg-[hsl(0,5%,80%)] ml-2 my-6"></div>
@@ -114,7 +182,7 @@ const EMICalculator = () => {
                   </div>
                   <div>
                     <div className="font-bold">Total Amount Payable</div>
-                    <div>1800000</div>
+                    <div>{totalPayableAmount}</div>
                   </div>
                 </div>
               </div>

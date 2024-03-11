@@ -19,6 +19,24 @@ import {
 } from "@/app/components/ui/select";
 
 import { ChevronDownIcon } from "@radix-ui/react-icons";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/app/components/ui/accordion";
+
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarTrigger,
+} from "@/components/ui/menubar"
+
+
 
 type Props = {};
 
@@ -79,7 +97,7 @@ const Header = (props: Props) => {
       </header>
 
       <nav className="flex h-[70px] md:h-24 items-center bg-custom-green ">
-        <div className=" mx-auto flex w-full max-w-[95%] items-center justify-between  2xl:max-w-[1320px]">
+        <div className="relative mx-auto flex w-full max-w-[95%] items-center justify-between  2xl:max-w-[1320px]">
           <div className="flex cursor-pointer items-center w-48 md:w-[250px] ">
             <Image
               src={"/images/adbl-logo.png"}
@@ -89,10 +107,11 @@ const Header = (props: Props) => {
               className={"object-cover"}
             />
           </div>
-          <div className=" hidden items-center text-white lg:ml-4  lg:flex">
-            <ul className="flex items-center justify-center lg:space-x-3 xl:space-x-12">
+           {/* <div className=" hidden items-center text-white lg:ml-4  lg:flex">
+            <ul className="hidden lg:flex items-center justify-center lg:space-x-3 xl:space-x-12">
+            <ul className={`${isNavOpen ? "bg-custom-red flex flex-col items-center justify-evenly -left-[2.6%] h-[500px] absolute top-[140%] z-10 mx-auto w-screen  lg:hidden" : "hidden space-y-2"} transition delay-700 ease-in text-white `}>
               <li className="hoverTextGreenEffect flex cursor-pointer">
-                <span className=" text-xs sm:text-sm md:text-base lg:text-base ">
+                <span className="">
                   Savings and Deposits
                 </span>
                 <ChevronDownIcon className="mt-[2px]" />
@@ -113,7 +132,84 @@ const Header = (props: Props) => {
                 Cards
               </li>
             </ul>
-          </div>
+          </div>  */}
+          <Accordion type="single" collapsible className={`${isNavOpen ? "bg-custom-green flex flex-col items-start justify-start -left-[2.6%] h-[500px] absolute top-[140%] z-10 mx-auto w-screen lg:flex-row  lg:h-auto lg:w-auto lg:relative  lg:mx-0 lg:bg-custom-green lg:items-center " : "hidden lg:flex  lg:flex-row lg:left-auto lg:h-auto lg:w-auto lg:relative lg:top-auto lg:mx-0 lg:bg-custom-green lg:items-center "}  transition delay-700 ease-in text-white px-2`}>
+                <AccordionItem value="item-1" className="relative w-full mb-1 px-5 mt-8 border-none no-underline lg:px-0 lg:w-auto lg:mt-0 lg:mx-auto lg:mr-4">
+                  <AccordionTrigger className=" p-0 text-base lg:text-sm lg:p-0">
+                  Savings and Deposits
+                  <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-white transition-transform duration-200 lg:ml-1" />
+                  </AccordionTrigger>
+                  <AccordionContent className="p-0 lg:absolute lg:z-20 lg:bg-custom-green lg:mx-auto lg:rounded-xl">
+                    <ul className="ml-4 lg:text-xs lg:mx-auto lg:text-center lg:px-4 lg:py-2">
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2" className="relative w-full mb-1 px-5 mt-8 border-none no-underline lg:px-0 lg:w-auto lg:mt-0 lg:mx-auto lg:mr-4">
+                  <AccordionTrigger className=" p-0 text-base lg:text-sm lg:p-0">
+                  Loan and Advances
+                  <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-white transition-transform duration-200 lg:ml-1" />
+                  </AccordionTrigger>
+                  <AccordionContent className="p-0 lg:absolute lg:z-20 lg:bg-custom-green lg:mx-auto lg:rounded-xl">
+                    <ul className="ml-4 lg:text-xs lg:mx-auto lg:text-center lg:px-4 lg:py-2">
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3" className="relative w-full mb-1 px-5 mt-8 border-none no-underline lg:px-0 lg:w-auto lg:mt-0 lg:mx-auto lg:mr-4">
+                  <AccordionTrigger className=" p-0 text-base lg:text-sm lg:p-0">
+                  Services
+                  <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-white transition-transform duration-200 lg:ml-1" />
+                  </AccordionTrigger>
+                  <AccordionContent className="p-0 lg:absolute lg:z-20 lg:bg-custom-green lg:mx-auto lg:rounded-xl">
+                    <ul className="ml-4 lg:text-xs lg:mx-auto lg:text-center lg:px-4 lg:py-2">
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4" className="relative w-full mb-1 px-5 mt-8 border-none no-underline lg:px-0 lg:w-auto lg:mt-0 lg:mx-auto lg:mr-4">
+                  <AccordionTrigger className=" p-0 text-base lg:text-sm lg:p-0">
+                  Financial Reports
+                  <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-white transition-transform duration-200 lg:ml-1" />
+                  </AccordionTrigger>
+                  <AccordionContent className="p-0 lg:absolute lg:z-20 lg:bg-custom-green lg:mx-auto lg:rounded-xl">
+                    <ul className="ml-4 lg:text-xs lg:mx-auto lg:text-center lg:px-4 lg:py-2">
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-5" className="relative w-full mb-1 px-5 mt-8 border-none no-underline lg:px-0 lg:w-auto lg:mt-0 lg:mx-auto lg:mr-4">
+                  <AccordionTrigger className=" p-0 text-base lg:text-sm lg:p-0">
+                  Cards
+                  <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-white transition-transform duration-200 lg:ml-1" />
+                  </AccordionTrigger>
+                  <AccordionContent className="p-0 lg:absolute lg:z-20 lg:bg-custom-green lg:mx-auto lg:rounded-xl">
+                    <ul className="ml-4 lg:text-xs lg:mx-auto lg:text-center lg:px-4 lg:py-2">
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                      <li>sample</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
 
           <div
             className={`${
@@ -129,7 +225,7 @@ const Header = (props: Props) => {
           <div
             onClick={() => setIsNavOpen(false)}
             className={`transition delay-150 ease-in-out ${
-              isNavOpen ? "block" : "hidden"
+              isNavOpen ? "block lg:hidden" : "hidden"
             }`}
           >
             <svg
@@ -173,3 +269,4 @@ const Header = (props: Props) => {
 };
 
 export default Header;
+

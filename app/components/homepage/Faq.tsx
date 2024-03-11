@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/app/components/ui/accordion";
+import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 const Faq = () => {
   return (
@@ -92,6 +93,7 @@ const Faq = () => {
                 <AccordionItem value="item-1">
                   <AccordionTrigger>
                     How do I register for 3D Secure PIN ?
+                    <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-black transition-transform duration-200" />
                   </AccordionTrigger>
                   <AccordionContent>
                     3D Secure is a service that allows you to generate a 6 digit
@@ -104,6 +106,7 @@ const Faq = () => {
                 <AccordionItem value="item-2">
                   <AccordionTrigger>
                     Should I keep a record of my online transaction ?
+                    <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-black transition-transform duration-200" />
                   </AccordionTrigger>
                   <AccordionContent>
                     Yes. It comes with default styles that matches the other
@@ -113,6 +116,7 @@ const Faq = () => {
                 <AccordionItem value="item-3">
                   <AccordionTrigger>
                     How can I review my monthly account statement thoroughly?
+                    <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-black transition-transform duration-200" />
                   </AccordionTrigger>
                   <AccordionContent>
                     Yes. It's animated by default, but you can disable it if you
@@ -122,6 +126,7 @@ const Faq = () => {
                 <AccordionItem value="item-4">
                   <AccordionTrigger>
                     What is the frequency of interest pay-out?
+                    <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-black transition-transform duration-200" />
                   </AccordionTrigger>
                   <AccordionContent>
                     Yes. It's animated by default, but you can disable it if you
@@ -131,6 +136,7 @@ const Faq = () => {
                 <AccordionItem value="item-5">
                   <AccordionTrigger>
                     How to protect my card details?
+                    <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-black transition-transform duration-200" />
                   </AccordionTrigger>
                   <AccordionContent>
                     Yes. It's animated by default, but you can disable it if you
@@ -140,6 +146,7 @@ const Faq = () => {
                 <AccordionItem value="item-6">
                   <AccordionTrigger>
                     Can I send payment information via email?
+                    <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-black transition-transform duration-200" />
                   </AccordionTrigger>
                   <AccordionContent>
                     Yes. It's animated by default, but you can disable it if you

@@ -81,7 +81,7 @@ const SliderSection = () => {
       </Slider>
 
       <div className="hidden h-10 bg-gray-300 sm:flex">
-        <div className="mx-auto flex h-10 w-[95%] 2xl:max-w-[1320px] ">
+        <div className="mx-auto flex h-10 w-[95%] md:max-w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px] ">
           <div className="flex items-center">
             <div className="flex h-10 w-36 items-center space-x-2 bg-custom-green px-2 text-white">
               <BellIcon />

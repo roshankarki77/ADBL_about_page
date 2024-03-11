@@ -89,8 +89,8 @@ const Header = (props: Props) => {
               className={"object-cover"}
             />
           </div>
-          <div className=" hidden items-center text-white lg:ml-4  xl:flex">
-            <ul className="flex items-center justify-center lg:space-x-4 xl:space-x-12">
+          <div className=" hidden items-center text-white lg:ml-4  lg:flex">
+            <ul className="flex items-center justify-center lg:space-x-3 xl:space-x-12">
               <li className="hoverTextGreenEffect flex cursor-pointer">
                 <span className=" text-xs sm:text-sm md:text-base lg:text-base ">
                   Savings and Deposits

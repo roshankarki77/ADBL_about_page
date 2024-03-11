@@ -67,7 +67,7 @@ const EMICalculator = () => {
 
   return (
     <section className="my-4  ">
-      <div className="mx-auto w-[95%]  md:w-[90%] 2xl:max-w-[1320px]">
+      <div className="mx-auto w-[95%]  md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px]">
         <h2 className="my-4 text-center text-xl font-semibold">
           EMI Calculator
         </h2>

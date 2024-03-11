@@ -11,7 +11,7 @@ import {
 const Faq = () => {
   return (
     <section className="my-2 ">
-      <div className="mx-auto w-[95%] pt-4 md:w-[90%] 2xl:max-w-[1320px]">
+      <div className="mx-auto w-[95%] pt-4 md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px]">
         <div className="flex flex-col flex-wrap xl:flex-row xl:justify-between">
           <div className="flex flex-col ">
             <h2 className="text-xl font-semibold">

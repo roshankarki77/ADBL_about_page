@@ -7,7 +7,7 @@ import { MdPhoneAndroid } from "react-icons/md";
 const ServiceSection = () => {
   return (
     <section className=" pb-8  bg-[#F5FFEF] ">
-      <div className="w-[95%] md:w-[90%] mx-auto pt-4 2xl:max-w-[1320px]">
+      <div className="w-[95%] md:w-[90%] mx-auto pt-4 lg:max-w-[85%] 2xl:max-w-[1320px]">
         <h2 className="text-xl font-semibold">ADBL Services</h2>
         <div className="flex items-center justify-between">
           <p className="mt-2 text-sm text-slate-500 pr-4 ">

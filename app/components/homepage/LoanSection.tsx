@@ -8,7 +8,7 @@ const LoanSection = () => {
   return (
     <>
       <div className="my-4  bg-[#F5FFEF] pb-8">
-        <div className="mx-auto w-[95%] md:w-[90%] 2xl:max-w-[1320px]">
+        <div className="mx-auto w-[95%] md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px]">
           <h2 className="pt-4 text-2xl font-semibold ">
             Are you looking for loan ?
           </h2>
@@ -142,7 +142,7 @@ const LoanSection = () => {
 
       {/* loan form section */}
       <section className="mt-8 ">
-        <div className="mx-auto flex w-[95%] md:w-[90%] flex-wrap 2xl:max-w-[1320px]">
+        <div className="mx-auto flex w-[95%] md:w-[90%] flex-wrap lg:max-w-[85%] 2xl:max-w-[1320px]">
           {/* left */}
           <div className="lg:flex-1 py-2 lg:pr-2">
             <h2 className="text-lg font-semibold leading-6">

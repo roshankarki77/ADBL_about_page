@@ -5,8 +5,8 @@ import { Slider } from "../ui/slider";
 
 const EMICalculator = () => {
   const [loanAmount, setLoanAmount] = useState("1000000");
-  const [loanTerm, setLoanTerm] = useState("8");
-  const [interestRate, setInterestRate] = useState("10");
+  const [loanTerm, setLoanTerm] = useState("10");
+  const [interestRate, setInterestRate] = useState("7.5");
   const [monthlyEmi, setMonthlyEmi] = useState("0");
   const [totalInterest, setTotalInterest] = useState("0");
   const [totalPayableAmount, setTotalPayableAmount] = useState("0");
@@ -149,7 +149,7 @@ const EMICalculator = () => {
                     onChange={handleInterestRateInputChange}
                     min={0}
                     max={20}
-                    className="inline w-8 bg-transparent border-none outline-none appearance-none text-center mr-2"
+                    className="inline w-8 bg-transparent border-none outline-none appearance-none text-center mr-[2px]"
                      >
                       </input><span>%</span>
                   </div>

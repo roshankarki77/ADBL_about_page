@@ -117,7 +117,7 @@ const Header = (props: Props) => {
 
           <div
             className={`${
-              isNavOpen ? "hidden" : "block space-y-2 xl:hidden"
+              isNavOpen ? "hidden" : "block space-y-2 lg:hidden"
             } transition delay-150 ease-in-out`}
             onClick={() => setIsNavOpen((prev) => !prev)}
           >

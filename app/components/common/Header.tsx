@@ -80,7 +80,7 @@ const Header = (props: Props) => {
 
       <nav className="flex h-[70px] md:h-24 items-center bg-custom-green ">
         <div className=" mx-auto flex w-full max-w-[95%] items-center justify-between  2xl:max-w-[1320px]">
-          <div className="flex cursor-pointer items-center  ">
+          <div className="flex cursor-pointer items-center w-48 md:w-[250px] ">
             <Image
               src={"/images/adbl-logo.png"}
               alt={"logo"}

@@ -5,6 +5,7 @@ import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdPhoneAndroid } from "react-icons/md";
 import Slider from "react-slick";
+import { ServiceData , serviceData } from "@/app/data/services";
 
 const ServiceSection = () => {
 
@@ -63,7 +64,24 @@ const ServiceSection = () => {
 
         <div className="slider-container">
       <Slider {...settings} className="mb-4">
-          <div className="h-[300px] bg-[#F5FFEF]  rounded-lg p-2 pt-12 pb-4 relative">
+          {serviceData.map((service: ServiceData, index: number) => (
+            <div key={index} className="h-[310px] bg-[#F5FFEF]  rounded-lg p-2 pt-12 pb-4 relative">
+            <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg shadow-md">
+            <span className="absolute bottom-[85%] rounded-full p-4 bg-white text-3xl shadow-md">
+              <MdPhoneAndroid />
+            </span>
+            <h2 className="text-custom-green text-xl mt-8">{service.title}</h2>
+            <p className="text-sm text-gray-500 mt-2">
+              {service.description}
+            </p>
+            <div className="flex text-custom-red mt-8 items-center space-x-2 hover:text-custom-light-red cursor-pointer">
+              <span>Read More</span>
+              <FaArrowRightLong />
+            </div>
+            </div>
+          </div>
+          ))}
+          {/* <div className="h-[300px] bg-[#F5FFEF]  rounded-lg p-2 pt-12 pb-4 relative">
             <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg shadow-md">
             <span className="absolute bottom-[85%] rounded-full p-4 bg-white text-3xl shadow-md">
               <MdPhoneAndroid />
@@ -164,7 +182,7 @@ const ServiceSection = () => {
               <FaArrowRightLong />
             </div>
             </div>
-          </div>
+          </div> */}
           
           </Slider>
     </div>

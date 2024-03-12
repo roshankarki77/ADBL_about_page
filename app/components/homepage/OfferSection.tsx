@@ -4,7 +4,7 @@ import React from "react";
 import Slider from "react-slick";
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
-
+import { OfferData,offerData } from "@/app/data/offers";
 
 const OfferSection = () => {
 
@@ -64,85 +64,28 @@ const OfferSection = () => {
 
       <div className="slider-container">
       <Slider {...settings}>
-        <div className="card transform border-none outline-none p-3">
-          <div className="relative w-full  rounded-lg transform cursor-pointer overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
-            <img
-              className="w-full"
-              src={"/images/nari-bachat.png"}
-              alt="nari bachat"
-            />
-            <div className="absolute inset-0 flex items-center  rounded-lg justify-center bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 hover:opacity-100">
-              <p className="text-center text-lg text-white">
-                Special discount offer on the occasion of Teej Festival
-              </p>
+        {
+          offerData.map((offer: OfferData, index: number) => (
+            <div key={index} className="card transform border-none outline-none p-3">
+              <div className="relative w-full  rounded-lg transform cursor-pointer overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+                <Image
+                  src={offer.img}
+                  alt={offer.title}
+                  width={300}
+                  height={200}
+                  className="w-full"
+                />
+                <div className="absolute inset-0 flex items-center  rounded-lg justify-center bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 hover:opacity-100">
+                  <p className="text-center text-lg text-white">
+                    {offer.description}
+                  </p>
+                </div>
+              </div>
+              <p className="mt-2 text-base">{offer.title}</p>
             </div>
-          </div>
-          <p className="mt-2 text-base">Nari Bachaat</p>
-        </div>
-
-        <div className="card transform border-none outline-none p-3">
-          <div className="relative w-full transform cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-            <img
-              className="w-full"
-              src={"/images/img2.png"}
-              alt="nari bachat"
-            />
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 hover:opacity-100">
-              <p className="text-center text-lg text-white">
-                Easy fund transfer send and received via ADBL Smart Banking
-              </p>
-            </div>
-          </div>
-          <p className="mt-2 text-base">ADBL Smart Banking</p>
-        </div>
-
-        <div className="card transform border-none outline-none p-3">
-          <div className="relative w-full transform cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-            <img
-              className="w-full"
-              src={"/images/img3.png"}
-              alt="nari bachat"
-            />
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 hover:opacity-100">
-              <p className="text-center text-lg text-white">
-                ADBL offers personal auto loan at Auto Nada Show
-              </p>
-            </div>
-          </div>
-          <p className="mt-2 text-base">Personal Auto Loan</p>
-        </div>
-
-        <div className="card transform border-none outline-none p-3">
-          <div className="relative w-full transform cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-            <img
-              className="w-full"
-              src={"/images/img4.png"}
-              alt="nari bachat"
-            />
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 hover:opacity-100">
-              <p className="text-center text-lg text-white">
-                Smart way to send and receive money from world wide
-              </p>
-            </div>
-          </div>
-          <p className="mt-2 text-base">ADBL Money Transfer</p>
-        </div>
-
-        <div className="card transform border-none outline-none p-3">
-          <div className="relative w-full transform cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-            <img
-              className="w-full"
-              src={"/images/img4.png"}
-              alt="nari bachat"
-            />
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 hover:opacity-100">
-              <p className="text-center text-lg text-white">
-                Smart way to send and receive money from world wide
-              </p>
-            </div>
-          </div>
-          <p className="mt-2 text-base">ADBL Money Transfer</p>
-        </div>
+          ))
+        }
+        
         </Slider>
     </div>
     </div>

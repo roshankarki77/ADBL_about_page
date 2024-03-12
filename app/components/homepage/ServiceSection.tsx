@@ -1,10 +1,51 @@
+"use client"
 import React from "react";
 
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdPhoneAndroid } from "react-icons/md";
+import Slider from "react-slick";
 
 const ServiceSection = () => {
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    // cssEase: "linear",
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+
   return (
     <section className=" pb-8  bg-[#F5FFEF] ">
       <div className="w-[95%] md:w-[90%] mx-auto pt-4 lg:max-w-[85%] 2xl:max-w-[1320px]">
@@ -20,8 +61,13 @@ const ServiceSection = () => {
           </div>
         </div>
 
-        <div className="grid mt-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-8 ">
-          <div className="h-60  rounded-lg p-4 bg-white relative">
+        <div className="slider-container">
+      <Slider {...settings} className="mb-4">
+          <div className="h-72 bg-[#F5FFEF]  rounded-lg p-2 pt-12 relative">
+            <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg">
+            <span className="absolute bottom-[196px] rounded-full p-4 bg-white border-2 text-3xl">
+              <MdPhoneAndroid />
+            </span>
             <h2 className="text-custom-green text-xl mt-8">Mobile Banking</h2>
             <p className="text-sm text-gray-500 mt-2">
               ADBL Smart is ADBL's Offical Mobile Banking App.Enjoy easy banking
@@ -32,9 +78,92 @@ const ServiceSection = () => {
               <span>Read More</span>
               <FaArrowRightLong />
             </div>
-            <span className="absolute -top-6 left-4 rounded-full p-4 bg-white border-2 text-3xl">
+            </div>
+          </div>
+          <div className="h-72 bg-[#F5FFEF]  rounded-lg p-2 pt-12 relative">
+            <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg">
+            <span className="absolute bottom-[196px] rounded-full p-4 bg-white border-2 text-3xl">
               <MdPhoneAndroid />
             </span>
+            <h2 className="text-custom-green text-xl mt-8">Mobile Banking</h2>
+            <p className="text-sm text-gray-500 mt-2">
+              ADBL Smart is ADBL's Offical Mobile Banking App.Enjoy easy banking
+              from your hand held devices,from anywhere anytime.
+            </p>
+
+            <div className="flex text-custom-red mt-8 items-center space-x-2 hover:text-custom-light-red cursor-pointer">
+              <span>Read More</span>
+              <FaArrowRightLong />
+            </div>
+            </div>
+          </div>
+          <div className="h-72 bg-[#F5FFEF]  rounded-lg p-2 pt-12 relative">
+            <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg">
+            <span className="absolute bottom-[196px] rounded-full p-4 bg-white border-2 text-3xl">
+              <MdPhoneAndroid />
+            </span>
+            <h2 className="text-custom-green text-xl mt-8">Mobile Banking</h2>
+            <p className="text-sm text-gray-500 mt-2">
+              ADBL Smart is ADBL's Offical Mobile Banking App.Enjoy easy banking
+              from your hand held devices,from anywhere anytime.
+            </p>
+
+            <div className="flex text-custom-red mt-8 items-center space-x-2 hover:text-custom-light-red cursor-pointer">
+              <span>Read More</span>
+              <FaArrowRightLong />
+            </div>
+            </div>
+          </div>
+          <div className="h-72 bg-[#F5FFEF]  rounded-lg p-2 pt-12 relative">
+            <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg">
+            <span className="absolute bottom-[196px] rounded-full p-4 bg-white border-2 text-3xl">
+              <MdPhoneAndroid />
+            </span>
+            <h2 className="text-custom-green text-xl mt-8">Mobile Banking</h2>
+            <p className="text-sm text-gray-500 mt-2">
+              ADBL Smart is ADBL's Offical Mobile Banking App.Enjoy easy banking
+              from your hand held devices,from anywhere anytime.
+            </p>
+
+            <div className="flex text-custom-red mt-8 items-center space-x-2 hover:text-custom-light-red cursor-pointer">
+              <span>Read More</span>
+              <FaArrowRightLong />
+            </div>
+            </div>
+          </div>
+          <div className="h-72 bg-[#F5FFEF]  rounded-lg p-2 pt-12 relative">
+            <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg">
+            <span className="absolute bottom-[196px] rounded-full p-4 bg-white border-2 text-3xl">
+              <MdPhoneAndroid />
+            </span>
+            <h2 className="text-custom-green text-xl mt-8">Mobile Banking</h2>
+            <p className="text-sm text-gray-500 mt-2">
+              ADBL Smart is ADBL's Offical Mobile Banking App.Enjoy easy banking
+              from your hand held devices,from anywhere anytime.
+            </p>
+
+            <div className="flex text-custom-red mt-8 items-center space-x-2 hover:text-custom-light-red cursor-pointer">
+              <span>Read More</span>
+              <FaArrowRightLong />
+            </div>
+            </div>
+          </div>
+          <div className="h-72 bg-[#F5FFEF]  rounded-lg p-2 pt-12 relative">
+            <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg">
+            <span className="absolute bottom-[196px] rounded-full p-4 bg-white border-2 text-3xl">
+              <MdPhoneAndroid />
+            </span>
+            <h2 className="text-custom-green text-xl mt-8">Mobile Banking</h2>
+            <p className="text-sm text-gray-500 mt-2">
+              ADBL Smart is ADBL's Offical Mobile Banking App.Enjoy easy banking
+              from your hand held devices,from anywhere anytime.
+            </p>
+
+            <div className="flex text-custom-red mt-8 items-center space-x-2 hover:text-custom-light-red cursor-pointer">
+              <span>Read More</span>
+              <FaArrowRightLong />
+            </div>
+            </div>
           </div>
 
           <div className="h-60  rounded-lg p-4 bg-white  relative">
@@ -124,7 +253,8 @@ const ServiceSection = () => {
               <MdPhoneAndroid />
             </span>
           </div>
-        </div>
+          </Slider>
+    </div>
       </div>
     </section>
   );

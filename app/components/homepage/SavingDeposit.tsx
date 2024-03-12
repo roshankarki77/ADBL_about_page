@@ -50,9 +50,47 @@ const SavingDeposit = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
+
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  // };
   return (
     <>
       <section className="mt-4 mb-16">
@@ -70,21 +108,10 @@ const SavingDeposit = () => {
             </div>
           </div>
 
-          <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4">
-            <div className="relative">
-              <img
-                src={"/images/kisan2.webp"}
-                alt="saving image"
-                // width={300}
-                // height={600}
-                className="rounded-lg"
-              />
-              <div className="absolute -bottom-4 left-0 right-0 mx-auto w-44 rounded bg-white p-2 text-center shadow-sm shadow-slate-400">
-                BalBachat Khata
-              </div>
-            </div>
-
-            <div className="relative">
+          {/* <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4"> */}
+          <div className="slider-container">
+      <Slider {...settings}>
+            <div className="relative p-1 pb-4">
               <Image
                 src={"/images/kisan2.webp"}
                 alt="saving image"
@@ -92,7 +119,20 @@ const SavingDeposit = () => {
                 height={600}
                 className="w-full rounded-lg"
               />
-              <div className="absolute -bottom-4 bg-custom-green left-0 right-0 mx-auto w-44 rounded  p-2 text-center shadow-sm shadow-slate-400 text-white">
+              <div className="absolute -bottom-1 left-0 right-0 mx-auto w-44 rounded bg-white p-2 text-center shadow-sm shadow-slate-400">
+                BalBachat Khata
+              </div>
+            </div>
+
+            <div className="relative p-1 pb-4">
+              <Image
+                src={"/images/kisan2.webp"}
+                alt="saving image"
+                width={300}
+                height={600}
+                className="w-full rounded-lg"
+              />
+              <div className="absolute -bottom-1 bg-custom-green left-0 right-0 mx-auto w-44 rounded  p-2 text-center shadow-sm shadow-slate-400 text-white">
                 BalBachat Khata
               </div>
 
@@ -101,7 +141,7 @@ const SavingDeposit = () => {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative p-1 pb-4">
               <Image
                 src={"/images/kisan2.webp"}
                 alt="saving image"
@@ -109,12 +149,12 @@ const SavingDeposit = () => {
                 height={600}
                 className="w-full rounded-lg"
               />
-              <div className="absolute -bottom-4 left-0 right-0 mx-auto w-44 rounded bg-white p-2 text-center shadow-sm shadow-slate-400">
+              <div className="absolute -bottom-1 left-0 right-0 mx-auto w-44 rounded bg-white p-2 text-center shadow-sm shadow-slate-400">
                 BalBachat Khata
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative p-1 pb-4">
               <Image
                 src={"/images/kisan2.webp"}
                 alt="saving image"
@@ -122,10 +162,24 @@ const SavingDeposit = () => {
                 height={600}
                 className="w-full rounded-lg"
               />
-              <div className="absolute -bottom-4 left-0 right-0 mx-auto w-44 rounded bg-white p-2 text-center shadow-sm shadow-slate-400 ">
+              <div className="absolute -bottom-1 left-0 right-0 mx-auto w-44 rounded bg-white p-2 text-center shadow-sm shadow-slate-400 ">
                 BalBachat Khata
               </div>
             </div>
+            
+            <div className="relative p-1 pb-4">
+              <Image
+                src={"/images/kisan2.webp"}
+                alt="saving image"
+                width={300}
+                height={600}
+                className="w-full rounded-lg"
+              />
+              <div className="absolute -bottom-1 left-0 right-0 mx-auto w-44 rounded bg-white p-2 text-center shadow-sm shadow-slate-400 ">
+                BalBachat Khata
+              </div>
+            </div>
+            </Slider>
           </div>
         </div>
       </section>

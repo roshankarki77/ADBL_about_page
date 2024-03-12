@@ -232,3 +232,8 @@ body {
 .AccordionTrigger:hover + .AccordionContent {
   display: block;
 }
+
+
+.slick-slide> div{
+  margin-left:10px;
+}

@@ -234,6 +234,7 @@ body {
 }
 
 
-.slick-slide> div{
-  margin-left:10px;
+.slick-slide-service> div{
+  margin-right:10px;
+  background: blue;
 }

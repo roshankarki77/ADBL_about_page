@@ -1,10 +1,10 @@
-"use client";
-
+"use client"
 import React from "react";
-import Slider from "react-slick";
+
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdPhoneAndroid } from "react-icons/md";
+import Slider from "react-slick";
 
 const ServiceSection = () => {
 
@@ -15,13 +15,13 @@ const ServiceSection = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
-    // cssEase: "linear",
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
     pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1450,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -29,7 +29,7 @@ const ServiceSection = () => {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -37,7 +37,7 @@ const ServiceSection = () => {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 590,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -60,100 +60,117 @@ const ServiceSection = () => {
             <DoubleArrowRightIcon />
           </div>
         </div>
-        {/* <div className="grid mt-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-8 "> */}
+
         <div className="slider-container">
-      <Slider {...settings}  className="slick-slide-service overflow-visible">
-          <div className="h-60  rounded-lg p-4 bg-white relative overflow-visible">
+      <Slider {...settings} className="mb-4">
+          <div className="h-[300px] bg-[#F5FFEF]  rounded-lg p-2 pt-12 pb-4 relative">
+            <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg shadow-md">
+            <span className="absolute bottom-[85%] rounded-full p-4 bg-white text-3xl shadow-md">
+              <MdPhoneAndroid />
+            </span>
             <h2 className="text-custom-green text-xl mt-8">Mobile Banking</h2>
             <p className="text-sm text-gray-500 mt-2">
               ADBL Smart is ADBL's Offical Mobile Banking App.Enjoy easy banking
               from your hand held devices,from anywhere anytime.
             </p>
+
             <div className="flex text-custom-red mt-8 items-center space-x-2 hover:text-custom-light-red cursor-pointer">
               <span>Read More</span>
               <FaArrowRightLong />
             </div>
-            <span className="absolute z-40 -top-6 left-4 rounded-full p-4 bg-white border-2 text-3xl overflow-visible ">
+            </div>
+          </div>
+          <div className="h-[300px] bg-[#F5FFEF]  rounded-lg p-2 pt-12 pb-4 relative">
+            <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg shadow-md">
+            <span className="absolute bottom-[85%] rounded-full p-4 bg-white text-3xl shadow-md">
               <MdPhoneAndroid />
             </span>
-          </div>
-          <div className="h-60  rounded-lg p-4 bg-white  relative">
             <h2 className="text-custom-green text-xl mt-8">Mobile Banking</h2>
             <p className="text-sm text-gray-500 mt-2">
               ADBL Smart is ADBL's Offical Mobile Banking App.Enjoy easy banking
               from your hand held devices,from anywhere anytime.
             </p>
+
             <div className="flex text-custom-red mt-8 items-center space-x-2 hover:text-custom-light-red cursor-pointer">
               <span>Read More</span>
               <FaArrowRightLong />
             </div>
-            <span className="absolute -top-6 left-4 rounded-full p-4 bg-white border-2 text-3xl">
+            </div>
+          </div>
+          <div className="h-[300px] bg-[#F5FFEF]  rounded-lg p-2 pt-12 pb-4 relative">
+            <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg shadow-md">
+            <span className="absolute bottom-[85%] rounded-full p-4 bg-white text-3xl shadow-md">
               <MdPhoneAndroid />
             </span>
-          </div>
-          <div
-            className="h-60 rounded-lg p-4 bg-white 
-         relative"
-          >
             <h2 className="text-custom-green text-xl mt-8">Mobile Banking</h2>
             <p className="text-sm text-gray-500 mt-2">
               ADBL Smart is ADBL's Offical Mobile Banking App.Enjoy easy banking
               from your hand held devices,from anywhere anytime.
             </p>
+
             <div className="flex text-custom-red mt-8 items-center space-x-2 hover:text-custom-light-red cursor-pointer">
               <span>Read More</span>
               <FaArrowRightLong />
             </div>
-            <span className="absolute -top-6 left-4 rounded-full p-4 bg-white border-2 text-3xl">
+            </div>
+          </div>
+          <div className="h-[300px] bg-[#F5FFEF]  rounded-lg p-2 pt-12 pb-4 relative">
+            <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg shadow-md">
+            <span className="absolute bottom-[85%] rounded-full p-4 bg-white text-3xl shadow-md">
               <MdPhoneAndroid />
             </span>
-          </div>
-          <div className="h-60  rounded-lg p-4 bg-white   relative">
             <h2 className="text-custom-green text-xl mt-8">Mobile Banking</h2>
             <p className="text-sm text-gray-500 mt-2">
               ADBL Smart is ADBL's Offical Mobile Banking App.Enjoy easy banking
               from your hand held devices,from anywhere anytime.
             </p>
+
             <div className="flex text-custom-red mt-8 items-center space-x-2 hover:text-custom-light-red cursor-pointer">
               <span>Read More</span>
               <FaArrowRightLong />
             </div>
-            <span className="absolute -top-6 left-4 rounded-full p-4 bg-white border-2 text-3xl">
+            </div>
+          </div>
+          <div className="h-[300px] bg-[#F5FFEF]  rounded-lg p-2 pt-12 pb-4 relative">
+            <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg shadow-md">
+            <span className="absolute bottom-[85%] rounded-full p-4 bg-white text-3xl shadow-md">
               <MdPhoneAndroid />
             </span>
-          </div>
-          <div className="h-60  rounded-lg p-4 bg-white  relative">
             <h2 className="text-custom-green text-xl mt-8">Mobile Banking</h2>
             <p className="text-sm text-gray-500 mt-2">
               ADBL Smart is ADBL's Offical Mobile Banking App.Enjoy easy banking
               from your hand held devices,from anywhere anytime.
             </p>
+
             <div className="flex text-custom-red mt-8 items-center space-x-2 hover:text-custom-light-red cursor-pointer">
               <span>Read More</span>
               <FaArrowRightLong />
             </div>
-            <span className="absolute -top-6 left-4 rounded-full p-4 bg-white border-2 text-3xl">
+            </div>
+          </div>
+          <div className="h-[300px] bg-[#F5FFEF]  rounded-lg p-2 pt-12 pb-4 relative">
+            <div className="relative pt-4 pb-8 p-4 bg-white rounded-lg shadow-md">
+            <span className="absolute bottom-[85%] rounded-full p-4 bg-white text-3xl shadow-md">
               <MdPhoneAndroid />
             </span>
-          </div>
-          <div className="h-60  rounded-lg p-4 bg-white  relative">
             <h2 className="text-custom-green text-xl mt-8">Mobile Banking</h2>
             <p className="text-sm text-gray-500 mt-2">
               ADBL Smart is ADBL's Offical Mobile Banking App.Enjoy easy banking
               from your hand held devices,from anywhere anytime.
             </p>
+
             <div className="flex text-custom-red mt-8 items-center space-x-2 hover:text-custom-light-red cursor-pointer">
               <span>Read More</span>
               <FaArrowRightLong />
             </div>
-            <span className="absolute -top-6 left-4 rounded-full p-4 bg-white border-2 text-3xl">
-              <MdPhoneAndroid />
-            </span>
+            </div>
           </div>
+          
           </Slider>
-        </div>
+    </div>
       </div>
     </section>
   );
 };
+
 export default ServiceSection;

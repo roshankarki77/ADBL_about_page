@@ -20,7 +20,7 @@ const SliderSection = () => {
   };
   return (
     <>
-      <Slider {...settings}>
+      <Slider {...settings} >
         <div className="relative h-48 w-full md:h-[480px]">
           <Image
             src={"/images/slider-image.png"}

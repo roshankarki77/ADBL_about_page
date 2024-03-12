@@ -228,3 +228,7 @@ body {
 .slick-next {
   display: none;
 }
+
+.AccordionTrigger:hover + .AccordionContent {
+  display: block;
+}

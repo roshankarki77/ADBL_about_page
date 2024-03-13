@@ -5,6 +5,8 @@ import Slider from "react-slick";
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { OfferData, offerData } from "@/app/data/offers";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const OfferSection = () => {
   const settings = {

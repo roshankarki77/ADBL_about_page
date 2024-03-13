@@ -5,9 +5,19 @@ import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdPhoneAndroid } from "react-icons/md";
 import Slider from "react-slick";
+import { useRef } from "react";
 import { ServiceData, serviceData } from "@/app/data/services";
+import { Button } from "../ui/button";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+
+interface SlickSlider {
+  slickPrev(): void;
+  slickNext(): void;
+}
 
 const ServiceSection = () => {
+  const slickRef = useRef<SlickSlider>(null);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -15,9 +25,9 @@ const ServiceSection = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    // cssEase: "linear",
     pauseOnHover: true,
     responsive: [
       {
@@ -46,6 +56,13 @@ const ServiceSection = () => {
     ],
   };
 
+  const handleLeftClick = () => {
+    slickRef.current?.slickPrev();
+  };
+  const handleRightClick = () => {
+    slickRef?.current?.slickNext();
+  };
+
   return (
     <section className=" bg-[#F5FFEF]  pb-8 ">
       <div className="mx-auto w-[95%] pt-4 md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px]">
@@ -61,8 +78,28 @@ const ServiceSection = () => {
           </div>
         </div>
 
-        <div className="slider-container">
-          <Slider {...settings} className="mb-4">
+        <div className="slider-container relative">
+          <Button
+            className="absolute -left-1 top-[53%] z-10 h-5 w-5 -translate-y-1/2 transform animate-pulse rounded-full bg-custom-light-green p-0 text-3xl text-white xl:-left-8 xl:h-8 xl:w-8"
+            variant={"default"}
+            size={"sm"}
+            onClick={handleLeftClick}
+          >
+            <FaChevronLeft className="h-3" />
+          </Button>
+          <Button
+            className="absolute -right-1 top-[53%] z-10 h-5 w-5 -translate-y-1/2 transform animate-pulse rounded-full bg-custom-light-green p-0 text-3xl text-white xl:-right-8 xl:h-8 xl:w-8"
+            variant={"default"}
+            size={"sm"}
+            onClick={handleRightClick}
+          >
+            <FaChevronRight className="h-3" />
+          </Button>
+          <Slider
+            {...settings}
+            ref={slickRef as React.RefObject<Slider>}
+            className="mb-4"
+          >
             {serviceData.map((service: ServiceData, index: number) => (
               <div
                 key={index}

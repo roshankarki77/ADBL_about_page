@@ -2,13 +2,23 @@
 
 import React from "react";
 import Slider from "react-slick";
+import { useRef } from "react";
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { OfferData, offerData } from "@/app/data/offers";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Button } from "../ui/button";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+
+interface SlickSlider {
+  slickPrev(): void;
+  slickNext(): void;
+}
 
 const OfferSection = () => {
+  const slickRef = useRef<SlickSlider>(null);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -16,9 +26,9 @@ const OfferSection = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    // cssEase: "linear",
     pauseOnHover: true,
     responsive: [
       {
@@ -46,6 +56,12 @@ const OfferSection = () => {
       },
     ],
   };
+  const handleLeftClick = () => {
+    slickRef.current?.slickPrev();
+  };
+  const handleRightClick = () => {
+    slickRef?.current?.slickNext();
+  };
 
   return (
     <div className="mx-auto my-8 max-w-[95%] md:max-w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px]">
@@ -62,8 +78,24 @@ const OfferSection = () => {
         </div>
       </div>
 
-      <div className="slider-container">
-        <Slider {...settings}>
+      <div className="slider-container relative">
+        <Button
+          className="absolute left-0 top-[47%] z-10 h-5 w-5 -translate-y-1/2 transform animate-pulse rounded-full bg-custom-light-green p-0 text-3xl text-white xl:-left-6 xl:h-8 xl:w-8"
+          variant={"default"}
+          size={"sm"}
+          onClick={handleLeftClick}
+        >
+          <FaChevronLeft className="h-3" />
+        </Button>
+        <Button
+          className="absolute right-0 top-[47%] z-10 h-5 w-5 -translate-y-1/2 transform animate-pulse rounded-full bg-custom-light-green p-0 text-3xl  text-white xl:-right-6 xl:h-8 xl:w-8"
+          variant={"default"}
+          size={"sm"}
+          onClick={handleRightClick}
+        >
+          <FaChevronRight className="h-3" />
+        </Button>
+        <Slider {...settings} ref={slickRef as React.RefObject<Slider>}>
           {offerData.map((offer: OfferData, index: number) => (
             <div
               key={index}

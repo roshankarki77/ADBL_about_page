@@ -1,19 +1,31 @@
 "use client";
 
 import React from "react";
+import { useRef } from "react";
+
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { SavingData, savingData } from "@/app/data/savings";
 import Slider from "react-slick";
+import { Button } from "../ui/button";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+
+interface SlickSlider {
+  slickPrev(): void;
+  slickNext(): void;
+}
 
 const SavingDeposit = () => {
   const slider = React.useRef<any>();
+
   let next = () => {
     slider.current.slickNext();
   };
   let previous = () => {
     slider.current.slickPrev();
   };
+
+  const slickRef = useRef<SlickSlider>(null);
 
   const settings = {
     dots: true,
@@ -22,9 +34,9 @@ const SavingDeposit = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    // cssEase: "linear",
     pauseOnHover: true,
     responsive: [
       {
@@ -53,6 +65,13 @@ const SavingDeposit = () => {
     ],
   };
 
+  const handleLeftClick = () => {
+    slickRef.current?.slickPrev();
+  };
+  const handleRightClick = () => {
+    slickRef?.current?.slickNext();
+  };
+
   return (
     <>
       <section className="mb-16 mt-4">
@@ -70,10 +89,30 @@ const SavingDeposit = () => {
             </div>
           </div>
 
-          <div className="slider-container">
-            <Slider {...settings} className="w-full ">
+          <div className="slider-container relative">
+            <Button
+              className="absolute -left-2 top-[48%] z-10 h-5 w-5 -translate-y-1/2 transform animate-pulse rounded-full bg-custom-light-green p-0 text-3xl text-white xl:-left-9 xl:h-8 xl:w-8"
+              variant={"default"}
+              size={"sm"}
+              onClick={handleLeftClick}
+            >
+              <FaChevronLeft className="h-3" />
+            </Button>
+            <Button
+              className="absolute -right-2 top-[48%] z-10 h-5 w-5 -translate-y-1/2 transform animate-pulse rounded-full bg-custom-light-green p-0 text-3xl text-white xl:-right-9 xl:h-8 xl:w-8"
+              variant={"default"}
+              size={"sm"}
+              onClick={handleRightClick}
+            >
+              <FaChevronRight className="h-3" />
+            </Button>
+            <Slider
+              {...settings}
+              ref={slickRef as React.RefObject<Slider>}
+              className="w-full "
+            >
               {savingData.map((data: SavingData, index: number) => (
-                <div key={index} className="relative p-1 pb-4 mt-1">
+                <div key={index} className="relative mt-1 p-1 pb-4">
                   <Image
                     src={data.image}
                     alt="saving image"

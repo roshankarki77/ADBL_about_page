@@ -91,7 +91,7 @@ const Faq = () => {
             <div className="mt-2 border-2 rounded-md border-[#CCCCCC] p-4">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>
+                  <AccordionTrigger className="text-left">
                     How do I register for 3D Secure PIN ?
                     <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-black transition-transform duration-200" />
                   </AccordionTrigger>
@@ -104,7 +104,7 @@ const Faq = () => {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
-                  <AccordionTrigger>
+                  <AccordionTrigger className="text-left">
                     Should I keep a record of my online transaction ?
                     <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-black transition-transform duration-200" />
                   </AccordionTrigger>
@@ -114,7 +114,7 @@ const Faq = () => {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
-                  <AccordionTrigger>
+                  <AccordionTrigger className="text-left">
                     How can I review my monthly account statement thoroughly?
                     <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-black transition-transform duration-200" />
                   </AccordionTrigger>
@@ -124,7 +124,7 @@ const Faq = () => {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4">
-                  <AccordionTrigger>
+                  <AccordionTrigger className="text-left">
                     What is the frequency of interest pay-out?
                     <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-black transition-transform duration-200" />
                   </AccordionTrigger>
@@ -134,7 +134,7 @@ const Faq = () => {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-5">
-                  <AccordionTrigger>
+                  <AccordionTrigger className="text-left">
                     How to protect my card details?
                     <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-black transition-transform duration-200" />
                   </AccordionTrigger>
@@ -144,7 +144,7 @@ const Faq = () => {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-6">
-                  <AccordionTrigger>
+                  <AccordionTrigger className="text-left">
                     Can I send payment information via email?
                     <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-black transition-transform duration-200" />
                   </AccordionTrigger>

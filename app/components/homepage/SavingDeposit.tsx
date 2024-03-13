@@ -91,7 +91,7 @@ const SavingDeposit = () => {
 
           <div className="slider-container relative">
             <Button
-              className="absolute -left-2 top-[48%] z-10 h-5 w-5 -translate-y-1/2 transform animate-pulse rounded-full bg-custom-light-green p-0 text-3xl text-white xl:-left-9 xl:h-8 xl:w-8"
+              className="absolute -left-2 top-[48%] z-10 h-5 w-5 -translate-y-1/2 transform animate-pulse rounded-full bg-custom-light-green p-0 text-3xl text-white xl:-left-8 xl:h-8 xl:w-8"
               variant={"default"}
               size={"sm"}
               onClick={handleLeftClick}
@@ -99,7 +99,7 @@ const SavingDeposit = () => {
               <FaChevronLeft className="h-3" />
             </Button>
             <Button
-              className="absolute -right-2 top-[48%] z-10 h-5 w-5 -translate-y-1/2 transform animate-pulse rounded-full bg-custom-light-green p-0 text-3xl text-white xl:-right-9 xl:h-8 xl:w-8"
+              className="absolute -right-2 top-[48%] z-10 h-5 w-5 -translate-y-1/2 transform animate-pulse rounded-full bg-custom-light-green p-0 text-3xl text-white xl:-right-8 xl:h-8 xl:w-8"
               variant={"default"}
               size={"sm"}
               onClick={handleRightClick}

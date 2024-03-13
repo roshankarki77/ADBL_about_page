@@ -27,13 +27,13 @@ const LoanSection = () => {
             {loanData.map((loan: LoanData, index: number) => (
               <div
                 key={index}
-                className="relative mt-2 hover:cursor-pointer"
+                className="relative mt-2 hover:cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105  hover:text-custom-green"
                 onClick={() => handleClick(loan.id)}
               >
-                <div className="mx-auto grid h-12 w-12 md:h-14 md:w-24 place-content-center rounded-full bg-white">
-                  <img src={loan.titleImage} alt="" className="rounded-full" />
+                <div className="mx-auto grid h-12 w-12 md:h-14 md:w-24 place-content-center rounded-full bg-white ">
+                  <img src={loan.titleImage} alt="" className="rounded-full shadow-md" />
                 </div>
-                <div className="mt-2 md:mt-6 text-center text-xs font-bold md:text-base">{loan.title}</div>
+                <div className="mt-2 md:mt-7 text-center text-xs font-bold md:text-base">{loan.title}</div>
                 <div
                   className={`${loan.id == currentLoan ? "block" : "hidden"} absolute -bottom-4 left-0 w-full border-b-4 border-custom-green pb-4 text-center`}
                 ></div>

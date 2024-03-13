@@ -5,8 +5,11 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <section className="my-8 ">
-      <div className="w-[95%] sm:w-[85%] mx-auto lg:max-w-[85%] 2xl:max-w-[1320px]">
+    <section className="my-8 py-8" style={{ backgroundImage: `url('/images/mobile-app-bg.png')` , backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <div 
+        className="w-[95%] sm:w-[85%] mx-auto lg:max-w-[85%] 2xl:max-w-[1320px]"
+        
+      >
         <div className="flex flex-wrap">
           <div className="lg:flex-1 w-full"  >
             <img src={"/images/mobile-app.png"} className="w-full hidden object-cover lg:block" alt="mobile app" />

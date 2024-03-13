@@ -27,13 +27,13 @@ const LoanSection = () => {
             {loanData.map((loan: LoanData, index: number) => (
               <div
                 key={index}
-                className="relative "
+                className="relative mt-2 hover:cursor-pointer"
                 onClick={() => handleClick(loan.id)}
               >
-                <div className="mx-auto grid h-24 w-24 place-content-center rounded-full bg-white">
+                <div className="mx-auto grid h-12 w-12 md:h-14 md:w-24 place-content-center rounded-full bg-white">
                   <img src={loan.titleImage} alt="" className="rounded-full" />
                 </div>
-                <div className="mt-4 text-center font-bold">{loan.title}</div>
+                <div className="mt-2 md:mt-6 text-center text-xs font-bold md:text-base">{loan.title}</div>
                 <div
                   className={`${loan.id == currentLoan ? "block" : "hidden"} absolute -bottom-4 left-0 w-full border-b-4 border-custom-green pb-4 text-center`}
                 ></div>
@@ -47,7 +47,7 @@ const LoanSection = () => {
             (loan) =>
               loan.id === currentLoan && (
                 <section className="mt-8 flex flex-wrap">
-                  <div className="md:flex-1">
+                  <div className="md:flex-1 hidden md:block">
                     <img src={loan.descriptionImage} alt="farmer image" />
                   </div>
                   <div className="flex-1 py-2">

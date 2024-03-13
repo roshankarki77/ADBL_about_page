@@ -2,13 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 
-import { IoPersonOutline } from "react-icons/io5";
 import { BsBriefcase } from "react-icons/bs";
-import { PiMoneyLight } from "react-icons/pi";
 import { GoTriangleDown } from "react-icons/go";
-import { IoSearchOutline } from "react-icons/io5";
+import { IoPersonOutline, IoSearchOutline } from "react-icons/io5";
+import { PiMoneyLight } from "react-icons/pi";
 
 import {
   Select,
@@ -18,48 +17,38 @@ import {
   SelectValue,
 } from "@/app/components/ui/select";
 
-import { ChevronDownIcon } from "@radix-ui/react-icons";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/app/components/ui/accordion";
-
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarTrigger,
-} from "@/components/ui/menubar"
-
+import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 
 type Props = {};
 
 const Header = (props: Props) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
   return (
     <>
       <header className="flex h-28 sm:h-24 bg-white  md:h-32 lg:h-24 xl:h-24 ">
         <div className=" mx-auto flex w-full max-w-[95%] flex-wrap items-center justify-between px-0 py-2 md:max-w-[90%] 2xl:max-w-[1320px]">
           <ul className="flex items-center space-x-6 sm:space-x-12">
-            <li className=" hoverTextRedEffect border-b-2 border-custom-red pb-1  text-sm text-custom-red md:text-base ">
+            <li className=" hoverTextRedEffect border-b-2 border-custom-red pb-1 text-sm text-custom-red md:text-base ">
               <Link href="#" className="flex items-center">
                 <IoPersonOutline />
                 <span className="ml-1 ">Personal Banking</span>
               </Link>
             </li>
-            <li className=" text-sm md:text-base ">
+            <li className=" text-sm md:text-base text-custom-red">
               <Link href="#" className="hoverTextRedEffect flex items-center">
                 <BsBriefcase />
                 <span className="ml-1">Business Banking</span>
               </Link>
             </li>
-            <li className="text-sm md:text-base">
+            <li className="text-sm md:text-base text-custom-red">
               <Link href="#" className="hoverTextRedEffect flex items-center">
                 <PiMoneyLight />
                 <span className="ml-1">Remittance</span>
@@ -81,14 +70,14 @@ const Header = (props: Props) => {
             <li className="cursor-pointer">
               <IoSearchOutline />
             </li>
-            <li className="">
+            <li className="text-custom-green">
               <Select>
                 <SelectTrigger className="w-[65px] border-custom-green text-xs md:text-sm lg:text-base ">
                   <SelectValue placeholder="EN" />
                 </SelectTrigger>
-                <SelectContent className="min-w-[4rem] sm:min-w-[6]">
-                  <SelectItem value="EN">EN</SelectItem>
-                  <SelectItem value="NP">NP</SelectItem>
+                <SelectContent className=" min-w-[4rem] sm:min-w-[6]">
+                  <SelectItem value="EN" className="text-custom-green">EN</SelectItem>
+                  <SelectItem value="NP" className="text-custom-green">NP</SelectItem>
                 </SelectContent>
               </Select>
             </li>
@@ -110,37 +99,37 @@ const Header = (props: Props) => {
            {/* <div className=" hidden items-center text-white lg:ml-4  lg:flex">
             <ul className="hidden lg:flex items-center justify-center lg:space-x-3 xl:space-x-12">
             <ul className={`${isNavOpen ? "bg-custom-red flex flex-col items-center justify-evenly -left-[2.6%] h-[500px] absolute top-[140%] z-10 mx-auto w-screen  lg:hidden" : "hidden space-y-2"} transition delay-700 ease-in text-white `}>
-              <li className="hoverTextGreenEffect flex cursor-pointer">
+              <li className="hoverGreenEffect flex cursor-pointer">
                 <span className="">
                   Savings and Deposits
                 </span>
                 <ChevronDownIcon className="mt-[2px]" />
               </li>
-              <li className="hoverTextGreenEffect flex cursor-pointer">
+              <li className="hoverGreenEffect flex cursor-pointer">
                 <span className="">Loan and Advances</span>
                 <ChevronDownIcon className="mt-[2px]" />
               </li>
-              <li className="hoverTextGreenEffect flex cursor-pointer">
+              <li className="hoverGreenEffect flex cursor-pointer">
                 <span className="">Services</span>
                 <ChevronDownIcon className="mt-[2px]" />
               </li>
-              <li className="hoverTextGreenEffect flex cursor-pointer">
+              <li className="hoverGreenEffect flex cursor-pointer">
                 <span className=""> Financial Reports</span>
                 <ChevronDownIcon className="mt-[2px]" />
               </li>
-              <li className="hoverTextGreenEffect flex cursor-pointer">
+              <li className="hoverGreenEffect flex cursor-pointer">
                 Cards
               </li>
             </ul>
           </div>  */}
-          <Accordion type="single" collapsible className={`${isNavOpen ? "bg-custom-green flex flex-col items-start justify-start -left-[2.6%] h-[500px] absolute top-[140%] z-10 mx-auto w-screen lg:flex-row  lg:h-auto lg:w-auto lg:relative  lg:mx-0 lg:bg-custom-green lg:items-center " : "hidden lg:flex  lg:flex-row lg:left-auto lg:h-auto lg:w-auto lg:relative lg:top-auto lg:mx-0 lg:bg-custom-green lg:items-center "}  text-white px-2`}>
-                <AccordionItem value="item-1" className="relative w-full mb-1 px-5 mt-8 border-none no-underline lg:px-0 lg:w-auto lg:mt-0 lg:mx-auto lg:mr-4">
-                  <AccordionTrigger className=" p-0 text-base lg:text-sm lg:p-0">
+          <Accordion type="single" collapsible  className={`${isNavOpen ? "bg-custom-green flex flex-col items-start justify-start -left-[2.6%] h-[500px] absolute top-[140%] z-10 mx-auto w-screen lg:flex-row  lg:h-auto lg:w-auto lg:relative  lg:mx-0 lg:bg-custom-green lg:items-center " : "hidden lg:flex  lg:flex-row lg:left-auto lg:h-auto lg:w-auto lg:relative lg:top-auto lg:mx-0 lg:bg-custom-green lg:items-center "}  text-white px-2`}>
+                <AccordionItem value="item-1" className="relative w-full mb-1 px-5 mt-8 border-none no-underline lg:px-0 lg:w-auto lg:mt-0 lg:mx-auto lg:mr-4 ">
+                  <AccordionTrigger className=" p-0 text-base lg:text-sm lg:p-0  ">
                   Savings and Deposits
                   <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-white transition-transform duration-200 lg:ml-1" />
                   </AccordionTrigger>
                   <AccordionContent className="p-0 lg:absolute lg:z-20 lg:bg-custom-green lg:mx-auto lg:rounded-xl">
-                    <ul className="ml-4 lg:text-xs lg:mx-auto lg:text-center lg:px-4 lg:py-2">
+                    <ul className={` ml-4 lg:text-xs lg:mx-auto lg:text-center lg:px-4 lg:py-2`}>
                       <li>sample</li>
                       <li>sample</li>
                       <li>sample</li>
@@ -259,9 +248,9 @@ const Header = (props: Props) => {
                 </ul>
                 <ChevronDownIcon className="mt-[2px]" />
               </li>
-              <li className="hoverTextGreenEffect pl-4">save</li>
-              <li className="hoverTextGreenEffect pl-4">save</li>
-              <li className="hoverTextGreenEffect pl-4">save</li>
+              <li className="hoverGreenEffect pl-4">save</li>
+              <li className="hoverGreenEffect pl-4">save</li>
+              <li className="hoverGreenEffect pl-4">save</li>
             </ul>
       </div> */}
     </>

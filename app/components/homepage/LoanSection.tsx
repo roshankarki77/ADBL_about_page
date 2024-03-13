@@ -1,20 +1,29 @@
 "use client";
 
 import React from "react";
+import { useEffect } from "react";
 import { Button } from "@/app/components/ui/button";
 import { TriangleRightIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import { LoanData, loanData } from "@/app/data/loans";
+import 'animate.css';
 
 const LoanSection = () => {
   const [currentLoan, setCurrentLoan] = useState<number>(1);
   function handleClick(id: number) {
     setCurrentLoan(id);
   }
+  const isServer = typeof window === "undefined";
+  const WOW = !isServer ? require("wowjs") : null;
+  useEffect(() => {
+    new WOW.WOW({
+      live: true,
+    }).init();
+  }, []);
   return (
     <>
       <div className="my-4  bg-[#F5FFEF] pb-8">
-        <div className="mx-auto w-[95%] md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px]">
+        <div className="mx-auto w-[95%] md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px] wow animate__animated animate__fadeInUp animate__slow ">
           <h2 className="pt-4 text-2xl font-semibold ">
             Are you looking for loan ?
           </h2>
@@ -46,7 +55,7 @@ const LoanSection = () => {
           {loanData.map(
             (loan) =>
               loan.id === currentLoan && (
-                <section className="mt-8 flex flex-wrap">
+                <section className="mt-8 flex flex-wrap wow animate__animated animate__fadeInUp animate__slow ">
                   <div className="md:flex-1 hidden md:block">
                     <img src={loan.descriptionImage} alt="farmer image" />
                   </div>
@@ -84,7 +93,7 @@ const LoanSection = () => {
       <section className="mt-8 ">
         <div className="mx-auto flex w-[95%] flex-wrap md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px]">
           {/* left */}
-          <div className="py-2 lg:flex-1 lg:pr-2">
+          <div className="py-2 lg:flex-1 lg:pr-2 wow animate__animated animate__fadeInUp animate__slow ">
             <h2 className="text-lg font-semibold leading-6">
               We usually follow 4 steps to get a better business loans.
             </h2>
@@ -141,7 +150,7 @@ const LoanSection = () => {
           </div>
 
           {/* right */}
-          <div className="flex-1 pt-4 lg:pt-0">
+          <div className="flex-1 pt-4 lg:pt-0 wow animate__animated animate__fadeInUp animate__slow ">
             <form
               action=""
               className="my-2 rounded-lg p-4 shadow shadow-black/60"

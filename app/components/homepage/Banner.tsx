@@ -2,13 +2,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import 'animate.css';
+import { useEffect } from "react";
+
+
 
 const Banner = () => {
+  const isServer = typeof window === "undefined";
+  const WOW = !isServer ? require("wowjs") : null;
+  useEffect(() => {
+    new WOW.WOW({
+      live: true,
+    }).init();
+  }, []);
   return (
     <section className="my-8 py-8" style={{ backgroundImage: `url('/images/mobile-app-bg.png')` , backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div 
-        className="w-[95%] sm:w-[85%] mx-auto lg:max-w-[85%] 2xl:max-w-[1320px]"
-        
+        className="w-[95%] sm:w-[85%] mx-auto lg:max-w-[85%] 2xl:max-w-[1320px] wow animate__animated animate__fadeInUp animate__slow "
       >
         <div className="flex flex-wrap">
           <div className="lg:flex-1 w-full"  >

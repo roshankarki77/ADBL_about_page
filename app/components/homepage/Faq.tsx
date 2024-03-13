@@ -1,5 +1,9 @@
+'use client'
 import Image from "next/image";
 import React from "react";
+import 'animate.css';
+import { useEffect } from "react";
+
 
 import {
   Accordion,
@@ -10,9 +14,18 @@ import {
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 const Faq = () => {
+
+  const isServer = typeof window === "undefined";
+  const WOW = !isServer ? require("wowjs") : null;
+  useEffect(() => {
+    new WOW.WOW({
+      live: true,
+    }).init();
+  }, []);
+
   return (
     <section className="my-2 ">
-      <div className="mx-auto w-[95%] pt-4 md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px]">
+      <div className="mx-auto w-[95%] pt-4 md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px] wow animate__animated animate__fadeInUp animate__slow ">
         <div className="flex flex-col flex-wrap xl:flex-row xl:justify-between">
           <div className="flex flex-col ">
             <h2 className="text-xl font-semibold">

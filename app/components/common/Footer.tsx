@@ -1,12 +1,24 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 
+import { useEffect } from "react";
+import "animate.css";
+
 const Footer = () => {
+  const isServer = typeof window === "undefined";
+  const WOW = !isServer ? require("wowjs") : null;
+  useEffect(() => {
+    new WOW.WOW({
+      live: true,
+    }).init();
+  }, []);
+
   return (
     // mx-auto w-[95%]  md:w-[90%]
-    <div className="mx-auto mt-8 lg:mt-20  flex w-[95%]  flex-col flex-wrap  justify-between md:w-[90%] lg:max-w-[85%] xl:flex-row  2xl:max-w-[1320px]">
-      <div className="grid grid-cols-1 gap-2 md:gap-0 md:grid-cols-2 lg:grid-cols-4 flex-1">
-        <div className="mb-6">
+    <div className="mx-auto mt-8 flex  w-[95%] flex-col  flex-wrap justify-between  md:w-[90%] lg:mt-20 lg:max-w-[85%] xl:flex-row  2xl:max-w-[1320px]">
+      <div className="wow animate__animated animate__fadeInUp animate__slow grid flex-1 grid-cols-1 gap-2 md:grid-cols-2 md:gap-0 lg:grid-cols-4">
+        <div className=" mb-6">
           <div className="mb-3 text-xl font-bold text-green-600">About Us</div>
           <div className="grid grid-cols-2 gap-x-2 md:grid-cols-1">
             <div className="hoverTextGreenEffect mb-2 text-sm font-medium text-stone-500 hover:cursor-pointer">
@@ -66,7 +78,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mb-6 md:min-w-[230px] xl:min-w-[190px] ">
+        <div className=" mb-6 md:min-w-[230px] xl:min-w-[190px] ">
           <div className="mb-3 text-xl font-bold text-green-600">
             News & Media
           </div>
@@ -97,7 +109,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mb-6 md:min-w-[230px]xl:min-w-[180px] ">
+        <div className="md:min-w-[230px]xl:min-w-[180px] mb-6 ">
           <div className="mb-3 text-xl font-bold text-green-600">
             Quick Links
           </div>
@@ -129,7 +141,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mb-8">
+      <div className="mb-8 wow animate__animated animate__fadeInUp animate__slow ">
         <div className="rounded-xl bg-green-700 p-6">
           <div>
             <div className="mb-4 flex">

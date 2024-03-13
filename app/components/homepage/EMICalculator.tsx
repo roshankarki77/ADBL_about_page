@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { Slider } from "../ui/slider";
+import 'animate.css';
 
 const EMICalculator = () => {
   const [loanAmount, setLoanAmount] = useState("1000000");
@@ -65,9 +66,17 @@ const EMICalculator = () => {
     setInterestRate(e.target.value);
   };
 
+  const isServer = typeof window === "undefined";
+  const WOW = !isServer ? require("wowjs") : null;
+  useEffect(() => {
+    new WOW.WOW({
+      live: true,
+    }).init();
+  }, []);
+
   return (
     <section className="my-4  ">
-      <div className="mx-auto w-[95%]  md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px]">
+      <div className="mx-auto w-[95%]  md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px] wow animate__animated animate__fadeInUp animate__slow ">
         <h2 className="my-4 text-center text-xl font-semibold">
           EMI Calculator
         </h2>

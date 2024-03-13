@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import { useEffect } from "react";
+
 
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -9,6 +11,7 @@ import { useRef } from "react";
 import { ServiceData, serviceData } from "@/app/data/services";
 import { Button } from "../ui/button";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import 'animate.css';
 
 interface SlickSlider {
   slickPrev(): void;
@@ -63,9 +66,17 @@ const ServiceSection = () => {
     slickRef?.current?.slickNext();
   };
 
+  const isServer = typeof window === "undefined";
+  const WOW = !isServer ? require("wowjs") : null;
+  useEffect(() => {
+    new WOW.WOW({
+      live: true,
+    }).init();
+  }, []);
+
   return (
     <section className=" bg-[#F5FFEF]  pb-8 ">
-      <div className="mx-auto w-[95%] pt-4 md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px]">
+      <div className="mx-auto w-[95%] pt-4 md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px] animate__animated animate__fadeInUp">
         <h2 className="text-xl font-semibold">ADBL Services</h2>
         <div className="flex items-center justify-between">
           <p className="mt-2 pr-4 text-sm text-slate-500 ">
@@ -78,7 +89,7 @@ const ServiceSection = () => {
           </div>
         </div>
 
-        <div className="slider-container relative">
+        <div className="slider-container relative wow animate__animated animate__fadeInUp animate__slow ">
           <Button
             className="absolute -left-1 top-[53%] z-10 h-5 w-5 -translate-y-1/2 transform animate-pulse rounded-full bg-custom-light-green p-0 text-3xl text-white xl:-left-8 xl:h-8 xl:w-8"
             variant={"default"}

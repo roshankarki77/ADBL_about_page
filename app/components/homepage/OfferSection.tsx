@@ -75,7 +75,7 @@ const OfferSection = () => {
 
 
   return (
-    <div className="mx-auto my-8 max-w-[95%] md:max-w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px] animate__animated animate__fadeInUp">
+    <div className="mx-auto my-8 max-w-[95%] md:max-w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px] wow animate__animated animate__fadeInUp">
       <h2 className="text-xl font-bold ">Offers for You</h2>
 
       <div className="mb-8 flex items-center justify-between">

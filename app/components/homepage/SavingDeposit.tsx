@@ -84,7 +84,7 @@ const SavingDeposit = () => {
   return (
     <>
       <section className="mb-16 mt-4">
-        <div className="mx-auto w-[95%] md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px] animate__animated animate__fadeInUp">
+        <div className="mx-auto w-[95%] md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px] wow animate__animated animate__fadeInUp">
           <h2 className=" text-2xl font-semibold">Saving and Deposit</h2>
 
           <div className="flex items-center justify-between">

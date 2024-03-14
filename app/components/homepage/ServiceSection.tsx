@@ -76,7 +76,7 @@ const ServiceSection = () => {
 
   return (
     <section className=" bg-[#F5FFEF]  pb-8 ">
-      <div className="mx-auto w-[95%] pt-4 md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px] animate__animated animate__fadeInUp">
+      <div className="mx-auto w-[95%] pt-4 md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px] wow animate__animated animate__fadeInUp">
         <h2 className="text-xl font-semibold">ADBL Services</h2>
         <div className="flex items-center justify-between">
           <p className="mt-2 pr-4 text-sm text-slate-500 ">

@@ -33,7 +33,11 @@ const Pagination1 = ({
 
     if (startPage > 1) {
       pages.push(
-        <PaginationItem key={1} onClick={() => onPageChange(1)}>
+        <PaginationItem 
+          key={1} 
+          onClick={() => onPageChange(1)}
+          className="hover:cursor-pointer"
+        >
           <PaginationLink isActive={currentPage === 1}>1</PaginationLink>
         </PaginationItem>,
       );
@@ -41,7 +45,7 @@ const Pagination1 = ({
         pages.push(
           <PaginationItem
             key="startEllipsis"
-            className="hover:cursor-pointer "
+            className="hover:cursor-pointer"
             onClick={() => onPageChange(startPage - 1)}
           >
             <PaginationLink className="text-base font-bold">...</PaginationLink>
@@ -52,7 +56,11 @@ const Pagination1 = ({
 
     for (let i = startPage; i <= endPage; i++) {
       pages.push(
-        <PaginationItem key={i} onClick={() => onPageChange(i)}>
+        <PaginationItem 
+          key={i} 
+          onClick={() => onPageChange(i)}
+          className="hover:cursor-pointer"
+        >
           <PaginationLink isActive={currentPage === i}>{i}</PaginationLink>
         </PaginationItem>,
       );
@@ -74,6 +82,7 @@ const Pagination1 = ({
         <PaginationItem
           key={totalPages}
           onClick={() => onPageChange(totalPages)}
+          className="hover:cursor-pointer "
         >
           <PaginationLink isActive={currentPage === totalPages}>
             {totalPages}

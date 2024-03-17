@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { headers } from "next/headers";
+import Pagination1 from '../components/Pagination1';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
@@ -17,10 +18,13 @@ const Atm = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [currentPage,itemsPerPage,province,district]);
+
+  const handlePageChange = (pageNumber:number) => {
+    setCurrentPage(pageNumber);
+  };
 
   const fetchData = async () => {
-
     try {
       if (!API_URL ||!API_KEY) {
         console.error("URL is not defined");
@@ -56,7 +60,6 @@ const Atm = () => {
       console.log("responseData",responseData.pagination.meta.last_page);
       setAtmData(responseData.data);
       setPaginations(responseData.pagination.meta.last_page);
-      setPaginations(Math.ceil(responseData.data.length / itemsPerPage));
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -79,8 +82,8 @@ const Atm = () => {
               </div>
             ))}
           </div>
-          
         </div>
+        <Pagination1 currentPage={currentPage} totalPages={paginations} onPageChange={handlePageChange} />
       </div>
     </section>
   );

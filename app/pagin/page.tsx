@@ -5,7 +5,7 @@ import Pagination1 from '../components/Pagination1';
 
 const YourPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 24; // Replace this with your total number of pages
+  const totalPages = 1; // Replace this with your total number of pages
   
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -20,4 +20,4 @@ const YourPage = () => {
   );
 };
 
-export default YourPage;
+export default YourPage; 

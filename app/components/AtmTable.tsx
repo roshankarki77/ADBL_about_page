@@ -1,13 +1,23 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import { useReactTable, flexRender,getCoreRowModel, } from '@tanstack/react-table';
 
-function AtmTable({ data }: { data: any[] }) {
+function AtmTable({ data ,handleSetItemsPerPage}: { data: any[]; handleSetItemsPerPage: (value: string) => void }) {
+    const startingNumber = 100;
+
+    // Initialize a counter to keep track of the SN
+    const [counter, setCounter] = useState(startingNumber);
+
     const columns = [
         {
             header: "SN",
             accessorKey: "",
-            Cell: (row: any) => {
-                return <div>{parseInt(row.row.id) + 1}</div>;
+            Cell: () => {
+                // Get the current value of counter for SN
+                const sn = counter + 1;
+                // Increment the counter for the next row
+                setCounter(prevCounter => prevCounter + 1);
+                return <div>{sn}</div>;
             },
             disableSortBy: true,
             disableFilters: true,
@@ -49,6 +59,22 @@ function AtmTable({ data }: { data: any[] }) {
 
     return (
         <div className="overflow-x-auto">
+            <div className='mb-4'>
+                <label>
+                    Show
+                    <div className='border-2 border-custom-green mx-2 inline-block'>
+                    <select
+                        onChange={(event) => handleSetItemsPerPage(event.target.value)}
+                        
+                    >
+                        <option value="1">10</option>
+                        <option value="2">20</option>
+                        <option value="3">30</option>
+                    </select>
+                    </div>
+                    entries
+                </label>
+            </div>
             <table className="w-full border-collapse table-auto">
                 <thead>
                     {table.getHeaderGroups().map(headerGroup => (

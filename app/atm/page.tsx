@@ -40,6 +40,12 @@ const Atm = () => {
 
   const handleSetView = (view: number) => {
     setView(view);
+    setCurrentPage(1);
+    if(view==2){
+      setItemsPerPage(10);
+    } else {
+      setItemsPerPage(18);
+    }
   };
 
   const fetchData = async () => {
@@ -154,6 +160,16 @@ const Atm = () => {
       setProvince(7);
     }
   }
+  const handleSetItemsPerPage = (e:any) => {
+    const selectedItemsPerPage = parseInt(e);
+    if (selectedItemsPerPage == 1) {
+      setItemsPerPage(10);
+    } else if (selectedItemsPerPage == 2) {
+      setItemsPerPage(20);
+    } else if (selectedItemsPerPage == 3) {
+      setItemsPerPage(30);
+    }
+  }
 
   return (
     <section className="mb-16 mt-4">
@@ -202,7 +218,7 @@ const Atm = () => {
                 onChange={(e) => {
                   setDistrict(parseInt(e.target.value));
                 }}
-                className="form-select"
+                className="form-select border-none"
               >
                 <option className="text-xs lg:text-lg " value={0}>Filter By District</option>
                 {districtList?.map((item) => {
@@ -236,6 +252,7 @@ const Atm = () => {
             <div>
               <AtmTable
                 data={atmData} // Add the missing data prop
+                handleSetItemsPerPage={handleSetItemsPerPage}
               />
             </div>
           )}

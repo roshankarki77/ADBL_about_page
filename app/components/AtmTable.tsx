@@ -27,9 +27,9 @@ function AtmTable({
   const columns = [
     {
       header: "SN",
-      accessorKey: "id",
-      Cell: ({ value }) => {
-        return <div>{value}</div>;
+      accessorKey: "",
+      cell: (row:any) => {
+        return <div>{parseInt(row.row.id) + 1}</div>;
       },
       disableSortBy: true,
       disableFilters: true,

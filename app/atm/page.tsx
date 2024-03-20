@@ -17,8 +17,10 @@ const Atm = () => {
 
   const [atmData, setAtmData] = useState<Object[]>([]);
   const [allData, setAllData] = useState<Object[]>([]);
+  const [slicedData, setSlicedData] = useState<Object[]>([]);
   const [districtList, setDistrictList] = useState<Object[]>([]);
   const [paginations, setPaginations] = useState<number>(0);
+  const [totalData, setTotalData] = useState<number>(0);
   const [selectedOption, setSelectedOption] = useState("0");
 
   useEffect(() => {
@@ -27,10 +29,22 @@ const Atm = () => {
 
   useEffect(() => {
     fetchData();
-  }, [currentPage, itemsPerPage, district]);
+  }, [district,province]);
 
   useEffect(() => {
-    fetchData();
+    setPaginations(Math.ceil(atmData.length/itemsPerPage));
+  }, [itemsPerPage]);
+
+  useEffect(() => {
+    sliceData();
+    console.log('sliced',atmData.length)
+    
+    setPaginations(Math.ceil(atmData.length/itemsPerPage));
+    console.log("sli",Math.ceil(atmData.length/itemsPerPage))
+    console.log("pagi",paginations)
+  }, [currentPage, itemsPerPage, atmData]);
+
+  useEffect(() => {
     handleDistrictListChange();
     setDistrict(0);
   }, [province]);
@@ -59,10 +73,10 @@ const Atm = () => {
         return;
       }
 
-      let url = API_URL + `?page=${currentPage}&per-page=${itemsPerPage}`;
+      let url = API_URL;
 
       if (province !== 0) {
-        url += `&province=${province}`;
+        url += `?province=${province}`;
       }
 
       if (province !== 0 && district !== 0) {
@@ -82,11 +96,21 @@ const Atm = () => {
 
       const responseData = await response.json();
       setAtmData(responseData.data);
-      setPaginations(responseData.pagination.meta.last_page);
+      // console.log('resp',responseData.data)
+      // setTotalData(responseData.data.length);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
+
+  const sliceData = () => {
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = atmData.slice(indexOfFirstItem, indexOfLastItem);
+    console.log('slicedfunction')
+    setSlicedData(currentItems);
+  }
+
   const fetchAllData = async () => {
     try {
       if (!API_URL || !API_KEY) {
@@ -259,8 +283,9 @@ const Atm = () => {
         </div>
         <div>
           {view == 1 && (
+            <div>
             <div className="grid grid-cols-1 justify-center gap-4 md:grid-cols-2 lg:grid-cols-3 ">
-              {atmData.map((item: any, index) => (
+              {slicedData.map((item: any, index) => (
                 <div
                   key={index}
                   className="flex min-h-28 flex-col justify-center rounded-xl bg-white p-4 shadow-[2px_3px_5px_2px_rgba(0,0,0,0.04)]"
@@ -272,6 +297,15 @@ const Atm = () => {
                 </div>
               ))}
             </div>
+            
+            <Pagination1
+          currentPage={currentPage}
+          totalPages={paginations}
+          onPageChange={handlePageChange}
+        />
+            </div>
+
+            
           )}
           {view == 2 && (
             <div>
@@ -283,11 +317,7 @@ const Atm = () => {
           )}
           {view == 3 && <div>map view</div>}
         </div>
-        <Pagination1
-          currentPage={currentPage}
-          totalPages={paginations}
-          onPageChange={handlePageChange}
-        />
+        
       </div>
     </section>
   );

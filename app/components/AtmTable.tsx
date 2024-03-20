@@ -5,7 +5,10 @@ import {
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
+  PaginationState,
+  getPaginationRowModel,
 } from "@tanstack/react-table";
+import Pagination2 from "../components/Pagination2";
 
 function AtmTable({
   data,
@@ -14,10 +17,10 @@ function AtmTable({
   data: any[];
   handleSetItemsPerPage: (value: string) => void;
 }) {
-  const startingNumber = 10;
-
-  // Initialize a counter to keep track of the SN
-  const [counter, setCounter] = useState(startingNumber);
+  const [pagination, setPagination] = useState<PaginationState>({
+    pageIndex: 0,
+    pageSize: 10,
+  })
   const [filtering, setFiltering] = useState("");
 
   console.log("data",data)
@@ -69,8 +72,11 @@ function AtmTable({
     columns,
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    onPaginationChange: setPagination,
     state: {
       globalFilter: filtering,
+      pagination,
     },
     onGlobalFilterChange: setFiltering,
   });
@@ -79,6 +85,29 @@ function AtmTable({
   console.log("globalFilter",table
   )
 
+  const handleSetFirstPage = () => {
+    table.firstPage();
+  } 
+  const handleSetNextPage = () => {
+    table.nextPage();
+  } 
+  const handleCanSetNextPage = () => table.getCanNextPage()
+
+  const handleSetPreviousPage = () => {
+    table.previousPage();
+  } 
+  const handleCanSetPreviousPage = () =>  table.getCanPreviousPage()
+
+  const handleGetCurrentPage = () => table.getState().pagination.pageIndex + 1
+
+  const handleSetCurrentPage = (e:any) => {
+    const page = e ? e - 1 : 0
+    table.setPageIndex(page)
+  }
+
+  const handleGetTotalPages = () => table.getPageCount()
+  const [detectSelectChange, setDetectSelectChange] = useState(false);
+  const [detectFilteringChange,setDetectFilteringChange] = useState(false);
   return (
     <div className="overflow-x-auto">
       <div className="mb-4 flex flex-col justify-between sm:flex-row">
@@ -86,13 +115,19 @@ function AtmTable({
           <label>
             Show
             <div className="mx-2 inline-block border-2 border-custom-green">
-              <select
-                onChange={(event) => handleSetItemsPerPage(event.target.value)}
-              >
-                <option value="1">10</option>
-                <option value="2">20</option>
-                <option value="3">30</option>
-              </select>
+            <select
+          value={table.getState().pagination.pageSize}
+          onChange={e => {
+            table.setPageSize(Number(e.target.value));
+            setDetectSelectChange(!detectSelectChange);
+          }}
+        >
+          {[10, 20, 30].map(pageSize => (
+            <option key={pageSize} value={pageSize}>
+               {pageSize}
+            </option>
+          ))}
+        </select>
             </div>
             entries
           </label>
@@ -102,7 +137,7 @@ function AtmTable({
           <input
             type="text"
             value={filtering}
-            onChange={(e) => setFiltering(e.target.value)}
+            onChange={(e) => {setFiltering(e.target.value);setDetectFilteringChange(!detectFilteringChange)}}
             className="w-36 border-2 border-custom-green"
           />
         </div>
@@ -146,6 +181,21 @@ function AtmTable({
           })}
         </tbody>
       </table>
+        <Pagination2
+          table={table}
+          data={data}
+          detectSelectChange={detectSelectChange}
+          detectFilteringChange={detectFilteringChange}
+          handleSetFirstPage={handleSetFirstPage}
+          handleSetNextPage={handleSetNextPage}
+          handleCanSetNextPage={handleCanSetNextPage}
+          handleSetPreviousPage={handleSetPreviousPage}
+          handleCanSetPreviousPage={handleCanSetPreviousPage}
+          handleGetCurrentPage={handleGetCurrentPage}
+          handleSetCurrentPage={handleSetCurrentPage}
+          handleGetTotalPages={handleGetTotalPages}
+        />
+      
     </div>
   );
 }

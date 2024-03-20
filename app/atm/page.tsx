@@ -19,6 +19,7 @@ const Atm = () => {
   const [allData, setAllData] = useState<Object[]>([]);
   const [districtList, setDistrictList] = useState<Object[]>([]);
   const [paginations, setPaginations] = useState<number>(0);
+  const [selectedOption, setSelectedOption] = useState("0");
 
   useEffect(() => {
     fetchAllData();
@@ -41,7 +42,10 @@ const Atm = () => {
   const handleSetView = (view: number) => {
     setView(view);
     setCurrentPage(1);
-    if(view==2){
+    setProvince(0);
+    setDistrict(0);
+    setSelectedOption("0");
+    if (view == 2) {
       setItemsPerPage(10);
     } else {
       setItemsPerPage(18);
@@ -103,7 +107,7 @@ const Atm = () => {
 
       const responseData = await response.json();
       setAllData(responseData.data);
-      console.log('alldata', responseData.data[1].district.province.id)
+      // console.log("alldata", responseData.data[1].district.province.id);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -112,14 +116,16 @@ const Atm = () => {
   const handleDistrictListChange = () => {
     const DistrictList = allData
       ?.filter(
-        (item) => item.district !== null && Number(province) === Number(item.district?.province?.id),
+        (item) =>
+          item.district !== null &&
+          Number(province) === Number(item.district?.province?.id),
       )
       .map((item) => ({
         title: item?.district?.dist_title,
         district_id: item?.district?.id,
       }));
 
-    const uniqueDistrictList  = [];
+    const uniqueDistrictList = [];
 
     DistrictList.forEach((item) => {
       const isDuplicate = uniqueDistrictList.some(
@@ -137,11 +143,11 @@ const Atm = () => {
     });
 
     setDistrictList(uniqueDistrictList);
-    console.log("uniqueDistrictList", uniqueDistrictList);
   };
 
-  const handleProvinceChange = (e) => {
+  const handleProvinceChange = (e) => { 
     const selectedProvinceId = parseInt(e.target.value);
+    setSelectedOption(e.target.value);
     if (selectedProvinceId == 0) {
       setProvince(0);
     } else if (selectedProvinceId == 1) {
@@ -159,8 +165,8 @@ const Atm = () => {
     } else if (selectedProvinceId == 7) {
       setProvince(7);
     }
-  }
-  const handleSetItemsPerPage = (e:any) => {
+  };
+  const handleSetItemsPerPage = (e: any) => {
     const selectedItemsPerPage = parseInt(e);
     if (selectedItemsPerPage == 1) {
       setItemsPerPage(10);
@@ -169,7 +175,7 @@ const Atm = () => {
     } else if (selectedItemsPerPage == 3) {
       setItemsPerPage(30);
     }
-  }
+  };
 
   return (
     <section className="mb-16 mt-4">
@@ -197,20 +203,33 @@ const Atm = () => {
           </div>
         </div>
         <div>
-          <div className="flex my-4">
-            <div className="border-2 border-custom-green mr-6">
-              <select
-                onChange={handleProvinceChange}
-                className="w-44 "
-              >
-                <option value="0" className="text-xs lg:text-lg ">Filter By Province</option>{" "}
-                <option value="1" className="text-xs lg:text-lg ">Province 1</option>
-                <option value="2" className="text-xs lg:text-lg ">Province 2</option>
-                <option value="3" className="text-xs lg:text-lg ">Bagmati Province</option>
-                <option value="4" className="text-xs lg:text-lg ">Gandaki Province</option>
-                <option value="5" className="text-xs lg:text-lg ">Lumbini Province</option>
-                <option value="6" className="text-xs lg:text-lg ">Karnali Province</option>
-                <option value="7" className="text-xs lg:text-lg ">Sudurpashchim Province</option>
+          <div className="my-4 flex">
+            <div className="mr-6 border-2 border-custom-green">
+              <select value={selectedOption} onChange={handleProvinceChange} className="w-44 ">
+                <option value="0" className="text-xs lg:text-lg ">
+                  Filter By Province
+                </option>{" "}
+                <option value="1" className="text-xs lg:text-lg ">
+                  Province 1
+                </option>
+                <option value="2" className="text-xs lg:text-lg ">
+                  Province 2
+                </option>
+                <option value="3" className="text-xs lg:text-lg ">
+                  Bagmati Province
+                </option>
+                <option value="4" className="text-xs lg:text-lg ">
+                  Gandaki Province
+                </option>
+                <option value="5" className="text-xs lg:text-lg ">
+                  Lumbini Province
+                </option>
+                <option value="6" className="text-xs lg:text-lg ">
+                  Karnali Province
+                </option>
+                <option value="7" className="text-xs lg:text-lg ">
+                  Sudurpashchim Province
+                </option>
               </select>
             </div>
             <div className="border-2 border-custom-green">
@@ -220,10 +239,16 @@ const Atm = () => {
                 }}
                 className="form-select border-none"
               >
-                <option className="text-xs lg:text-lg " value={0}>Filter By District</option>
+                <option className="text-xs lg:text-lg " value={0}>
+                  Filter By District
+                </option>
                 {districtList?.map((item) => {
                   return (
-                    <option key={item.district_id} value={item.district_id} className="text-xs lg:text-lg ">
+                    <option
+                      key={item.district_id}
+                      value={item.district_id}
+                      className="text-xs lg:text-lg "
+                    >
                       {item.title}
                     </option>
                   );

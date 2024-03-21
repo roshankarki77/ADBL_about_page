@@ -293,7 +293,7 @@ const Branch = () => {
                 {slicedData.map((item: any, index) => (
                   <div
                     key={index}
-                    className="flex min-h-28 flex-col justify-start rounded-xl bg-white p-4 shadow-[2px_3px_5px_2px_rgba(0,0,0,0.04)]"
+                    className="flex min-h-28 flex-col justify-start rounded-xl bg-white p-4 shadow-[0_0px_10px_-4px_rgba(0,0,0,0.3)]"
                   >
                     {/* <p className="text-base font-bold text-custom-green">
                     {item.atm_title}

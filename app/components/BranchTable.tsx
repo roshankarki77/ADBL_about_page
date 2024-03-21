@@ -50,7 +50,8 @@ function BranchTable({
     },
     {
       header: "Contact Details",
-      accessorKey: "",
+    //   accessorKey: "address",
+    accessorFn: (row) => `${row.address} ${row.email} ${row.phone} ${row.fullname}`,
       cell: ({ row }: { row: any }) => {
         return (
           <div className="contact-details">

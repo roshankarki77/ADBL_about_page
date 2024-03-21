@@ -29,19 +29,19 @@ const Atm = () => {
 
   useEffect(() => {
     fetchData();
-  }, [district,province]);
+  }, [district, province]);
 
   useEffect(() => {
-    setPaginations(Math.ceil(atmData.length/itemsPerPage));
+    setPaginations(Math.ceil(atmData.length / itemsPerPage));
   }, [itemsPerPage]);
 
   useEffect(() => {
     sliceData();
-    console.log('sliced',atmData.length)
-    
-    setPaginations(Math.ceil(atmData.length/itemsPerPage));
-    console.log("sli",Math.ceil(atmData.length/itemsPerPage))
-    console.log("pagi",paginations)
+    console.log("sliced", atmData.length);
+
+    setPaginations(Math.ceil(atmData.length / itemsPerPage));
+    console.log("sli", Math.ceil(atmData.length / itemsPerPage));
+    console.log("pagi", paginations);
   }, [currentPage, itemsPerPage, atmData]);
 
   useEffect(() => {
@@ -107,9 +107,9 @@ const Atm = () => {
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = atmData.slice(indexOfFirstItem, indexOfLastItem);
-    console.log('slicedfunction')
+    console.log("slicedfunction");
     setSlicedData(currentItems);
-  }
+  };
 
   const fetchAllData = async () => {
     try {
@@ -169,7 +169,7 @@ const Atm = () => {
     setDistrictList(uniqueDistrictList);
   };
 
-  const handleProvinceChange = (e) => { 
+  const handleProvinceChange = (e) => {
     const selectedProvinceId = parseInt(e.target.value);
     setSelectedOption(e.target.value);
     if (selectedProvinceId == 0) {
@@ -204,6 +204,7 @@ const Atm = () => {
   return (
     <section className="mb-16 mt-4">
       <div className="mx-auto w-[95%] md:w-[90%] lg:max-w-[85%] 2xl:max-w-[1320px]">
+        <h1 className="text-2xl font-bold text-custom-green">ATM</h1>
         <div className="mb-3 flex justify-center">
           <div className="flex ">
             <div
@@ -229,7 +230,11 @@ const Atm = () => {
         <div>
           <div className="my-4 flex">
             <div className="mr-6 border-2 border-custom-green">
-              <select value={selectedOption} onChange={handleProvinceChange} className="w-44 ">
+              <select
+                value={selectedOption}
+                onChange={handleProvinceChange}
+                className="w-44 "
+              >
                 <option value="0" className="text-xs lg:text-lg ">
                   Filter By Province
                 </option>{" "}
@@ -284,28 +289,26 @@ const Atm = () => {
         <div>
           {view == 1 && (
             <div>
-            <div className="grid grid-cols-1 justify-center gap-4 md:grid-cols-2 lg:grid-cols-3 ">
-              {slicedData.map((item: any, index) => (
-                <div
-                  key={index}
-                  className="flex min-h-28 flex-col justify-center rounded-xl bg-white p-4 shadow-[2px_3px_5px_2px_rgba(0,0,0,0.04)]"
-                >
-                  <p className="text-base font-bold text-custom-green">
-                    {item.atm_title}
-                  </p>
-                  <p className="text-stone-800">{item.address}</p>
-                </div>
-              ))}
-            </div>
-            
-            <Pagination1
-          currentPage={currentPage}
-          totalPages={paginations}
-          onPageChange={handlePageChange}
-        />
-            </div>
+              <div className="grid grid-cols-1 justify-center gap-4 md:grid-cols-2 lg:grid-cols-3 ">
+                {slicedData.map((item: any, index) => (
+                  <div
+                    key={index}
+                    className="flex min-h-28 flex-col justify-center rounded-xl bg-white p-4 shadow-[2px_3px_5px_2px_rgba(0,0,0,0.04)]"
+                  >
+                    <p className="text-base font-bold text-custom-green">
+                      {item.atm_title}
+                    </p>
+                    <p className="text-stone-800">{item.address}</p>
+                  </div>
+                ))}
+              </div>
 
-            
+              <Pagination1
+                currentPage={currentPage}
+                totalPages={paginations}
+                onPageChange={handlePageChange}
+              />
+            </div>
           )}
           {view == 2 && (
             <div>
@@ -317,7 +320,6 @@ const Atm = () => {
           )}
           {view == 3 && <div>map view</div>}
         </div>
-        
       </div>
     </section>
   );

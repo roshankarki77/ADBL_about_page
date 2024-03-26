@@ -30,26 +30,36 @@ type Props = {};
 
 const Header = (props: Props) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [bankingPage, setBankingPage] = useState(1);
 
   return (
     <>
       <header className="flex h-28 sm:h-24 bg-white  md:h-32 lg:h-24 xl:h-24 ">
         <div className=" mx-auto flex w-full max-w-[95%] flex-wrap items-center justify-between px-0 py-2 md:max-w-[90%] 2xl:max-w-[1320px]">
           <ul className="flex items-center space-x-6 sm:space-x-12">
-            <li className=" hoverTextRedEffect border-b-2 border-custom-red pb-1 text-sm text-custom-red md:text-base ">
-              <Link href="#" className="flex items-center">
+            <li 
+            className={`border-b-2 ${bankingPage == 1 ? "border-custom-red text-custom-red":"border-white"} hoverTextRedEffect   pb-1 text-sm  md:text-base `}
+            onClick={() => setBankingPage(1)}
+            >
+              <Link href="/personal-banking" className="flex items-center">
                 <IoPersonOutline />
                 <span className="ml-1 ">Personal Banking</span>
               </Link>
             </li>
-            <li className=" text-sm md:text-base text-custom-red">
-              <Link href="#" className="hoverTextRedEffect flex items-center">
+            <li 
+            className={`border-b-2 ${bankingPage == 2 ? "border-custom-red text-custom-red":"border-white"} hoverTextRedEffect   pb-1 text-sm  md:text-base `}
+            onClick={() => setBankingPage(2)}
+            >
+              <Link href="/business-banking" className=" flex items-center">
                 <BsBriefcase />
                 <span className="ml-1">Business Banking</span>
               </Link>
             </li>
-            <li className="text-sm md:text-base text-custom-red">
-              <Link href="#" className="hoverTextRedEffect flex items-center">
+            <li 
+            className={`border-b-2 ${bankingPage == 3 ? "border-custom-red text-custom-red":"border-white"} hoverTextRedEffect   pb-1 text-sm  md:text-base `}
+            onClick={() => setBankingPage(3)}
+            >
+              <Link href="remittance" className=" flex items-center">
                 <PiMoneyLight />
                 <span className="ml-1">Remittance</span>
               </Link>
@@ -96,33 +106,7 @@ const Header = (props: Props) => {
               className={"object-cover"}
             />
           </div>
-           {/* <div className=" hidden items-center text-white lg:ml-4  lg:flex">
-            <ul className="hidden lg:flex items-center justify-center lg:space-x-3 xl:space-x-12">
-            <ul className={`${isNavOpen ? "bg-custom-red flex flex-col items-center justify-evenly -left-[2.6%] h-[500px] absolute top-[140%] z-10 mx-auto w-screen  lg:hidden" : "hidden space-y-2"} transition delay-700 ease-in text-white `}>
-              <li className="hoverGreenEffect flex cursor-pointer">
-                <span className="">
-                  Savings and Deposits
-                </span>
-                <ChevronDownIcon className="mt-[2px]" />
-              </li>
-              <li className="hoverGreenEffect flex cursor-pointer">
-                <span className="">Loan and Advances</span>
-                <ChevronDownIcon className="mt-[2px]" />
-              </li>
-              <li className="hoverGreenEffect flex cursor-pointer">
-                <span className="">Services</span>
-                <ChevronDownIcon className="mt-[2px]" />
-              </li>
-              <li className="hoverGreenEffect flex cursor-pointer">
-                <span className=""> Financial Reports</span>
-                <ChevronDownIcon className="mt-[2px]" />
-              </li>
-              <li className="hoverGreenEffect flex cursor-pointer">
-                Cards
-              </li>
-            </ul>
-          </div>  */}
-          <Accordion type="single" collapsible  className={`${isNavOpen ? "bg-custom-green flex flex-col items-start justify-start -left-[2.6%] h-[500px] absolute top-[140%] z-10 mx-auto w-screen lg:flex-row  lg:h-auto lg:w-auto lg:relative  lg:mx-0 lg:bg-custom-green lg:items-center " : "hidden lg:flex  lg:flex-row lg:left-auto lg:h-auto lg:w-auto lg:relative lg:top-auto lg:mx-0 lg:bg-custom-green lg:items-center "}  text-white px-2`}>
+          {bankingPage == 1 && <Accordion type="single" collapsible  className={`${isNavOpen ? "bg-custom-green flex flex-col items-start justify-start -left-[2.6%] h-[500px] absolute top-[140%] z-10 mx-auto w-screen lg:flex-row  lg:h-auto lg:w-auto lg:relative  lg:mx-0 lg:bg-custom-green lg:items-center " : "hidden lg:flex  lg:flex-row lg:left-auto lg:h-auto lg:w-auto lg:relative lg:top-auto lg:mx-0 lg:bg-custom-green lg:items-center "}  text-white px-2`}>
                 <AccordionItem value="item-1" className="relative w-full mb-1 px-5 mt-8 border-none no-underline lg:px-0 lg:w-auto lg:mt-0 lg:mx-auto lg:mr-4 ">
                   <AccordionTrigger className=" p-0 text-base lg:text-sm lg:p-0  ">
                   Savings and Deposits
@@ -186,19 +170,41 @@ const Header = (props: Props) => {
                 <AccordionItem value="item-5" className="relative w-full mb-1 px-5 mt-8 border-none no-underline lg:px-0 lg:w-auto lg:mt-0 lg:mx-auto lg:mr-4">
                   <AccordionTrigger className=" p-0 text-base lg:text-sm lg:p-0">
                   Cards
+                  </AccordionTrigger>
+                </AccordionItem>
+              </Accordion>}
+          {bankingPage == 2 && <Accordion type="single" collapsible  className={`${isNavOpen ? "bg-custom-green flex flex-col items-start justify-start -left-[2.6%] h-[500px] absolute top-[140%] z-10 mx-auto w-screen lg:flex-row  lg:h-auto lg:w-auto lg:relative  lg:mx-0 lg:bg-custom-green lg:items-center " : "hidden lg:flex  lg:flex-row lg:left-auto lg:h-auto lg:w-auto lg:relative lg:top-auto lg:mx-0 lg:bg-custom-green lg:items-center "}  text-white px-2`}>
+                <AccordionItem value="item-1" className="relative w-full mb-1 px-5 mt-8 border-none no-underline lg:px-0 lg:w-auto lg:mt-0 lg:mx-auto lg:mr-4 ">
+                  <AccordionTrigger className=" p-0 text-base lg:text-sm lg:p-0  ">
+                  Deposit Account
+                  <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-white transition-transform duration-200 lg:ml-1" />
+                  </AccordionTrigger>
+                  <AccordionContent className="p-0 lg:absolute lg:z-20 lg:bg-custom-green lg:mx-auto lg:rounded-xl">
+                    <ul className={` ml-4 lg:text-xs lg:mx-auto lg:text-center lg:px-4 lg:py-2 `}>
+                      <li className="text-left">Current Account</li>
+                      <li className="text-left">Call Account</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2" className="relative w-full mb-1 px-5 mt-8 border-none no-underline lg:px-0 lg:w-auto lg:mt-0 lg:mx-auto lg:mr-4">
+                  <AccordionTrigger className=" p-0 text-base lg:text-sm lg:p-0">
+                  Loan and Advances
                   <ChevronDownIcon className="h-4 ml-8 w-4 shrink-0 text-white transition-transform duration-200 lg:ml-1" />
                   </AccordionTrigger>
                   <AccordionContent className="p-0 lg:absolute lg:z-20 lg:bg-custom-green lg:mx-auto lg:rounded-xl">
                     <ul className="ml-4 lg:text-xs lg:mx-auto lg:text-center lg:px-4 lg:py-2">
-                      <li>sample</li>
-                      <li>sample</li>
-                      <li>sample</li>
-                      <li>sample</li>
-                      <li>sample</li>
+                      <li className="text-left">Micro Loan</li>
+                      <li className="text-left">Business Loan</li>
                     </ul>
                   </AccordionContent>
                 </AccordionItem>
-              </Accordion>
+                <AccordionItem value="item-3" className="relative w-full mb-1 px-5 mt-8 border-none no-underline lg:px-0 lg:w-auto lg:mt-0 lg:mx-auto lg:mr-4">
+                  <AccordionTrigger className=" p-0 text-base lg:text-sm lg:p-0">
+                  Non-Funded Credit Facilities
+                  </AccordionTrigger>
+                </AccordionItem>
+                
+              </Accordion>}
 
           <div
             className={`${
@@ -232,27 +238,6 @@ const Header = (props: Props) => {
           </div>
         </div>
       </nav>
-
-      {/* <div className={`menu bg-custom-green`}>
-      <ul className={`flex items-center justify-center w-[95%] mx-auto lg:space-x-4 xl:space-x-12 text-white flex-col space-y-4 py-8  display-none ${isNavOpen ? 'block' : 'display-hidden'}`}>
-              <li className=" flex cursor-pointer  w-full justify-between">
-                <ul className=" sm:text-sm md:text-base lg:text-base w-full">
-                  <div className="text-custom-light-green animate-pulse">Savings and Deposits</div>
-                  <li className="pl-4 flex justify-between items-center">
-                    <p className="">save</p>
-                    <ChevronDownIcon className="mt-[2px]" />
-                  </li>
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                  <li className="pl-4">save</li>
-                </ul>
-                <ChevronDownIcon className="mt-[2px]" />
-              </li>
-              <li className="hoverGreenEffect pl-4">save</li>
-              <li className="hoverGreenEffect pl-4">save</li>
-              <li className="hoverGreenEffect pl-4">save</li>
-            </ul>
-      </div> */}
     </>
   );
 };
